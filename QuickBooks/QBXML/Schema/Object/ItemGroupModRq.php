@@ -38,6 +38,9 @@ class QuickBooks_QBXML_Schema_Object_ItemGroupModRq extends QuickBooks_QBXML_Sch
   'ListID' => 'IDTYPE',
   'EditSequence' => 'STRTYPE',
   'Name' => 'STRTYPE',
+  'BarCode BarCodeValue' => 'STRTYPE',
+  'BarCode AssignEvenIfUsed' => 'BOOLTYPE',
+  'BarCode AllowOverride' => 'BOOLTYPE',
   'IsActive' => 'BOOLTYPE',
   'ItemDesc' => 'STRTYPE',
   'UnitOfMeasureSetRef ListID' => 'IDTYPE',
@@ -61,6 +64,9 @@ class QuickBooks_QBXML_Schema_Object_ItemGroupModRq extends QuickBooks_QBXML_Sch
   'ListID' => 0,
   'EditSequence' => 16,
   'Name' => 31,
+  'BarCode BarCodeValue' => 50,
+  'BarCode AssignEvenIfUsed' => 0,
+  'BarCode AllowOverride' => 0,
   'IsActive' => 0,
   'ItemDesc' => 4095,
   'UnitOfMeasureSetRef ListID' => 0,
@@ -84,6 +90,9 @@ class QuickBooks_QBXML_Schema_Object_ItemGroupModRq extends QuickBooks_QBXML_Sch
   'ListID' => false,
   'EditSequence' => false,
   'Name' => true,
+  'BarCode BarCodeValue' => true,
+  'BarCode AssignEvenIfUsed' => true,
+  'BarCode AllowOverride' => true,
   'IsActive' => true,
   'ItemDesc' => true,
   'UnitOfMeasureSetRef ListID' => false,
@@ -105,18 +114,21 @@ class QuickBooks_QBXML_Schema_Object_ItemGroupModRq extends QuickBooks_QBXML_Sch
   'ListID' => 999.99,
   'EditSequence' => 999.99,
   'Name' => 999.99,
+  'BarCode BarCodeValue' => 999.99,
+  'BarCode AssignEvenIfUsed' => 999.99,
+  'BarCode AllowOverride' => 999.99,
   'IsActive' => 999.99,
   'ItemDesc' => 999.99,
   'UnitOfMeasureSetRef ListID' => 999.99,
   'UnitOfMeasureSetRef FullName' => 999.99,
-  'ForceUOMChange' => 7,
+  'ForceUOMChange' => 7.0,
   'IsPrintItemsInGroup' => 999.99,
   'ClearItemsInGroup' => 999.99,
   'ItemGroupLine ItemRef ListID' => 999.99,
   'ItemGroupLine ItemRef FullName' => 999.99,
   'ItemGroupLine Quantity' => 999.99,
-  'ItemGroupLine UnitOfMeasure' => 7,
-  'IncludeRetElement' => 4,
+  'ItemGroupLine UnitOfMeasure' => 7.0,
+  'IncludeRetElement' => 4.0,
 );
 		
 		return $paths;
@@ -128,6 +140,9 @@ class QuickBooks_QBXML_Schema_Object_ItemGroupModRq extends QuickBooks_QBXML_Sch
   'ListID' => false,
   'EditSequence' => false,
   'Name' => false,
+  'BarCode BarCodeValue' => false,
+  'BarCode AssignEvenIfUsed' => false,
+  'BarCode AllowOverride' => false,
   'IsActive' => false,
   'ItemDesc' => false,
   'UnitOfMeasureSetRef ListID' => false,
@@ -159,28 +174,31 @@ class QuickBooks_QBXML_Schema_Object_ItemGroupModRq extends QuickBooks_QBXML_Sch
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'ListID',
-  1 => 'EditSequence',
-  2 => 'Name',
-  3 => 'IsActive',
-  4 => 'ItemDesc',
-  5 => 'UnitOfMeasureSetRef ListID',
-  6 => 'UnitOfMeasureSetRef FullName',
-  7 => 'ForceUOMChange',
-  8 => 'IsPrintItemsInGroup',
-  9 => 'ClearItemsInGroup',
-  10 => 'ItemGroupLine',
-  11 => 'ItemGroupLine ItemRef',
-  12 => 'ItemGroupLine ItemRef ListID',
-  13 => 'ItemGroupLine ItemRef FullName',
-  14 => 'ItemGroupLine Quantity',
-  15 => 'ItemGroupLine UnitOfMeasure',
-  16 => 'IncludeRetElement',
-);
+		static $paths = [
+  'ListID',
+  'EditSequence',
+  'Name',
+  'BarCode',
+  'BarCode BarCodeValue',
+  'BarCode AssignEvenIfUsed',
+  'BarCode AllowOverride',
+  'IsActive',
+  'ItemDesc',
+  'UnitOfMeasureSetRef',
+  'UnitOfMeasureSetRef ListID',
+  'UnitOfMeasureSetRef FullName',
+  'ForceUOMChange',
+  'IsPrintItemsInGroup',
+  'ClearItemsInGroup',
+  'ItemGroupLine',
+  'ItemGroupLine ItemRef',
+  'ItemGroupLine ItemRef ListID',
+  'ItemGroupLine ItemRef FullName',
+  'ItemGroupLine Quantity',
+  'ItemGroupLine UnitOfMeasure',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

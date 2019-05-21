@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Schema object for: CustomerQueryRq
+ * Schema object for: LeadQueryRq
  * 
  * @author "Keith Palmer Jr." <Keith@ConsoliByte.com>
  * @license LICENSE.txt
@@ -23,7 +23,7 @@ require_once 'QuickBooks/QBXML/Schema/Object.php';
 /**
  * 
  */
-class QuickBooks_QBXML_Schema_Object_CustomerQueryRq extends QuickBooks_QBXML_Schema_Object
+class QuickBooks_QBXML_Schema_Object_LeadQueryRq extends QuickBooks_QBXML_Schema_Object
 {
 	protected function &_qbxmlWrapper()
 	{
@@ -36,19 +36,15 @@ class QuickBooks_QBXML_Schema_Object_CustomerQueryRq extends QuickBooks_QBXML_Sc
 	{
 		static $paths = array (
   'ListID' => 'IDTYPE',
-  'FullName' => 'STRTYPE',
+  'Name' => 'STRTYPE',
   'MaxReturned' => 'INTTYPE',
-  'ActiveStatus' => 'ENUMTYPE',
   'FromModifiedDate' => 'DATETIMETYPE',
   'ToModifiedDate' => 'DATETIMETYPE',
   'NameFilter MatchCriterion' => 'ENUMTYPE',
   'NameFilter Name' => 'STRTYPE',
   'NameRangeFilter FromName' => 'STRTYPE',
   'NameRangeFilter ToName' => 'STRTYPE',
-  'TotalBalanceFilter Operator' => 'ENUMTYPE',
-  'TotalBalanceFilter Amount' => 'AMTTYPE',
   'IncludeRetElement' => 'STRTYPE',
-  'OwnerID' => 'GUIDTYPE',
 );
 		
 		return $paths;
@@ -58,19 +54,15 @@ class QuickBooks_QBXML_Schema_Object_CustomerQueryRq extends QuickBooks_QBXML_Sc
 	{
 		static $paths = array (
   'ListID' => 0,
-  'FullName' => 0,
+  'Name' => 0,
   'MaxReturned' => 0,
-  'ActiveStatus' => 0,
   'FromModifiedDate' => 0,
   'ToModifiedDate' => 0,
   'NameFilter MatchCriterion' => 0,
   'NameFilter Name' => 0,
   'NameRangeFilter FromName' => 0,
   'NameRangeFilter ToName' => 0,
-  'TotalBalanceFilter Operator' => 0,
-  'TotalBalanceFilter Amount' => 0,
   'IncludeRetElement' => 50,
-  'OwnerID' => 0,
 );
 		
 		return $paths;
@@ -80,19 +72,15 @@ class QuickBooks_QBXML_Schema_Object_CustomerQueryRq extends QuickBooks_QBXML_Sc
 	{
 		static $paths = array (
   'ListID' => false,
-  'FullName' => false,
+  'Name' => false,
   'MaxReturned' => true,
-  'ActiveStatus' => true,
   'FromModifiedDate' => true,
   'ToModifiedDate' => true,
   'NameFilter MatchCriterion' => false,
   'NameFilter Name' => false,
   'NameRangeFilter FromName' => true,
   'NameRangeFilter ToName' => true,
-  'TotalBalanceFilter Operator' => false,
-  'TotalBalanceFilter Amount' => false,
   'IncludeRetElement' => true,
-  'OwnerID' => true,
 );
 	}
 	
@@ -100,19 +88,15 @@ class QuickBooks_QBXML_Schema_Object_CustomerQueryRq extends QuickBooks_QBXML_Sc
 	{
 		static $paths = array (
   'ListID' => 999.99,
-  'FullName' => 999.99,
-  'MaxReturned' => 0,
-  'ActiveStatus' => 999.99,
+  'Name' => 999.99,
+  'MaxReturned' => 0.0,
   'FromModifiedDate' => 999.99,
   'ToModifiedDate' => 999.99,
   'NameFilter MatchCriterion' => 999.99,
   'NameFilter Name' => 999.99,
   'NameRangeFilter FromName' => 999.99,
   'NameRangeFilter ToName' => 999.99,
-  'TotalBalanceFilter Operator' => 999.99,
-  'TotalBalanceFilter Amount' => 999.99,
-  'IncludeRetElement' => 4,
-  'OwnerID' => 2,
+  'IncludeRetElement' => 13.0,
 );
 		
 		return $paths;
@@ -122,19 +106,15 @@ class QuickBooks_QBXML_Schema_Object_CustomerQueryRq extends QuickBooks_QBXML_Sc
 	{
 		static $paths = array (
   'ListID' => true,
-  'FullName' => true,
+  'Name' => true,
   'MaxReturned' => false,
-  'ActiveStatus' => false,
   'FromModifiedDate' => false,
   'ToModifiedDate' => false,
   'NameFilter MatchCriterion' => false,
-  'NameFilter Name' => false,
+  'NameFilter Name' => true,
   'NameRangeFilter FromName' => false,
   'NameRangeFilter ToName' => false,
-  'TotalBalanceFilter Operator' => false,
-  'TotalBalanceFilter Amount' => false,
   'IncludeRetElement' => true,
-  'OwnerID' => true,
 );
 			
 		return $paths;
@@ -154,25 +134,21 @@ class QuickBooks_QBXML_Schema_Object_CustomerQueryRq extends QuickBooks_QBXML_Sc
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'ListID',
-  1 => 'FullName',
-  2 => 'MaxReturned',
-  3 => 'ActiveStatus',
-  4 => 'FromModifiedDate',
-  5 => 'ToModifiedDate',
-  6 => 'NameFilter MatchCriterion',
-  7 => 'NameFilter Name',
-  8 => 'NameRangeFilter FromName',
-  9 => 'NameRangeFilter ToName',
-  10 => 'TotalBalanceFilter Operator',
-  11 => 'TotalBalanceFilter Amount',
-  12 => 'IncludeRetElement',
-  13 => 'OwnerID',
-);
+		static $paths = [
+  'ListID',
+  'Name',
+  'MaxReturned',
+  'FromModifiedDate',
+  'ToModifiedDate',
+  'NameFilter',
+  'NameFilter MatchCriterion',
+  'NameFilter Name',
+  'NameRangeFilter',
+  'NameRangeFilter FromName',
+  'NameRangeFilter ToName',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

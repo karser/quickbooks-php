@@ -27,7 +27,7 @@ class QuickBooks_QBXML_Schema_Object_PriceLevelModRq extends QuickBooks_QBXML_Sc
 {
 	protected function &_qbxmlWrapper()
 	{
-		static $wrapper = '';
+		static $wrapper = 'PriceLevelMod';
 		
 		return $wrapper;
 	}
@@ -35,17 +35,19 @@ class QuickBooks_QBXML_Schema_Object_PriceLevelModRq extends QuickBooks_QBXML_Sc
 	protected function &_dataTypePaths()
 	{
 		static $paths = array (
-  'PriceLevelMod ListID' => 'IDTYPE',
-  'PriceLevelMod EditSequence' => 'STRTYPE',
-  'PriceLevelMod Name' => 'STRTYPE',
-  'PriceLevelMod IsActive' => 'BOOLTYPE',
-  'PriceLevelMod PriceLevelFixedPercentage' => 'PERCENTTYPE',
-  'PriceLevelMod PriceLevelPerItem ItemRef ListID' => 'IDTYPE',
-  'PriceLevelMod PriceLevelPerItem ItemRef FullName' => 'STRTYPE',
-  'PriceLevelMod PriceLevelPerItem CustomPrice' => 'PRICETYPE',
-  'PriceLevelMod PriceLevelPerItem CustomPricePercent' => 'PERCENTTYPE',
-  'PriceLevelMod PriceLevelPerItem AdjustPercentage' => 'PERCENTTYPE',
-  'PriceLevelMod PriceLevelPerItem AdjustRelativeTo' => 'ENUMTYPE',
+  'ListID' => 'IDTYPE',
+  'EditSequence' => 'STRTYPE',
+  'Name' => 'STRTYPE',
+  'IsActive' => 'BOOLTYPE',
+  'PriceLevelFixedPercentage' => 'PERCENTTYPE',
+  'PriceLevelPerItem ItemRef ListID' => 'IDTYPE',
+  'PriceLevelPerItem ItemRef FullName' => 'STRTYPE',
+  'PriceLevelPerItem CustomPrice' => 'PRICETYPE',
+  'PriceLevelPerItem CustomPricePercent' => 'PERCENTTYPE',
+  'PriceLevelPerItem AdjustPercentage' => 'PERCENTTYPE',
+  'PriceLevelPerItem AdjustRelativeTo' => 'ENUMTYPE',
+  'CurrencyRef ListID' => 'IDTYPE',
+  'CurrencyRef FullName' => 'STRTYPE',
   'IncludeRetElement' => 'STRTYPE',
 );
 		
@@ -55,17 +57,19 @@ class QuickBooks_QBXML_Schema_Object_PriceLevelModRq extends QuickBooks_QBXML_Sc
 	protected function &_maxLengthPaths()
 	{
 		static $paths = array (
-  'PriceLevelMod ListID' => 0,
-  'PriceLevelMod EditSequence' => 16,
-  'PriceLevelMod Name' => 31,
-  'PriceLevelMod IsActive' => 0,
-  'PriceLevelMod PriceLevelFixedPercentage' => 0,
-  'PriceLevelMod PriceLevelPerItem ItemRef ListID' => 0,
-  'PriceLevelMod PriceLevelPerItem ItemRef FullName' => 0,
-  'PriceLevelMod PriceLevelPerItem CustomPrice' => 0,
-  'PriceLevelMod PriceLevelPerItem CustomPricePercent' => 0,
-  'PriceLevelMod PriceLevelPerItem AdjustPercentage' => 0,
-  'PriceLevelMod PriceLevelPerItem AdjustRelativeTo' => 0,
+  'ListID' => 0,
+  'EditSequence' => 16,
+  'Name' => 31,
+  'IsActive' => 0,
+  'PriceLevelFixedPercentage' => 0,
+  'PriceLevelPerItem ItemRef ListID' => 0,
+  'PriceLevelPerItem ItemRef FullName' => 0,
+  'PriceLevelPerItem CustomPrice' => 0,
+  'PriceLevelPerItem CustomPricePercent' => 0,
+  'PriceLevelPerItem AdjustPercentage' => 0,
+  'PriceLevelPerItem AdjustRelativeTo' => 0,
+  'CurrencyRef ListID' => 0,
+  'CurrencyRef FullName' => 0,
   'IncludeRetElement' => 50,
 );
 		
@@ -75,17 +79,19 @@ class QuickBooks_QBXML_Schema_Object_PriceLevelModRq extends QuickBooks_QBXML_Sc
 	protected function &_isOptionalPaths()
 	{
 		static $paths = array (
-  'PriceLevelMod ListID' => false,
-  'PriceLevelMod EditSequence' => false,
-  'PriceLevelMod Name' => true,
-  'PriceLevelMod IsActive' => true,
-  'PriceLevelMod PriceLevelFixedPercentage' => false,
-  'PriceLevelMod PriceLevelPerItem ItemRef ListID' => false,
-  'PriceLevelMod PriceLevelPerItem ItemRef FullName' => true,
-  'PriceLevelMod PriceLevelPerItem CustomPrice' => false,
-  'PriceLevelMod PriceLevelPerItem CustomPricePercent' => false,
-  'PriceLevelMod PriceLevelPerItem AdjustPercentage' => false,
-  'PriceLevelMod PriceLevelPerItem AdjustRelativeTo' => false,
+  'ListID' => false,
+  'EditSequence' => false,
+  'Name' => true,
+  'IsActive' => true,
+  'PriceLevelFixedPercentage' => false,
+  'PriceLevelPerItem ItemRef ListID' => false,
+  'PriceLevelPerItem ItemRef FullName' => true,
+  'PriceLevelPerItem CustomPrice' => false,
+  'PriceLevelPerItem CustomPricePercent' => false,
+  'PriceLevelPerItem AdjustPercentage' => false,
+  'PriceLevelPerItem AdjustRelativeTo' => false,
+  'CurrencyRef ListID' => false,
+  'CurrencyRef FullName' => true,
   'IncludeRetElement' => true,
 );
 	}
@@ -93,17 +99,19 @@ class QuickBooks_QBXML_Schema_Object_PriceLevelModRq extends QuickBooks_QBXML_Sc
 	protected function &_sinceVersionPaths()
 	{
 		static $paths = array (
-  'PriceLevelMod ListID' => 999.99,
-  'PriceLevelMod EditSequence' => 999.99,
-  'PriceLevelMod Name' => 999.99,
-  'PriceLevelMod IsActive' => 999.99,
-  'PriceLevelMod PriceLevelFixedPercentage' => 999.99,
-  'PriceLevelMod PriceLevelPerItem ItemRef ListID' => 999.99,
-  'PriceLevelMod PriceLevelPerItem ItemRef FullName' => 999.99,
-  'PriceLevelMod PriceLevelPerItem CustomPrice' => 999.99,
-  'PriceLevelMod PriceLevelPerItem CustomPricePercent' => 999.99,
-  'PriceLevelMod PriceLevelPerItem AdjustPercentage' => 999.99,
-  'PriceLevelMod PriceLevelPerItem AdjustRelativeTo' => 999.99,
+  'ListID' => 999.99,
+  'EditSequence' => 999.99,
+  'Name' => 999.99,
+  'IsActive' => 999.99,
+  'PriceLevelFixedPercentage' => 999.99,
+  'PriceLevelPerItem ItemRef ListID' => 999.99,
+  'PriceLevelPerItem ItemRef FullName' => 999.99,
+  'PriceLevelPerItem CustomPrice' => 999.99,
+  'PriceLevelPerItem CustomPricePercent' => 999.99,
+  'PriceLevelPerItem AdjustPercentage' => 999.99,
+  'PriceLevelPerItem AdjustRelativeTo' => 999.99,
+  'CurrencyRef ListID' => 999.99,
+  'CurrencyRef FullName' => 999.99,
   'IncludeRetElement' => 999.99,
 );
 		
@@ -113,17 +121,19 @@ class QuickBooks_QBXML_Schema_Object_PriceLevelModRq extends QuickBooks_QBXML_Sc
 	protected function &_isRepeatablePaths()
 	{
 		static $paths = array (
-  'PriceLevelMod ListID' => false,
-  'PriceLevelMod EditSequence' => false,
-  'PriceLevelMod Name' => false,
-  'PriceLevelMod IsActive' => false,
-  'PriceLevelMod PriceLevelFixedPercentage' => false,
-  'PriceLevelMod PriceLevelPerItem ItemRef ListID' => false,
-  'PriceLevelMod PriceLevelPerItem ItemRef FullName' => false,
-  'PriceLevelMod PriceLevelPerItem CustomPrice' => false,
-  'PriceLevelMod PriceLevelPerItem CustomPricePercent' => false,
-  'PriceLevelMod PriceLevelPerItem AdjustPercentage' => false,
-  'PriceLevelMod PriceLevelPerItem AdjustRelativeTo' => false,
+  'ListID' => false,
+  'EditSequence' => false,
+  'Name' => false,
+  'IsActive' => false,
+  'PriceLevelFixedPercentage' => false,
+  'PriceLevelPerItem ItemRef ListID' => false,
+  'PriceLevelPerItem ItemRef FullName' => false,
+  'PriceLevelPerItem CustomPrice' => false,
+  'PriceLevelPerItem CustomPricePercent' => false,
+  'PriceLevelPerItem AdjustPercentage' => false,
+  'PriceLevelPerItem AdjustRelativeTo' => false,
+  'CurrencyRef ListID' => false,
+  'CurrencyRef FullName' => false,
   'IncludeRetElement' => true,
 );
 			
@@ -144,26 +154,26 @@ class QuickBooks_QBXML_Schema_Object_PriceLevelModRq extends QuickBooks_QBXML_Sc
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'PriceLevelMod ListID',
-  1 => 'PriceLevelMod EditSequence',
-  2 => 'PriceLevelMod Name',
-  3 => 'PriceLevelMod IsActive',
-  4 => 'PriceLevelMod PriceLevelFixedPercentage',
-  5 => 'PriceLevelMod',
-  6 => 'PriceLevelMod PriceLevelPerItem',
-  7 => 'PriceLevelMod PriceLevelPerItem ItemRef',
-  8 => 'PriceLevelMod PriceLevelPerItem ItemRef ListID',
-  9 => 'PriceLevelMod PriceLevelPerItem ItemRef FullName',
-  10 => 'PriceLevelMod PriceLevelPerItem CustomPrice',
-  11 => 'PriceLevelMod PriceLevelPerItem CustomPricePercent',
-  12 => 'PriceLevelMod PriceLevelPerItem AdjustPercentage',
-  13 => 'PriceLevelMod PriceLevelPerItem AdjustRelativeTo',
-  14 => 'IncludeRetElement',
-);
+		static $paths = [
+  'ListID',
+  'EditSequence',
+  'Name',
+  'IsActive',
+  'PriceLevelFixedPercentage',
+  'PriceLevelPerItem',
+  'PriceLevelPerItem ItemRef',
+  'PriceLevelPerItem ItemRef ListID',
+  'PriceLevelPerItem ItemRef FullName',
+  'PriceLevelPerItem CustomPrice',
+  'PriceLevelPerItem CustomPricePercent',
+  'PriceLevelPerItem AdjustPercentage',
+  'PriceLevelPerItem AdjustRelativeTo',
+  'CurrencyRef',
+  'CurrencyRef ListID',
+  'CurrencyRef FullName',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

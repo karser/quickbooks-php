@@ -36,7 +36,12 @@ class QuickBooks_QBXML_Schema_Object_ItemOtherChargeAddRq extends QuickBooks_QBX
 	{
 		static $paths = array (
   'Name' => 'STRTYPE',
+  'BarCode BarCodeValue' => 'STRTYPE',
+  'BarCode AssignEvenIfUsed' => 'BOOLTYPE',
+  'BarCode AllowOverride' => 'BOOLTYPE',
   'IsActive' => 'BOOLTYPE',
+  'ClassRef ListID' => 'IDTYPE',
+  'ClassRef FullName' => 'STRTYPE',
   'ParentRef ListID' => 'IDTYPE',
   'ParentRef FullName' => 'STRTYPE',
   'IsTaxIncluded' => 'BOOLTYPE',
@@ -59,6 +64,7 @@ class QuickBooks_QBXML_Schema_Object_ItemOtherChargeAddRq extends QuickBooks_QBX
   'SalesAndPurchase ExpenseAccountRef FullName' => 'STRTYPE',
   'SalesAndPurchase PrefVendorRef ListID' => 'IDTYPE',
   'SalesAndPurchase PrefVendorRef FullName' => 'STRTYPE',
+  'ExternalGUID' => 'GUIDTYPE',
   'IncludeRetElement' => 'STRTYPE',
 );
 		
@@ -69,29 +75,35 @@ class QuickBooks_QBXML_Schema_Object_ItemOtherChargeAddRq extends QuickBooks_QBX
 	{
 		static $paths = array (
   'Name' => 31,
+  'BarCode BarCodeValue' => 50,
+  'BarCode AssignEvenIfUsed' => 0,
+  'BarCode AllowOverride' => 0,
   'IsActive' => 0,
+  'ClassRef ListID' => 0,
+  'ClassRef FullName' => 159,
   'ParentRef ListID' => 0,
-  'ParentRef FullName' => 0,
+  'ParentRef FullName' => 159,
   'IsTaxIncluded' => 0,
   'SalesTaxCodeRef ListID' => 0,
-  'SalesTaxCodeRef FullName' => 0,
+  'SalesTaxCodeRef FullName' => 159,
   'SalesOrPurchase Desc' => 4095,
   'SalesOrPurchase Price' => 0,
   'SalesOrPurchase PricePercent' => 0,
   'SalesOrPurchase AccountRef ListID' => 0,
-  'SalesOrPurchase AccountRef FullName' => 0,
+  'SalesOrPurchase AccountRef FullName' => 159,
   'SalesAndPurchase SalesDesc' => 4095,
   'SalesAndPurchase SalesPrice' => 0,
   'SalesAndPurchase IncomeAccountRef ListID' => 0,
-  'SalesAndPurchase IncomeAccountRef FullName' => 0,
+  'SalesAndPurchase IncomeAccountRef FullName' => 159,
   'SalesAndPurchase PurchaseDesc' => 4095,
   'SalesAndPurchase PurchaseCost' => 0,
   'SalesAndPurchase PurchaseTaxCodeRef ListID' => 0,
-  'SalesAndPurchase PurchaseTaxCodeRef FullName' => 0,
+  'SalesAndPurchase PurchaseTaxCodeRef FullName' => 159,
   'SalesAndPurchase ExpenseAccountRef ListID' => 0,
-  'SalesAndPurchase ExpenseAccountRef FullName' => 0,
+  'SalesAndPurchase ExpenseAccountRef FullName' => 159,
   'SalesAndPurchase PrefVendorRef ListID' => 0,
-  'SalesAndPurchase PrefVendorRef FullName' => 0,
+  'SalesAndPurchase PrefVendorRef FullName' => 159,
+  'ExternalGUID' => 0,
   'IncludeRetElement' => 50,
 );
 		
@@ -102,7 +114,12 @@ class QuickBooks_QBXML_Schema_Object_ItemOtherChargeAddRq extends QuickBooks_QBX
 	{
 		static $paths = array (
   'Name' => false,
+  'BarCode BarCodeValue' => true,
+  'BarCode AssignEvenIfUsed' => true,
+  'BarCode AllowOverride' => true,
   'IsActive' => true,
+  'ClassRef ListID' => true,
+  'ClassRef FullName' => true,
   'ParentRef ListID' => true,
   'ParentRef FullName' => true,
   'IsTaxIncluded' => true,
@@ -125,6 +142,7 @@ class QuickBooks_QBXML_Schema_Object_ItemOtherChargeAddRq extends QuickBooks_QBX
   'SalesAndPurchase ExpenseAccountRef FullName' => true,
   'SalesAndPurchase PrefVendorRef ListID' => true,
   'SalesAndPurchase PrefVendorRef FullName' => true,
+  'ExternalGUID' => true,
   'IncludeRetElement' => true,
 );
 	}
@@ -133,10 +151,15 @@ class QuickBooks_QBXML_Schema_Object_ItemOtherChargeAddRq extends QuickBooks_QBX
 	{
 		static $paths = array (
   'Name' => 999.99,
+  'BarCode BarCodeValue' => 999.99,
+  'BarCode AssignEvenIfUsed' => 999.99,
+  'BarCode AllowOverride' => 999.99,
   'IsActive' => 999.99,
+  'ClassRef ListID' => 999.99,
+  'ClassRef FullName' => 999.99,
   'ParentRef ListID' => 999.99,
   'ParentRef FullName' => 999.99,
-  'IsTaxIncluded' => 6,
+  'IsTaxIncluded' => 6.0,
   'SalesTaxCodeRef ListID' => 999.99,
   'SalesTaxCodeRef FullName' => 999.99,
   'SalesOrPurchase Desc' => 999.99,
@@ -156,7 +179,8 @@ class QuickBooks_QBXML_Schema_Object_ItemOtherChargeAddRq extends QuickBooks_QBX
   'SalesAndPurchase ExpenseAccountRef FullName' => 999.99,
   'SalesAndPurchase PrefVendorRef ListID' => 999.99,
   'SalesAndPurchase PrefVendorRef FullName' => 999.99,
-  'IncludeRetElement' => 4,
+  'ExternalGUID' => 8.0,
+  'IncludeRetElement' => 4.0,
 );
 		
 		return $paths;
@@ -166,7 +190,12 @@ class QuickBooks_QBXML_Schema_Object_ItemOtherChargeAddRq extends QuickBooks_QBX
 	{
 		static $paths = array (
   'Name' => false,
+  'BarCode BarCodeValue' => false,
+  'BarCode AssignEvenIfUsed' => false,
+  'BarCode AllowOverride' => false,
   'IsActive' => false,
+  'ClassRef ListID' => false,
+  'ClassRef FullName' => false,
   'ParentRef ListID' => false,
   'ParentRef FullName' => false,
   'IsTaxIncluded' => false,
@@ -189,6 +218,7 @@ class QuickBooks_QBXML_Schema_Object_ItemOtherChargeAddRq extends QuickBooks_QBX
   'SalesAndPurchase ExpenseAccountRef FullName' => false,
   'SalesAndPurchase PrefVendorRef ListID' => false,
   'SalesAndPurchase PrefVendorRef FullName' => false,
+  'ExternalGUID' => false,
   'IncludeRetElement' => true,
 );
 			
@@ -209,36 +239,46 @@ class QuickBooks_QBXML_Schema_Object_ItemOtherChargeAddRq extends QuickBooks_QBX
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'Name',
-  1 => 'IsActive',
-  2 => 'ParentRef ListID',
-  3 => 'ParentRef FullName',
-  4 => 'IsTaxIncluded',
-  5 => 'SalesTaxCodeRef ListID',
-  6 => 'SalesTaxCodeRef FullName',
-  7 => 'SalesOrPurchase Desc',
-  8 => 'SalesOrPurchase Price',
-  9 => 'SalesOrPurchase PricePercent',
-  10 => 'SalesOrPurchase AccountRef ListID',
-  11 => 'SalesOrPurchase AccountRef FullName',
-  12 => 'SalesAndPurchase SalesDesc',
-  13 => 'SalesAndPurchase SalesPrice',
-  14 => 'SalesAndPurchase IncomeAccountRef ListID',
-  15 => 'SalesAndPurchase IncomeAccountRef FullName',
-  16 => 'SalesAndPurchase PurchaseDesc',
-  17 => 'SalesAndPurchase PurchaseCost',
-  18 => 'SalesAndPurchase PurchaseTaxCodeRef ListID',
-  19 => 'SalesAndPurchase PurchaseTaxCodeRef FullName',
-  20 => 'SalesAndPurchase ExpenseAccountRef ListID',
-  21 => 'SalesAndPurchase ExpenseAccountRef FullName',
-  22 => 'SalesAndPurchase PrefVendorRef ListID',
-  23 => 'SalesAndPurchase PrefVendorRef FullName',
-  24 => 'IncludeRetElement',
-);
+		static $paths = [
+  'Name',
+  'BarCode',
+  'BarCode BarCodeValue',
+  'BarCode AssignEvenIfUsed',
+  'BarCode AllowOverride',
+  'IsActive',
+  'ClassRef',
+  'ClassRef ListID',
+  'ClassRef FullName',
+  'ParentRef',
+  'ParentRef ListID',
+  'ParentRef FullName',
+  'IsTaxIncluded',
+  'SalesTaxCodeRef',
+  'SalesTaxCodeRef ListID',
+  'SalesTaxCodeRef FullName',
+  'SalesOrPurchase',
+  'SalesOrPurchase Desc',
+  'SalesOrPurchase Price',
+  'SalesOrPurchase PricePercent',
+  'SalesOrPurchase AccountRef ListID',
+  'SalesOrPurchase AccountRef FullName',
+  'SalesAndPurchase',
+  'SalesAndPurchase SalesDesc',
+  'SalesAndPurchase SalesPrice',
+  'SalesAndPurchase IncomeAccountRef ListID',
+  'SalesAndPurchase IncomeAccountRef FullName',
+  'SalesAndPurchase PurchaseDesc',
+  'SalesAndPurchase PurchaseCost',
+  'SalesAndPurchase PurchaseTaxCodeRef ListID',
+  'SalesAndPurchase PurchaseTaxCodeRef FullName',
+  'SalesAndPurchase ExpenseAccountRef ListID',
+  'SalesAndPurchase ExpenseAccountRef FullName',
+  'SalesAndPurchase PrefVendorRef ListID',
+  'SalesAndPurchase PrefVendorRef FullName',
+  'ExternalGUID',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

@@ -50,6 +50,8 @@ class QuickBooks_QBXML_Schema_Object_DepositQueryRq extends QuickBooks_QBXML_Sch
   'AccountFilter FullName' => 'STRTYPE',
   'AccountFilter ListIDWithChildren' => 'IDTYPE',
   'AccountFilter FullNameWithChildren' => 'STRTYPE',
+  'CurrencyFilter ListID' => 'IDTYPE',
+  'CurrencyFilter FullName' => 'STRTYPE',
   'IncludeLineItems' => 'BOOLTYPE',
   'IncludeRetElement' => 'STRTYPE',
   'OwnerID' => 'GUIDTYPE',
@@ -76,6 +78,8 @@ class QuickBooks_QBXML_Schema_Object_DepositQueryRq extends QuickBooks_QBXML_Sch
   'AccountFilter FullName' => 0,
   'AccountFilter ListIDWithChildren' => 0,
   'AccountFilter FullNameWithChildren' => 0,
+  'CurrencyFilter ListID' => 0,
+  'CurrencyFilter FullName' => 0,
   'IncludeLineItems' => 0,
   'IncludeRetElement' => 50,
   'OwnerID' => 0,
@@ -102,6 +106,8 @@ class QuickBooks_QBXML_Schema_Object_DepositQueryRq extends QuickBooks_QBXML_Sch
   'AccountFilter FullName' => false,
   'AccountFilter ListIDWithChildren' => false,
   'AccountFilter FullNameWithChildren' => false,
+  'CurrencyFilter ListID' => false,
+  'CurrencyFilter FullName' => false,
   'IncludeLineItems' => true,
   'IncludeRetElement' => true,
   'OwnerID' => true,
@@ -112,22 +118,24 @@ class QuickBooks_QBXML_Schema_Object_DepositQueryRq extends QuickBooks_QBXML_Sch
 	{
 		static $paths = array (
   'TxnID' => 999.99,
-  'MaxReturned' => 0,
+  'MaxReturned' => 0.0,
   'ModifiedDateRangeFilter FromModifiedDate' => 999.99,
   'ModifiedDateRangeFilter ToModifiedDate' => 999.99,
   'TxnDateRangeFilter FromTxnDate' => 999.99,
   'TxnDateRangeFilter ToTxnDate' => 999.99,
   'TxnDateRangeFilter DateMacro' => 999.99,
-  'EntityFilter ListID' => 2,
+  'EntityFilter ListID' => 2.0,
   'EntityFilter FullName' => 999.99,
-  'EntityFilter ListIDWithChildren' => 2,
+  'EntityFilter ListIDWithChildren' => 2.0,
   'EntityFilter FullNameWithChildren' => 999.99,
-  'AccountFilter ListID' => 2,
+  'AccountFilter ListID' => 2.0,
   'AccountFilter FullName' => 999.99,
-  'AccountFilter ListIDWithChildren' => 2,
+  'AccountFilter ListIDWithChildren' => 2.0,
   'AccountFilter FullNameWithChildren' => 999.99,
+  'CurrencyFilter ListID' => 2.0,
+  'CurrencyFilter FullName' => 999.99,
   'IncludeLineItems' => 999.99,
-  'IncludeRetElement' => 4,
+  'IncludeRetElement' => 4.0,
   'OwnerID' => 999.99,
 );
 		
@@ -152,6 +160,8 @@ class QuickBooks_QBXML_Schema_Object_DepositQueryRq extends QuickBooks_QBXML_Sch
   'AccountFilter FullName' => true,
   'AccountFilter ListIDWithChildren' => false,
   'AccountFilter FullNameWithChildren' => false,
+  'CurrencyFilter ListID' => true,
+  'CurrencyFilter FullName' => true,
   'IncludeLineItems' => false,
   'IncludeRetElement' => true,
   'OwnerID' => true,
@@ -174,29 +184,34 @@ class QuickBooks_QBXML_Schema_Object_DepositQueryRq extends QuickBooks_QBXML_Sch
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'TxnID',
-  1 => 'MaxReturned',
-  2 => 'ModifiedDateRangeFilter FromModifiedDate',
-  3 => 'ModifiedDateRangeFilter ToModifiedDate',
-  4 => 'TxnDateRangeFilter FromTxnDate',
-  5 => 'TxnDateRangeFilter ToTxnDate',
-  6 => 'TxnDateRangeFilter DateMacro',
-  7 => 'EntityFilter ListID',
-  8 => 'EntityFilter FullName',
-  9 => 'EntityFilter ListIDWithChildren',
-  10 => 'EntityFilter FullNameWithChildren',
-  11 => 'AccountFilter ListID',
-  12 => 'AccountFilter FullName',
-  13 => 'AccountFilter ListIDWithChildren',
-  14 => 'AccountFilter FullNameWithChildren',
-  15 => 'IncludeLineItems',
-  16 => 'IncludeRetElement',
-  17 => 'OwnerID',
-);
+		static $paths = [
+  'TxnID',
+  'MaxReturned',
+  'ModifiedDateRangeFilter',
+  'ModifiedDateRangeFilter FromModifiedDate',
+  'ModifiedDateRangeFilter ToModifiedDate',
+  'TxnDateRangeFilter',
+  'TxnDateRangeFilter FromTxnDate',
+  'TxnDateRangeFilter ToTxnDate',
+  'TxnDateRangeFilter DateMacro',
+  'EntityFilter',
+  'EntityFilter ListID',
+  'EntityFilter FullName',
+  'EntityFilter ListIDWithChildren',
+  'EntityFilter FullNameWithChildren',
+  'AccountFilter',
+  'AccountFilter ListID',
+  'AccountFilter FullName',
+  'AccountFilter ListIDWithChildren',
+  'AccountFilter FullNameWithChildren',
+  'CurrencyFilter',
+  'CurrencyFilter ListID',
+  'CurrencyFilter FullName',
+  'IncludeLineItems',
+  'IncludeRetElement',
+  'OwnerID'
+];
 			
 		return $paths;
 	}
 }
-
-?>

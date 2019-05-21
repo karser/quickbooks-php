@@ -91,7 +91,7 @@ class QuickBooks_QBXML_Schema_Object_DataExtDelRq extends QuickBooks_QBXML_Schem
   'DataExtDel ListObjRef FullName' => 999.99,
   'DataExtDel TxnDataExtType' => 999.99,
   'DataExtDel TxnID' => 999.99,
-  'DataExtDel TxnLineID' => 3,
+  'DataExtDel TxnLineID' => 3.0,
   'DataExtDel OtherDataExtType' => 999.99,
 );
 		
@@ -129,20 +129,19 @@ class QuickBooks_QBXML_Schema_Object_DataExtDelRq extends QuickBooks_QBXML_Schem
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'DataExtDel OwnerID',
-  1 => 'DataExtDel DataExtName',
-  2 => 'DataExtDel ListDataExtType',
-  3 => 'DataExtDel ListObjRef ListID',
-  4 => 'DataExtDel ListObjRef FullName',
-  5 => 'DataExtDel TxnDataExtType',
-  6 => 'DataExtDel TxnID',
-  7 => 'DataExtDel TxnLineID',
-  8 => 'DataExtDel OtherDataExtType',
-);
+		static $paths = [
+  'DataExtDel',
+  'DataExtDel OwnerID',
+  'DataExtDel DataExtName',
+  'DataExtDel ListDataExtType',
+  'DataExtDel ListObjRef ListID',
+  'DataExtDel ListObjRef FullName',
+  'DataExtDel TxnDataExtType',
+  'DataExtDel TxnID',
+  'DataExtDel TxnLineID',
+  'DataExtDel OtherDataExtType'
+];
 			
 		return $paths;
 	}
 }
-
-?>

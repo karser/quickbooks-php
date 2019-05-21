@@ -92,7 +92,7 @@ class QuickBooks_QBXML_Schema_Object_StandardTermsQueryRq extends QuickBooks_QBX
 		static $paths = array (
   'ListID' => 999.99,
   'FullName' => 999.99,
-  'MaxReturned' => 0,
+  'MaxReturned' => 0.0,
   'ActiveStatus' => 999.99,
   'FromModifiedDate' => 999.99,
   'ToModifiedDate' => 999.99,
@@ -100,7 +100,7 @@ class QuickBooks_QBXML_Schema_Object_StandardTermsQueryRq extends QuickBooks_QBX
   'NameFilter Name' => 999.99,
   'NameRangeFilter FromName' => 999.99,
   'NameRangeFilter ToName' => 999.99,
-  'IncludeRetElement' => 4,
+  'IncludeRetElement' => 4.0,
 );
 		
 		return $paths;
@@ -139,22 +139,22 @@ class QuickBooks_QBXML_Schema_Object_StandardTermsQueryRq extends QuickBooks_QBX
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'ListID',
-  1 => 'FullName',
-  2 => 'MaxReturned',
-  3 => 'ActiveStatus',
-  4 => 'FromModifiedDate',
-  5 => 'ToModifiedDate',
-  6 => 'NameFilter MatchCriterion',
-  7 => 'NameFilter Name',
-  8 => 'NameRangeFilter FromName',
-  9 => 'NameRangeFilter ToName',
-  10 => 'IncludeRetElement',
-);
+		static $paths = [
+  'ListID',
+  'FullName',
+  'MaxReturned',
+  'ActiveStatus',
+  'FromModifiedDate',
+  'ToModifiedDate',
+  'NameFilter',
+  'NameFilter MatchCriterion',
+  'NameFilter Name',
+  'NameRangeFilter',
+  'NameRangeFilter FromName',
+  'NameRangeFilter ToName',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

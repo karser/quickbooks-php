@@ -2,37 +2,36 @@
 
 /**
  * Schema object for: ItemInventoryAssemblyQueryRq
- *
- * @author Keith Palmer <keith@consolibyte.com>
- * @author Jay Williams <jay@myd3.com>
+ * 
+ * @author "Keith Palmer Jr." <Keith@ConsoliByte.com>
  * @license LICENSE.txt
- *
+ * 
  * @package QuickBooks
  * @subpackage QBXML
  */
 
 /**
- *
+ * 
  */
 require_once 'QuickBooks.php';
 
 /**
- *
+ * 
  */
 require_once 'QuickBooks/QBXML/Schema/Object.php';
 
 /**
- *
+ * 
  */
 class QuickBooks_QBXML_Schema_Object_ItemInventoryAssemblyQueryRq extends QuickBooks_QBXML_Schema_Object
 {
 	protected function &_qbxmlWrapper()
 	{
 		static $wrapper = '';
-
+		
 		return $wrapper;
 	}
-
+	
 	protected function &_dataTypePaths()
 	{
 		static $paths = array (
@@ -46,13 +45,17 @@ class QuickBooks_QBXML_Schema_Object_ItemInventoryAssemblyQueryRq extends QuickB
   'NameFilter Name' => 'STRTYPE',
   'NameRangeFilter FromName' => 'STRTYPE',
   'NameRangeFilter ToName' => 'STRTYPE',
+  'ClassFilter ListID' => 'IDTYPE',
+  'ClassFilter FullName' => 'STRTYPE',
+  'ClassFilter ListIDWithChildren' => 'IDTYPE',
+  'ClassFilter FullNameWithChildren' => 'STRTYPE',
   'IncludeRetElement' => 'STRTYPE',
   'OwnerID' => 'GUIDTYPE',
 );
-
+		
 		return $paths;
 	}
-
+	
 	protected function &_maxLengthPaths()
 	{
 		static $paths = array (
@@ -66,18 +69,22 @@ class QuickBooks_QBXML_Schema_Object_ItemInventoryAssemblyQueryRq extends QuickB
   'NameFilter Name' => 0,
   'NameRangeFilter FromName' => 0,
   'NameRangeFilter ToName' => 0,
-  'IncludeRetElement' => 0,
+  'ClassFilter ListID' => 0,
+  'ClassFilter FullName' => 0,
+  'ClassFilter ListIDWithChildren' => 0,
+  'ClassFilter FullNameWithChildren' => 0,
+  'IncludeRetElement' => 50,
   'OwnerID' => 0,
 );
-
+		
 		return $paths;
 	}
-
+	
 	protected function &_isOptionalPaths()
 	{
 		static $paths = array (
-  'ListID' => true,
-  'FullName' => true,
+  'ListID' => false,
+  'FullName' => false,
   'MaxReturned' => true,
   'ActiveStatus' => true,
   'FromModifiedDate' => true,
@@ -86,17 +93,21 @@ class QuickBooks_QBXML_Schema_Object_ItemInventoryAssemblyQueryRq extends QuickB
   'NameFilter Name' => false,
   'NameRangeFilter FromName' => true,
   'NameRangeFilter ToName' => true,
+  'ClassFilter ListID' => false,
+  'ClassFilter FullName' => false,
+  'ClassFilter ListIDWithChildren' => false,
+  'ClassFilter FullNameWithChildren' => false,
   'IncludeRetElement' => true,
   'OwnerID' => true,
 );
 	}
-
+	
 	protected function &_sinceVersionPaths()
 	{
 		static $paths = array (
   'ListID' => 999.99,
   'FullName' => 999.99,
-  'MaxReturned' => 999.99,
+  'MaxReturned' => 0.0,
   'ActiveStatus' => 999.99,
   'FromModifiedDate' => 999.99,
   'ToModifiedDate' => 999.99,
@@ -104,13 +115,17 @@ class QuickBooks_QBXML_Schema_Object_ItemInventoryAssemblyQueryRq extends QuickB
   'NameFilter Name' => 999.99,
   'NameRangeFilter FromName' => 999.99,
   'NameRangeFilter ToName' => 999.99,
-  'IncludeRetElement' => 999.99,
-  'OwnerID' => 999.99,
+  'ClassFilter ListID' => 999.99,
+  'ClassFilter FullName' => 999.99,
+  'ClassFilter ListIDWithChildren' => 999.99,
+  'ClassFilter FullNameWithChildren' => 999.99,
+  'IncludeRetElement' => 4.0,
+  'OwnerID' => 2.0,
 );
-
+		
 		return $paths;
 	}
-
+	
 	protected function &_isRepeatablePaths()
 	{
 		static $paths = array (
@@ -124,42 +139,53 @@ class QuickBooks_QBXML_Schema_Object_ItemInventoryAssemblyQueryRq extends QuickB
   'NameFilter Name' => false,
   'NameRangeFilter FromName' => false,
   'NameRangeFilter ToName' => false,
+  'ClassFilter ListID' => true,
+  'ClassFilter FullName' => true,
+  'ClassFilter ListIDWithChildren' => false,
+  'ClassFilter FullNameWithChildren' => false,
   'IncludeRetElement' => true,
   'OwnerID' => true,
 );
-
+			
 		return $paths;
 	}
-
+	
 	/*
 	abstract protected function &_inLocalePaths()
 	{
 		static $paths = array(
-			'FirstName' => array( 'QBD', 'QBCA', 'QBUK', 'QBAU' ),
+			'FirstName' => array( 'QBD', 'QBCA', 'QBUK', 'QBAU' ), 
 			'LastName' => array( 'QBD', 'QBCA', 'QBUK', 'QBAU' ),
 			);
-
+		
 		return $paths;
 	}
 	*/
-
+	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'ListID',
-  1 => 'FullName',
-  2 => 'MaxReturned',
-  3 => 'ActiveStatus',
-  4 => 'FromModifiedDate',
-  5 => 'ToModifiedDate',
-  6 => 'NameFilter MatchCriterion',
-  7 => 'NameFilter Name',
-  8 => 'NameRangeFilter FromName',
-  9 => 'NameRangeFilter ToName',
-  10 => 'IncludeRetElement',
-  11 => 'OwnerID',
-);
-
+		static $paths = [
+  'ListID',
+  'FullName',
+  'MaxReturned',
+  'ActiveStatus',
+  'FromModifiedDate',
+  'ToModifiedDate',
+  'NameFilter',
+  'NameFilter MatchCriterion',
+  'NameFilter Name',
+  'NameRangeFilter',
+  'NameRangeFilter FromName',
+  'NameRangeFilter ToName',
+  'ClassFilter',
+  'ClassFilter ListID',
+  'ClassFilter FullName',
+  'ClassFilter ListIDWithChildren',
+  'ClassFilter FullNameWithChildren',
+  'IncludeRetElement',
+  'OwnerID'
+];
+			
 		return $paths;
 	}
 }

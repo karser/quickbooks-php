@@ -27,7 +27,7 @@ class QuickBooks_QBXML_Schema_Object_JobTypeAddRq extends QuickBooks_QBXML_Schem
 {
 	protected function &_qbxmlWrapper()
 	{
-		static $wrapper = '';
+		static $wrapper = 'JobTypeAdd';
 		
 		return $wrapper;
 	}
@@ -35,10 +35,10 @@ class QuickBooks_QBXML_Schema_Object_JobTypeAddRq extends QuickBooks_QBXML_Schem
 	protected function &_dataTypePaths()
 	{
 		static $paths = array (
-  'JobTypeAdd Name' => 'STRTYPE',
-  'JobTypeAdd IsActive' => 'BOOLTYPE',
-  'JobTypeAdd ParentRef ListID' => 'IDTYPE',
-  'JobTypeAdd ParentRef FullName' => 'STRTYPE',
+  'Name' => 'STRTYPE',
+  'IsActive' => 'BOOLTYPE',
+  'ParentRef ListID' => 'IDTYPE',
+  'ParentRef FullName' => 'STRTYPE',
   'IncludeRetElement' => 'STRTYPE',
 );
 		
@@ -48,10 +48,10 @@ class QuickBooks_QBXML_Schema_Object_JobTypeAddRq extends QuickBooks_QBXML_Schem
 	protected function &_maxLengthPaths()
 	{
 		static $paths = array (
-  'JobTypeAdd Name' => 31,
-  'JobTypeAdd IsActive' => 0,
-  'JobTypeAdd ParentRef ListID' => 0,
-  'JobTypeAdd ParentRef FullName' => 0,
+  'Name' => 31,
+  'IsActive' => 0,
+  'ParentRef ListID' => 0,
+  'ParentRef FullName' => 0,
   'IncludeRetElement' => 50,
 );
 		
@@ -61,10 +61,10 @@ class QuickBooks_QBXML_Schema_Object_JobTypeAddRq extends QuickBooks_QBXML_Schem
 	protected function &_isOptionalPaths()
 	{
 		static $paths = array (
-  'JobTypeAdd Name' => false,
-  'JobTypeAdd IsActive' => true,
-  'JobTypeAdd ParentRef ListID' => true,
-  'JobTypeAdd ParentRef FullName' => true,
+  'Name' => false,
+  'IsActive' => true,
+  'ParentRef ListID' => true,
+  'ParentRef FullName' => true,
   'IncludeRetElement' => true,
 );
 	}
@@ -72,11 +72,11 @@ class QuickBooks_QBXML_Schema_Object_JobTypeAddRq extends QuickBooks_QBXML_Schem
 	protected function &_sinceVersionPaths()
 	{
 		static $paths = array (
-  'JobTypeAdd Name' => 999.99,
-  'JobTypeAdd IsActive' => 999.99,
-  'JobTypeAdd ParentRef ListID' => 999.99,
-  'JobTypeAdd ParentRef FullName' => 999.99,
-  'IncludeRetElement' => 4,
+  'Name' => 999.99,
+  'IsActive' => 999.99,
+  'ParentRef ListID' => 999.99,
+  'ParentRef FullName' => 999.99,
+  'IncludeRetElement' => 4.0,
 );
 		
 		return $paths;
@@ -85,10 +85,10 @@ class QuickBooks_QBXML_Schema_Object_JobTypeAddRq extends QuickBooks_QBXML_Schem
 	protected function &_isRepeatablePaths()
 	{
 		static $paths = array (
-  'JobTypeAdd Name' => false,
-  'JobTypeAdd IsActive' => false,
-  'JobTypeAdd ParentRef ListID' => false,
-  'JobTypeAdd ParentRef FullName' => false,
+  'Name' => false,
+  'IsActive' => false,
+  'ParentRef ListID' => false,
+  'ParentRef FullName' => false,
   'IncludeRetElement' => true,
 );
 			
@@ -109,16 +109,15 @@ class QuickBooks_QBXML_Schema_Object_JobTypeAddRq extends QuickBooks_QBXML_Schem
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'JobTypeAdd Name',
-  1 => 'JobTypeAdd IsActive',
-  2 => 'JobTypeAdd ParentRef ListID',
-  3 => 'JobTypeAdd ParentRef FullName',
-  4 => 'IncludeRetElement',
-);
+		static $paths = [
+  'Name',
+  'IsActive',
+  'ParentRef',
+  'ParentRef ListID',
+  'ParentRef FullName',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

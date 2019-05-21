@@ -63,8 +63,8 @@ class QuickBooks_QBXML_Schema_Object_CompanyQueryRq extends QuickBooks_QBXML_Sch
 	protected function &_sinceVersionPaths()
 	{
 		static $paths = array (
-  'IncludeRetElement' => 4,
-  'OwnerID' => 2,
+  'IncludeRetElement' => 4.0,
+  'OwnerID' => 2.0,
 );
 		
 		return $paths;
@@ -94,13 +94,11 @@ class QuickBooks_QBXML_Schema_Object_CompanyQueryRq extends QuickBooks_QBXML_Sch
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'IncludeRetElement',
-  1 => 'OwnerID',
-);
+		static $paths = [
+  'IncludeRetElement',
+  'OwnerID'
+];
 			
 		return $paths;
 	}
 }
-
-?>

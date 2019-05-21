@@ -50,6 +50,8 @@ class QuickBooks_QBXML_Schema_Object_AccountModRq extends QuickBooks_QBXML_Schem
   'SalesTaxCodeRef ListID' => 'IDTYPE',
   'SalesTaxCodeRef FullName' => 'STRTYPE',
   'TaxLineID' => 'INTTYPE',
+  'CurrencyRef ListID' => 'IDTYPE',
+  'CurrencyRef FullName' => 'STRTYPE',
   'IncludeRetElement' => 'STRTYPE',
 );
 		
@@ -74,6 +76,8 @@ class QuickBooks_QBXML_Schema_Object_AccountModRq extends QuickBooks_QBXML_Schem
   'SalesTaxCodeRef ListID' => 0,
   'SalesTaxCodeRef FullName' => 0,
   'TaxLineID' => 0,
+  'CurrencyRef ListID' => 0,
+  'CurrencyRef FullName' => 0,
   'IncludeRetElement' => 50,
 );
 		
@@ -98,6 +102,8 @@ class QuickBooks_QBXML_Schema_Object_AccountModRq extends QuickBooks_QBXML_Schem
   'SalesTaxCodeRef ListID' => false,
   'SalesTaxCodeRef FullName' => true,
   'TaxLineID' => true,
+  'CurrencyRef ListID' => false,
+  'CurrencyRef FullName' => true,
   'IncludeRetElement' => true,
 );
 	}
@@ -119,8 +125,10 @@ class QuickBooks_QBXML_Schema_Object_AccountModRq extends QuickBooks_QBXML_Schem
   'OpenBalanceDate' => 999.99,
   'SalesTaxCodeRef ListID' => 999.99,
   'SalesTaxCodeRef FullName' => 999.99,
-  'TaxLineID' => 7,
-  'IncludeRetElement' => 4,
+  'TaxLineID' => 7.0,
+  'CurrencyRef ListID' => 999.99,
+  'CurrencyRef FullName' => 999.99,
+  'IncludeRetElement' => 4.0,
 );
 		
 		return $paths;
@@ -144,6 +152,8 @@ class QuickBooks_QBXML_Schema_Object_AccountModRq extends QuickBooks_QBXML_Schem
   'SalesTaxCodeRef ListID' => false,
   'SalesTaxCodeRef FullName' => false,
   'TaxLineID' => false,
+  'CurrencyRef ListID' => false,
+  'CurrencyRef FullName' => false,
   'IncludeRetElement' => true,
 );
 			
@@ -164,27 +174,30 @@ class QuickBooks_QBXML_Schema_Object_AccountModRq extends QuickBooks_QBXML_Schem
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'ListID',
-  1 => 'EditSequence',
-  2 => 'Name',
-  3 => 'IsActive',
-  4 => 'ParentRef ListID',
-  5 => 'ParentRef FullName',
-  6 => 'AccountType',
-  7 => 'AccountNumber',
-  8 => 'BankNumber',
-  9 => 'Desc',
-  10 => 'OpenBalance',
-  11 => 'OpenBalanceDate',
-  12 => 'SalesTaxCodeRef ListID',
-  13 => 'SalesTaxCodeRef FullName',
-  14 => 'TaxLineID',
-  15 => 'IncludeRetElement',
-);
+		static $paths = [
+  'ListID',
+  'EditSequence',
+  'Name',
+  'IsActive',
+  'ParentRef',
+  'ParentRef ListID',
+  'ParentRef FullName',
+  'AccountType',
+  'AccountNumber',
+  'BankNumber',
+  'Desc',
+  'OpenBalance',
+  'OpenBalanceDate',
+  'SalesTaxCodeRef',
+  'SalesTaxCodeRef ListID',
+  'SalesTaxCodeRef FullName',
+  'TaxLineID',
+  'CurrencyRef',
+  'CurrencyRef ListID',
+  'CurrencyRef FullName',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

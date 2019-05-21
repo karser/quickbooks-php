@@ -94,13 +94,11 @@ class QuickBooks_QBXML_Schema_Object_TxnDelRq extends QuickBooks_QBXML_Schema_Ob
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'TxnDelType',
-  1 => 'TxnID',
-);
+		static $paths = [
+  'TxnDelType',
+  'TxnID'
+];
 			
 		return $paths;
 	}
 }
-
-?>

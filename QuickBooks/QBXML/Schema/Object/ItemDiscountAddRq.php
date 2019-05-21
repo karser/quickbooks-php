@@ -36,7 +36,12 @@ class QuickBooks_QBXML_Schema_Object_ItemDiscountAddRq extends QuickBooks_QBXML_
 	{
 		static $paths = array (
   'Name' => 'STRTYPE',
+  'BarCode BarCodeValue' => 'STRTYPE',
+  'BarCode AssignEvenIfUsed' => 'BOOLTYPE',
+  'BarCode AllowOverride' => 'BOOLTYPE',
   'IsActive' => 'BOOLTYPE',
+  'ClassRef ListID' => 'IDTYPE',
+  'ClassRef FullName' => 'STRTYPE',
   'ParentRef ListID' => 'IDTYPE',
   'ParentRef FullName' => 'STRTYPE',
   'ItemDesc' => 'STRTYPE',
@@ -46,6 +51,7 @@ class QuickBooks_QBXML_Schema_Object_ItemDiscountAddRq extends QuickBooks_QBXML_
   'DiscountRatePercent' => 'PERCENTTYPE',
   'AccountRef ListID' => 'IDTYPE',
   'AccountRef FullName' => 'STRTYPE',
+  'ExternalGUID' => 'GUIDTYPE',
   'IncludeRetElement' => 'STRTYPE',
 );
 		
@@ -56,16 +62,22 @@ class QuickBooks_QBXML_Schema_Object_ItemDiscountAddRq extends QuickBooks_QBXML_
 	{
 		static $paths = array (
   'Name' => 31,
+  'BarCode BarCodeValue' => 50,
+  'BarCode AssignEvenIfUsed' => 0,
+  'BarCode AllowOverride' => 0,
   'IsActive' => 0,
+  'ClassRef ListID' => 0,
+  'ClassRef FullName' => 159,
   'ParentRef ListID' => 0,
-  'ParentRef FullName' => 0,
+  'ParentRef FullName' => 159,
   'ItemDesc' => 4095,
   'SalesTaxCodeRef ListID' => 0,
-  'SalesTaxCodeRef FullName' => 0,
+  'SalesTaxCodeRef FullName' => 159,
   'DiscountRate' => 0,
   'DiscountRatePercent' => 0,
   'AccountRef ListID' => 0,
-  'AccountRef FullName' => 0,
+  'AccountRef FullName' => 159,
+  'ExternalGUID' => 0,
   'IncludeRetElement' => 50,
 );
 		
@@ -76,7 +88,12 @@ class QuickBooks_QBXML_Schema_Object_ItemDiscountAddRq extends QuickBooks_QBXML_
 	{
 		static $paths = array (
   'Name' => false,
+  'BarCode BarCodeValue' => true,
+  'BarCode AssignEvenIfUsed' => true,
+  'BarCode AllowOverride' => true,
   'IsActive' => true,
+  'ClassRef ListID' => true,
+  'ClassRef FullName' => true,
   'ParentRef ListID' => true,
   'ParentRef FullName' => true,
   'ItemDesc' => true,
@@ -86,6 +103,7 @@ class QuickBooks_QBXML_Schema_Object_ItemDiscountAddRq extends QuickBooks_QBXML_
   'DiscountRatePercent' => false,
   'AccountRef ListID' => true,
   'AccountRef FullName' => true,
+  'ExternalGUID' => true,
   'IncludeRetElement' => true,
 );
 	}
@@ -94,7 +112,12 @@ class QuickBooks_QBXML_Schema_Object_ItemDiscountAddRq extends QuickBooks_QBXML_
 	{
 		static $paths = array (
   'Name' => 999.99,
+  'BarCode BarCodeValue' => 999.99,
+  'BarCode AssignEvenIfUsed' => 999.99,
+  'BarCode AllowOverride' => 999.99,
   'IsActive' => 999.99,
+  'ClassRef ListID' => 999.99,
+  'ClassRef FullName' => 999.99,
   'ParentRef ListID' => 999.99,
   'ParentRef FullName' => 999.99,
   'ItemDesc' => 999.99,
@@ -104,7 +127,8 @@ class QuickBooks_QBXML_Schema_Object_ItemDiscountAddRq extends QuickBooks_QBXML_
   'DiscountRatePercent' => 999.99,
   'AccountRef ListID' => 999.99,
   'AccountRef FullName' => 999.99,
-  'IncludeRetElement' => 4,
+  'ExternalGUID' => 8.0,
+  'IncludeRetElement' => 4.0,
 );
 		
 		return $paths;
@@ -114,7 +138,12 @@ class QuickBooks_QBXML_Schema_Object_ItemDiscountAddRq extends QuickBooks_QBXML_
 	{
 		static $paths = array (
   'Name' => false,
+  'BarCode BarCodeValue' => false,
+  'BarCode AssignEvenIfUsed' => false,
+  'BarCode AllowOverride' => false,
   'IsActive' => false,
+  'ClassRef ListID' => false,
+  'ClassRef FullName' => false,
   'ParentRef ListID' => false,
   'ParentRef FullName' => false,
   'ItemDesc' => false,
@@ -124,6 +153,7 @@ class QuickBooks_QBXML_Schema_Object_ItemDiscountAddRq extends QuickBooks_QBXML_
   'DiscountRatePercent' => false,
   'AccountRef ListID' => false,
   'AccountRef FullName' => false,
+  'ExternalGUID' => false,
   'IncludeRetElement' => true,
 );
 			
@@ -144,23 +174,32 @@ class QuickBooks_QBXML_Schema_Object_ItemDiscountAddRq extends QuickBooks_QBXML_
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'Name',
-  1 => 'IsActive',
-  2 => 'ParentRef ListID',
-  3 => 'ParentRef FullName',
-  4 => 'ItemDesc',
-  5 => 'SalesTaxCodeRef ListID',
-  6 => 'SalesTaxCodeRef FullName',
-  7 => 'DiscountRate',
-  8 => 'DiscountRatePercent',
-  9 => 'AccountRef ListID',
-  10 => 'AccountRef FullName',
-  11 => 'IncludeRetElement',
-);
+		static $paths = [
+  'Name',
+  'BarCode',
+  'BarCode BarCodeValue',
+  'BarCode AssignEvenIfUsed',
+  'BarCode AllowOverride',
+  'IsActive',
+  'ClassRef',
+  'ClassRef ListID',
+  'ClassRef FullName',
+  'ParentRef',
+  'ParentRef ListID',
+  'ParentRef FullName',
+  'ItemDesc',
+  'SalesTaxCodeRef',
+  'SalesTaxCodeRef ListID',
+  'SalesTaxCodeRef FullName',
+  'DiscountRate',
+  'DiscountRatePercent',
+  'AccountRef',
+  'AccountRef ListID',
+  'AccountRef FullName',
+  'ExternalGUID',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

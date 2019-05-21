@@ -1,10 +1,10 @@
 <?php
 
 /**
- * Schema object for: Template
+ * Schema object for: ListDisplayModRq
  * 
- * @author Keith Palmer <keith@consolibyte.com>
- * @license LICENSE.txt 
+ * @author "Keith Palmer Jr." <Keith@ConsoliByte.com>
+ * @license LICENSE.txt
  * 
  * @package QuickBooks
  * @subpackage QBXML
@@ -23,44 +23,59 @@ require_once 'QuickBooks/QBXML/Schema/Object.php';
 /**
  * 
  */
-class QuickBooks_QBXML_Schema_Object_Template extends QuickBooks_QBXML_Schema_Object
+class QuickBooks_QBXML_Schema_Object_ListDisplayModRq extends QuickBooks_QBXML_Schema_Object
 {
 	protected function &_qbxmlWrapper()
 	{
-		static $wrapper = '_qbxmlWrapper';
+		static $wrapper = '';
 		
 		return $wrapper;
 	}
 	
 	protected function &_dataTypePaths()
 	{
-		static $paths = '_dataTypePaths';
+		static $paths = array (
+  'ListDisplayModType' => 'ENUMTYPE',
+  'ListID' => 'IDTYPE',
+);
 		
 		return $paths;
 	}
 	
 	protected function &_maxLengthPaths()
 	{
-		static $paths = '_maxLengthPaths';
+		static $paths = array (
+  'ListDisplayModType' => 0,
+  'ListID' => 0,
+);
 		
 		return $paths;
 	}
 	
 	protected function &_isOptionalPaths()
 	{
-		static $paths = '_isOptionalPaths';
+		static $paths = array (
+  'ListDisplayModType' => false,
+  'ListID' => false,
+);
 	}
 	
 	protected function &_sinceVersionPaths()
 	{
-		static $paths = '_sinceVersionPaths';
+		static $paths = array (
+  'ListDisplayModType' => 999.99,
+  'ListID' => 999.99,
+);
 		
 		return $paths;
 	}
 	
 	protected function &_isRepeatablePaths()
 	{
-		static $paths = '_isRepeatablePaths';
+		static $paths = array (
+  'ListDisplayModType' => false,
+  'ListID' => false,
+);
 			
 		return $paths;
 	}
@@ -79,10 +94,11 @@ class QuickBooks_QBXML_Schema_Object_Template extends QuickBooks_QBXML_Schema_Ob
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = '_reorderPaths';
+		static $paths = [
+  'ListDisplayModType',
+  'ListID'
+];
 			
 		return $paths;
 	}
 }
-
-?>

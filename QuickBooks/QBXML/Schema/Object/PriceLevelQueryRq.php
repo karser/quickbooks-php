@@ -47,6 +47,8 @@ class QuickBooks_QBXML_Schema_Object_PriceLevelQueryRq extends QuickBooks_QBXML_
   'NameRangeFilter ToName' => 'STRTYPE',
   'ItemRef ListID' => 'IDTYPE',
   'ItemRef FullName' => 'STRTYPE',
+  'CurrencyFilter ListID' => 'IDTYPE',
+  'CurrencyFilter FullName' => 'STRTYPE',
   'IncludeRetElement' => 'STRTYPE',
 );
 		
@@ -68,6 +70,8 @@ class QuickBooks_QBXML_Schema_Object_PriceLevelQueryRq extends QuickBooks_QBXML_
   'NameRangeFilter ToName' => 0,
   'ItemRef ListID' => 0,
   'ItemRef FullName' => 0,
+  'CurrencyFilter ListID' => 0,
+  'CurrencyFilter FullName' => 0,
   'IncludeRetElement' => 50,
 );
 		
@@ -89,6 +93,8 @@ class QuickBooks_QBXML_Schema_Object_PriceLevelQueryRq extends QuickBooks_QBXML_
   'NameRangeFilter ToName' => true,
   'ItemRef ListID' => false,
   'ItemRef FullName' => false,
+  'CurrencyFilter ListID' => false,
+  'CurrencyFilter FullName' => false,
   'IncludeRetElement' => true,
 );
 	}
@@ -98,7 +104,7 @@ class QuickBooks_QBXML_Schema_Object_PriceLevelQueryRq extends QuickBooks_QBXML_
 		static $paths = array (
   'ListID' => 999.99,
   'FullName' => 999.99,
-  'MaxReturned' => 0,
+  'MaxReturned' => 0.0,
   'ActiveStatus' => 999.99,
   'FromModifiedDate' => 999.99,
   'ToModifiedDate' => 999.99,
@@ -108,6 +114,8 @@ class QuickBooks_QBXML_Schema_Object_PriceLevelQueryRq extends QuickBooks_QBXML_
   'NameRangeFilter ToName' => 999.99,
   'ItemRef ListID' => 999.99,
   'ItemRef FullName' => 999.99,
+  'CurrencyFilter ListID' => 999.99,
+  'CurrencyFilter FullName' => 999.99,
   'IncludeRetElement' => 999.99,
 );
 		
@@ -129,6 +137,8 @@ class QuickBooks_QBXML_Schema_Object_PriceLevelQueryRq extends QuickBooks_QBXML_
   'NameRangeFilter ToName' => false,
   'ItemRef ListID' => true,
   'ItemRef FullName' => true,
+  'CurrencyFilter ListID' => true,
+  'CurrencyFilter FullName' => true,
   'IncludeRetElement' => true,
 );
 			
@@ -149,24 +159,28 @@ class QuickBooks_QBXML_Schema_Object_PriceLevelQueryRq extends QuickBooks_QBXML_
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'ListID',
-  1 => 'FullName',
-  2 => 'MaxReturned',
-  3 => 'ActiveStatus',
-  4 => 'FromModifiedDate',
-  5 => 'ToModifiedDate',
-  6 => 'NameFilter MatchCriterion',
-  7 => 'NameFilter Name',
-  8 => 'NameRangeFilter FromName',
-  9 => 'NameRangeFilter ToName',
-  10 => 'ItemRef ListID',
-  11 => 'ItemRef FullName',
-  12 => 'IncludeRetElement',
-);
+		static $paths = [
+  'ListID',
+  'FullName',
+  'MaxReturned',
+  'ActiveStatus',
+  'FromModifiedDate',
+  'ToModifiedDate',
+  'NameFilter',
+  'NameFilter MatchCriterion',
+  'NameFilter Name',
+  'NameRangeFilter',
+  'NameRangeFilter FromName',
+  'NameRangeFilter ToName',
+  'ItemRef',
+  'ItemRef ListID',
+  'ItemRef FullName',
+  'CurrencyFilter',
+  'CurrencyFilter ListID',
+  'CurrencyFilter FullName',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

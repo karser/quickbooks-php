@@ -47,6 +47,12 @@ class QuickBooks_QBXML_Schema_Object_VendorQueryRq extends QuickBooks_QBXML_Sche
   'NameRangeFilter ToName' => 'STRTYPE',
   'TotalBalanceFilter Operator' => 'ENUMTYPE',
   'TotalBalanceFilter Amount' => 'AMTTYPE',
+  'CurrencyFilter ListID' => 'IDTYPE',
+  'CurrencyFilter FullName' => 'STRTYPE',
+  'ClassFilter ListID' => 'IDTYPE',
+  'ClassFilter FullName' => 'STRTYPE',
+  'ClassFilter ListIDWithChildren' => 'IDTYPE',
+  'ClassFilter FullNameWithChildren' => 'STRTYPE',
   'IncludeRetElement' => 'STRTYPE',
   'OwnerID' => 'GUIDTYPE',
 );
@@ -69,6 +75,12 @@ class QuickBooks_QBXML_Schema_Object_VendorQueryRq extends QuickBooks_QBXML_Sche
   'NameRangeFilter ToName' => 0,
   'TotalBalanceFilter Operator' => 0,
   'TotalBalanceFilter Amount' => 0,
+  'CurrencyFilter ListID' => 0,
+  'CurrencyFilter FullName' => 0,
+  'ClassFilter ListID' => 0,
+  'ClassFilter FullName' => 0,
+  'ClassFilter ListIDWithChildren' => 0,
+  'ClassFilter FullNameWithChildren' => 0,
   'IncludeRetElement' => 50,
   'OwnerID' => 0,
 );
@@ -91,6 +103,12 @@ class QuickBooks_QBXML_Schema_Object_VendorQueryRq extends QuickBooks_QBXML_Sche
   'NameRangeFilter ToName' => true,
   'TotalBalanceFilter Operator' => false,
   'TotalBalanceFilter Amount' => false,
+  'CurrencyFilter ListID' => false,
+  'CurrencyFilter FullName' => false,
+  'ClassFilter ListID' => false,
+  'ClassFilter FullName' => false,
+  'ClassFilter ListIDWithChildren' => false,
+  'ClassFilter FullNameWithChildren' => false,
   'IncludeRetElement' => true,
   'OwnerID' => true,
 );
@@ -101,7 +119,7 @@ class QuickBooks_QBXML_Schema_Object_VendorQueryRq extends QuickBooks_QBXML_Sche
 		static $paths = array (
   'ListID' => 999.99,
   'FullName' => 999.99,
-  'MaxReturned' => 0,
+  'MaxReturned' => 0.0,
   'ActiveStatus' => 999.99,
   'FromModifiedDate' => 999.99,
   'ToModifiedDate' => 999.99,
@@ -111,8 +129,14 @@ class QuickBooks_QBXML_Schema_Object_VendorQueryRq extends QuickBooks_QBXML_Sche
   'NameRangeFilter ToName' => 999.99,
   'TotalBalanceFilter Operator' => 999.99,
   'TotalBalanceFilter Amount' => 999.99,
-  'IncludeRetElement' => 4,
-  'OwnerID' => 2,
+  'CurrencyFilter ListID' => 999.99,
+  'CurrencyFilter FullName' => 999.99,
+  'ClassFilter ListID' => 999.99,
+  'ClassFilter FullName' => 999.99,
+  'ClassFilter ListIDWithChildren' => 999.99,
+  'ClassFilter FullNameWithChildren' => 999.99,
+  'IncludeRetElement' => 4.0,
+  'OwnerID' => 2.0,
 );
 		
 		return $paths;
@@ -133,6 +157,12 @@ class QuickBooks_QBXML_Schema_Object_VendorQueryRq extends QuickBooks_QBXML_Sche
   'NameRangeFilter ToName' => false,
   'TotalBalanceFilter Operator' => false,
   'TotalBalanceFilter Amount' => false,
+  'CurrencyFilter ListID' => true,
+  'CurrencyFilter FullName' => true,
+  'ClassFilter ListID' => true,
+  'ClassFilter FullName' => true,
+  'ClassFilter ListIDWithChildren' => false,
+  'ClassFilter FullNameWithChildren' => false,
   'IncludeRetElement' => true,
   'OwnerID' => true,
 );
@@ -154,25 +184,34 @@ class QuickBooks_QBXML_Schema_Object_VendorQueryRq extends QuickBooks_QBXML_Sche
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'ListID',
-  1 => 'FullName',
-  2 => 'MaxReturned',
-  3 => 'ActiveStatus',
-  4 => 'FromModifiedDate',
-  5 => 'ToModifiedDate',
-  6 => 'NameFilter MatchCriterion',
-  7 => 'NameFilter Name',
-  8 => 'NameRangeFilter FromName',
-  9 => 'NameRangeFilter ToName',
-  10 => 'TotalBalanceFilter Operator',
-  11 => 'TotalBalanceFilter Amount',
-  12 => 'IncludeRetElement',
-  13 => 'OwnerID',
-);
+		static $paths = [
+  'ListID',
+  'FullName',
+  'MaxReturned',
+  'ActiveStatus',
+  'FromModifiedDate',
+  'ToModifiedDate',
+  'NameFilter',
+  'NameFilter MatchCriterion',
+  'NameFilter Name',
+  'NameRangeFilter',
+  'NameRangeFilter FromName',
+  'NameRangeFilter ToName',
+  'TotalBalanceFilter',
+  'TotalBalanceFilter Operator',
+  'TotalBalanceFilter Amount',
+  'CurrencyFilter',
+  'CurrencyFilter ListID',
+  'CurrencyFilter FullName',
+  'ClassFilter',
+  'ClassFilter ListID',
+  'ClassFilter FullName',
+  'ClassFilter ListIDWithChildren',
+  'ClassFilter FullNameWithChildren',
+  'IncludeRetElement',
+  'OwnerID'
+];
 			
 		return $paths;
 	}
 }
-
-?>

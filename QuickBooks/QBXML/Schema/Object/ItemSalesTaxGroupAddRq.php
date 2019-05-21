@@ -27,7 +27,7 @@ class QuickBooks_QBXML_Schema_Object_ItemSalesTaxGroupAddRq extends QuickBooks_Q
 {
 	protected function &_qbxmlWrapper()
 	{
-		static $wrapper = 'ItemSalesTaxGroup';
+		static $wrapper = 'ItemSalesTaxGroupAdd';
 		
 		return $wrapper;
 	}
@@ -36,8 +36,12 @@ class QuickBooks_QBXML_Schema_Object_ItemSalesTaxGroupAddRq extends QuickBooks_Q
 	{
 		static $paths = array (
   'Name' => 'STRTYPE',
+  'BarCode BarCodeValue' => 'STRTYPE',
+  'BarCode AssignEvenIfUsed' => 'BOOLTYPE',
+  'BarCode AllowOverride' => 'BOOLTYPE',
   'IsActive' => 'BOOLTYPE',
   'ItemDesc' => 'STRTYPE',
+  'ExternalGUID' => 'GUIDTYPE',
   'ItemSalesTaxRef ListID' => 'IDTYPE',
   'ItemSalesTaxRef FullName' => 'STRTYPE',
   'IncludeRetElement' => 'STRTYPE',
@@ -50,8 +54,12 @@ class QuickBooks_QBXML_Schema_Object_ItemSalesTaxGroupAddRq extends QuickBooks_Q
 	{
 		static $paths = array (
   'Name' => 31,
+  'BarCode BarCodeValue' => 50,
+  'BarCode AssignEvenIfUsed' => 0,
+  'BarCode AllowOverride' => 0,
   'IsActive' => 0,
   'ItemDesc' => 4095,
+  'ExternalGUID' => 0,
   'ItemSalesTaxRef ListID' => 0,
   'ItemSalesTaxRef FullName' => 31,
   'IncludeRetElement' => 50,
@@ -64,8 +72,12 @@ class QuickBooks_QBXML_Schema_Object_ItemSalesTaxGroupAddRq extends QuickBooks_Q
 	{
 		static $paths = array (
   'Name' => false,
+  'BarCode BarCodeValue' => true,
+  'BarCode AssignEvenIfUsed' => true,
+  'BarCode AllowOverride' => true,
   'IsActive' => true,
   'ItemDesc' => true,
+  'ExternalGUID' => true,
   'ItemSalesTaxRef ListID' => true,
   'ItemSalesTaxRef FullName' => true,
   'IncludeRetElement' => true,
@@ -76,11 +88,15 @@ class QuickBooks_QBXML_Schema_Object_ItemSalesTaxGroupAddRq extends QuickBooks_Q
 	{
 		static $paths = array (
   'Name' => 999.99,
+  'BarCode BarCodeValue' => 999.99,
+  'BarCode AssignEvenIfUsed' => 999.99,
+  'BarCode AllowOverride' => 999.99,
   'IsActive' => 999.99,
   'ItemDesc' => 999.99,
+  'ExternalGUID' => 8.0,
   'ItemSalesTaxRef ListID' => 999.99,
   'ItemSalesTaxRef FullName' => 999.99,
-  'IncludeRetElement' => 4,
+  'IncludeRetElement' => 4.0,
 );
 		
 		return $paths;
@@ -90,8 +106,12 @@ class QuickBooks_QBXML_Schema_Object_ItemSalesTaxGroupAddRq extends QuickBooks_Q
 	{
 		static $paths = array (
   'Name' => false,
+  'BarCode BarCodeValue' => false,
+  'BarCode AssignEvenIfUsed' => false,
+  'BarCode AllowOverride' => false,
   'IsActive' => false,
   'ItemDesc' => false,
+  'ExternalGUID' => false,
   'ItemSalesTaxRef ListID' => false,
   'ItemSalesTaxRef FullName' => false,
   'IncludeRetElement' => true,
@@ -114,18 +134,21 @@ class QuickBooks_QBXML_Schema_Object_ItemSalesTaxGroupAddRq extends QuickBooks_Q
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'Name',
-  1 => 'IsActive',
-  2 => 'ItemDesc',
-  3 => 'ItemSalesTaxRef', 
-  4 => 'ItemSalesTaxRef ListID',
-  5 => 'ItemSalesTaxRef FullName',
-  6 => 'IncludeRetElement',
-);
+		static $paths = [
+  'Name',
+  'BarCode',
+  'BarCode BarCodeValue',
+  'BarCode AssignEvenIfUsed',
+  'BarCode AllowOverride',
+  'IsActive',
+  'ItemDesc',
+  'ExternalGUID',
+  'ItemSalesTaxRef',
+  'ItemSalesTaxRef ListID',
+  'ItemSalesTaxRef FullName',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

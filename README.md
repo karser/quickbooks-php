@@ -81,3 +81,10 @@ There is additional documentation and additional examples on our legacy and new 
 -------------------------------------
 ###Keith Palmer###
 - Follow me on Twitter for updates: https://twitter.com/keith_palmer_jr
+
+
+### Generate QBXML objects ###
+```php
+rm -rf ./QuickBooks/QBXML/Schema/Object/*
+php ./generate.php
+```

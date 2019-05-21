@@ -68,7 +68,7 @@ class QuickBooks_QBXML_Schema_Object_ShipMethodAddRq extends QuickBooks_QBXML_Sc
 		static $paths = array (
   'Name' => 999.99,
   'IsActive' => 999.99,
-  'IncludeRetElement' => 4,
+  'IncludeRetElement' => 4.0,
 );
 		
 		return $paths;
@@ -99,14 +99,12 @@ class QuickBooks_QBXML_Schema_Object_ShipMethodAddRq extends QuickBooks_QBXML_Sc
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'Name',
-  1 => 'IsActive',
-  2 => 'IncludeRetElement',
-);
+		static $paths = [
+  'Name',
+  'IsActive',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

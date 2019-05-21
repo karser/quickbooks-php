@@ -92,7 +92,7 @@ class QuickBooks_QBXML_Schema_Object_SalesTaxCodeAddRq extends QuickBooks_QBXML_
   'ItemPurchaseTaxRef FullName' => 999.99,
   'ItemSalesTaxRef ListID' => 999.99,
   'ItemSalesTaxRef FullName' => 999.99,
-  'IncludeRetElement' => 4,
+  'IncludeRetElement' => 4.0,
 );
 		
 		return $paths;
@@ -129,20 +129,20 @@ class QuickBooks_QBXML_Schema_Object_SalesTaxCodeAddRq extends QuickBooks_QBXML_
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'Name',
-  1 => 'IsActive',
-  2 => 'IsTaxable',
-  3 => 'Desc',
-  4 => 'ItemPurchaseTaxRef ListID',
-  5 => 'ItemPurchaseTaxRef FullName',
-  6 => 'ItemSalesTaxRef ListID',
-  7 => 'ItemSalesTaxRef FullName',
-  8 => 'IncludeRetElement',
-);
+		static $paths = [
+  'Name',
+  'IsActive',
+  'IsTaxable',
+  'Desc',
+  'ItemPurchaseTaxRef',
+  'ItemPurchaseTaxRef ListID',
+  'ItemPurchaseTaxRef FullName',
+  'ItemSalesTaxRef',
+  'ItemSalesTaxRef ListID',
+  'ItemSalesTaxRef FullName',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

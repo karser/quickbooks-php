@@ -123,7 +123,7 @@ class QuickBooks_QBXML_Schema_Object_BuildAssemblyQueryRq extends QuickBooks_QBX
   'TxnID' => 999.99,
   'RefNumber' => 999.99,
   'RefNumberCaseSensitive' => 999.99,
-  'MaxReturned' => 0,
+  'MaxReturned' => 0.0,
   'ModifiedDateRangeFilter FromModifiedDate' => 999.99,
   'ModifiedDateRangeFilter ToModifiedDate' => 999.99,
   'TxnDateRangeFilter FromTxnDate' => 999.99,
@@ -189,32 +189,35 @@ class QuickBooks_QBXML_Schema_Object_BuildAssemblyQueryRq extends QuickBooks_QBX
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'TxnID',
-  1 => 'RefNumber',
-  2 => 'RefNumberCaseSensitive',
-  3 => 'MaxReturned',
-  4 => 'ModifiedDateRangeFilter FromModifiedDate',
-  5 => 'ModifiedDateRangeFilter ToModifiedDate',
-  6 => 'TxnDateRangeFilter FromTxnDate',
-  7 => 'TxnDateRangeFilter ToTxnDate',
-  8 => 'TxnDateRangeFilter DateMacro',
-  9 => 'ItemFilter ListID',
-  10 => 'ItemFilter FullName',
-  11 => 'ItemFilter ListIDWithChildren',
-  12 => 'ItemFilter FullNameWithChildren',
-  13 => 'RefNumberFilter MatchCriterion',
-  14 => 'RefNumberFilter RefNumber',
-  15 => 'RefNumberRangeFilter FromRefNumber',
-  16 => 'RefNumberRangeFilter ToRefNumber',
-  17 => 'PendingStatus',
-  18 => 'IncludeComponentLineItems',
-  19 => 'IncludeRetElement',
-  20 => 'OwnerID',
-);
+		static $paths = [
+  'TxnID',
+  'RefNumber',
+  'RefNumberCaseSensitive',
+  'MaxReturned',
+  'ModifiedDateRangeFilter',
+  'ModifiedDateRangeFilter FromModifiedDate',
+  'ModifiedDateRangeFilter ToModifiedDate',
+  'TxnDateRangeFilter',
+  'TxnDateRangeFilter FromTxnDate',
+  'TxnDateRangeFilter ToTxnDate',
+  'TxnDateRangeFilter DateMacro',
+  'ItemFilter',
+  'ItemFilter ListID',
+  'ItemFilter FullName',
+  'ItemFilter ListIDWithChildren',
+  'ItemFilter FullNameWithChildren',
+  'RefNumberFilter',
+  'RefNumberFilter MatchCriterion',
+  'RefNumberFilter RefNumber',
+  'RefNumberRangeFilter',
+  'RefNumberRangeFilter FromRefNumber',
+  'RefNumberRangeFilter ToRefNumber',
+  'PendingStatus',
+  'IncludeComponentLineItems',
+  'IncludeRetElement',
+  'OwnerID'
+];
 			
 		return $paths;
 	}
 }
-
-?>

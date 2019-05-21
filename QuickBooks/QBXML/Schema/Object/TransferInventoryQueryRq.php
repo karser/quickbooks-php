@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Schema object for: InvoiceQueryRq
+ * Schema object for: TransferInventoryQueryRq
  * 
  * @author "Keith Palmer Jr." <Keith@ConsoliByte.com>
  * @license LICENSE.txt
@@ -23,7 +23,7 @@ require_once 'QuickBooks/QBXML/Schema/Object.php';
 /**
  * 
  */
-class QuickBooks_QBXML_Schema_Object_InvoiceQueryRq extends QuickBooks_QBXML_Schema_Object
+class QuickBooks_QBXML_Schema_Object_TransferInventoryQueryRq extends QuickBooks_QBXML_Schema_Object
 {
 	protected function &_qbxmlWrapper()
 	{
@@ -56,11 +56,10 @@ class QuickBooks_QBXML_Schema_Object_InvoiceQueryRq extends QuickBooks_QBXML_Sch
   'RefNumberFilter RefNumber' => 'STRTYPE',
   'RefNumberRangeFilter FromRefNumber' => 'STRTYPE',
   'RefNumberRangeFilter ToRefNumber' => 'STRTYPE',
-  'PaidStatus' => 'ENUMTYPE',
+  'SiteFilter ListID' => 'IDTYPE',
+  'SiteFilter FullName' => 'STRTYPE',
   'IncludeLineItems' => 'BOOLTYPE',
-  'IncludeLinkedTxns' => 'BOOLTYPE',
   'IncludeRetElement' => 'STRTYPE',
-  'OwnerID' => 'GUIDTYPE',
 );
 		
 		return $paths;
@@ -90,11 +89,10 @@ class QuickBooks_QBXML_Schema_Object_InvoiceQueryRq extends QuickBooks_QBXML_Sch
   'RefNumberFilter RefNumber' => 0,
   'RefNumberRangeFilter FromRefNumber' => 0,
   'RefNumberRangeFilter ToRefNumber' => 0,
-  'PaidStatus' => 0,
+  'SiteFilter ListID' => 0,
+  'SiteFilter FullName' => 0,
   'IncludeLineItems' => 0,
-  'IncludeLinkedTxns' => 0,
-  'IncludeRetElement' => 50,
-  'OwnerID' => 0,
+  'IncludeRetElement' => 0,
 );
 		
 		return $paths;
@@ -124,11 +122,10 @@ class QuickBooks_QBXML_Schema_Object_InvoiceQueryRq extends QuickBooks_QBXML_Sch
   'RefNumberFilter RefNumber' => false,
   'RefNumberRangeFilter FromRefNumber' => true,
   'RefNumberRangeFilter ToRefNumber' => true,
-  'PaidStatus' => true,
+  'SiteFilter ListID' => false,
+  'SiteFilter FullName' => false,
   'IncludeLineItems' => true,
-  'IncludeLinkedTxns' => true,
   'IncludeRetElement' => true,
-  'OwnerID' => true,
 );
 	}
 	
@@ -137,30 +134,29 @@ class QuickBooks_QBXML_Schema_Object_InvoiceQueryRq extends QuickBooks_QBXML_Sch
 		static $paths = array (
   'TxnID' => 999.99,
   'RefNumber' => 999.99,
-  'RefNumberCaseSensitive' => 4,
-  'MaxReturned' => 0,
+  'RefNumberCaseSensitive' => 999.99,
+  'MaxReturned' => 0.0,
   'ModifiedDateRangeFilter FromModifiedDate' => 999.99,
   'ModifiedDateRangeFilter ToModifiedDate' => 999.99,
   'TxnDateRangeFilter FromTxnDate' => 999.99,
   'TxnDateRangeFilter ToTxnDate' => 999.99,
   'TxnDateRangeFilter DateMacro' => 999.99,
-  'EntityFilter ListID' => 2,
+  'EntityFilter ListID' => 2.0,
   'EntityFilter FullName' => 999.99,
-  'EntityFilter ListIDWithChildren' => 2,
+  'EntityFilter ListIDWithChildren' => 2.0,
   'EntityFilter FullNameWithChildren' => 999.99,
-  'AccountFilter ListID' => 2,
+  'AccountFilter ListID' => 2.0,
   'AccountFilter FullName' => 999.99,
-  'AccountFilter ListIDWithChildren' => 2,
+  'AccountFilter ListIDWithChildren' => 2.0,
   'AccountFilter FullNameWithChildren' => 999.99,
   'RefNumberFilter MatchCriterion' => 999.99,
   'RefNumberFilter RefNumber' => 999.99,
   'RefNumberRangeFilter FromRefNumber' => 999.99,
   'RefNumberRangeFilter ToRefNumber' => 999.99,
-  'PaidStatus' => 999.99,
+  'SiteFilter ListID' => 2.0,
+  'SiteFilter FullName' => 999.99,
   'IncludeLineItems' => 999.99,
-  'IncludeLinkedTxns' => 1.1,
-  'IncludeRetElement' => 4,
-  'OwnerID' => 2,
+  'IncludeRetElement' => 999.99,
 );
 		
 		return $paths;
@@ -190,11 +186,10 @@ class QuickBooks_QBXML_Schema_Object_InvoiceQueryRq extends QuickBooks_QBXML_Sch
   'RefNumberFilter RefNumber' => true,
   'RefNumberRangeFilter FromRefNumber' => false,
   'RefNumberRangeFilter ToRefNumber' => false,
-  'PaidStatus' => false,
+  'SiteFilter ListID' => true,
+  'SiteFilter FullName' => true,
   'IncludeLineItems' => false,
-  'IncludeLinkedTxns' => false,
   'IncludeRetElement' => true,
-  'OwnerID' => true,
 );
 			
 		return $paths;
@@ -214,37 +209,41 @@ class QuickBooks_QBXML_Schema_Object_InvoiceQueryRq extends QuickBooks_QBXML_Sch
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'TxnID',
-  1 => 'RefNumber',
-  2 => 'RefNumberCaseSensitive',
-  3 => 'MaxReturned',
-  4 => 'ModifiedDateRangeFilter FromModifiedDate',
-  5 => 'ModifiedDateRangeFilter ToModifiedDate',
-  6 => 'TxnDateRangeFilter FromTxnDate',
-  7 => 'TxnDateRangeFilter ToTxnDate',
-  8 => 'TxnDateRangeFilter DateMacro',
-  9 => 'EntityFilter ListID',
-  10 => 'EntityFilter FullName',
-  11 => 'EntityFilter ListIDWithChildren',
-  12 => 'EntityFilter FullNameWithChildren',
-  13 => 'AccountFilter ListID',
-  14 => 'AccountFilter FullName',
-  15 => 'AccountFilter ListIDWithChildren',
-  16 => 'AccountFilter FullNameWithChildren',
-  17 => 'RefNumberFilter MatchCriterion',
-  18 => 'RefNumberFilter RefNumber',
-  19 => 'RefNumberRangeFilter FromRefNumber',
-  20 => 'RefNumberRangeFilter ToRefNumber',
-  21 => 'PaidStatus',
-  22 => 'IncludeLineItems',
-  23 => 'IncludeLinkedTxns',
-  24 => 'IncludeRetElement',
-  25 => 'OwnerID',
-);
+		static $paths = [
+  'TxnID',
+  'RefNumber',
+  'RefNumberCaseSensitive',
+  'MaxReturned',
+  'ModifiedDateRangeFilter',
+  'ModifiedDateRangeFilter FromModifiedDate',
+  'ModifiedDateRangeFilter ToModifiedDate',
+  'TxnDateRangeFilter',
+  'TxnDateRangeFilter FromTxnDate',
+  'TxnDateRangeFilter ToTxnDate',
+  'TxnDateRangeFilter DateMacro',
+  'EntityFilter',
+  'EntityFilter ListID',
+  'EntityFilter FullName',
+  'EntityFilter ListIDWithChildren',
+  'EntityFilter FullNameWithChildren',
+  'AccountFilter',
+  'AccountFilter ListID',
+  'AccountFilter FullName',
+  'AccountFilter ListIDWithChildren',
+  'AccountFilter FullNameWithChildren',
+  'RefNumberFilter',
+  'RefNumberFilter MatchCriterion',
+  'RefNumberFilter RefNumber',
+  'RefNumberRangeFilter',
+  'RefNumberRangeFilter FromRefNumber',
+  'RefNumberRangeFilter ToRefNumber',
+  'SiteFilter',
+  'SiteFilter ListID',
+  'SiteFilter FullName',
+  'IncludeLineItems',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

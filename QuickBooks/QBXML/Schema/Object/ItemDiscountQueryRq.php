@@ -45,6 +45,10 @@ class QuickBooks_QBXML_Schema_Object_ItemDiscountQueryRq extends QuickBooks_QBXM
   'NameFilter Name' => 'STRTYPE',
   'NameRangeFilter FromName' => 'STRTYPE',
   'NameRangeFilter ToName' => 'STRTYPE',
+  'ClassFilter ListID' => 'IDTYPE',
+  'ClassFilter FullName' => 'STRTYPE',
+  'ClassFilter ListIDWithChildren' => 'IDTYPE',
+  'ClassFilter FullNameWithChildren' => 'STRTYPE',
   'IncludeRetElement' => 'STRTYPE',
   'OwnerID' => 'GUIDTYPE',
 );
@@ -65,6 +69,10 @@ class QuickBooks_QBXML_Schema_Object_ItemDiscountQueryRq extends QuickBooks_QBXM
   'NameFilter Name' => 0,
   'NameRangeFilter FromName' => 0,
   'NameRangeFilter ToName' => 0,
+  'ClassFilter ListID' => 0,
+  'ClassFilter FullName' => 0,
+  'ClassFilter ListIDWithChildren' => 0,
+  'ClassFilter FullNameWithChildren' => 0,
   'IncludeRetElement' => 50,
   'OwnerID' => 0,
 );
@@ -85,6 +93,10 @@ class QuickBooks_QBXML_Schema_Object_ItemDiscountQueryRq extends QuickBooks_QBXM
   'NameFilter Name' => false,
   'NameRangeFilter FromName' => true,
   'NameRangeFilter ToName' => true,
+  'ClassFilter ListID' => false,
+  'ClassFilter FullName' => false,
+  'ClassFilter ListIDWithChildren' => false,
+  'ClassFilter FullNameWithChildren' => false,
   'IncludeRetElement' => true,
   'OwnerID' => true,
 );
@@ -95,7 +107,7 @@ class QuickBooks_QBXML_Schema_Object_ItemDiscountQueryRq extends QuickBooks_QBXM
 		static $paths = array (
   'ListID' => 999.99,
   'FullName' => 999.99,
-  'MaxReturned' => 0,
+  'MaxReturned' => 0.0,
   'ActiveStatus' => 999.99,
   'FromModifiedDate' => 999.99,
   'ToModifiedDate' => 999.99,
@@ -103,8 +115,12 @@ class QuickBooks_QBXML_Schema_Object_ItemDiscountQueryRq extends QuickBooks_QBXM
   'NameFilter Name' => 999.99,
   'NameRangeFilter FromName' => 999.99,
   'NameRangeFilter ToName' => 999.99,
-  'IncludeRetElement' => 4,
-  'OwnerID' => 2,
+  'ClassFilter ListID' => 999.99,
+  'ClassFilter FullName' => 999.99,
+  'ClassFilter ListIDWithChildren' => 999.99,
+  'ClassFilter FullNameWithChildren' => 999.99,
+  'IncludeRetElement' => 4.0,
+  'OwnerID' => 2.0,
 );
 		
 		return $paths;
@@ -123,6 +139,10 @@ class QuickBooks_QBXML_Schema_Object_ItemDiscountQueryRq extends QuickBooks_QBXM
   'NameFilter Name' => false,
   'NameRangeFilter FromName' => false,
   'NameRangeFilter ToName' => false,
+  'ClassFilter ListID' => true,
+  'ClassFilter FullName' => true,
+  'ClassFilter ListIDWithChildren' => false,
+  'ClassFilter FullNameWithChildren' => false,
   'IncludeRetElement' => true,
   'OwnerID' => true,
 );
@@ -144,23 +164,28 @@ class QuickBooks_QBXML_Schema_Object_ItemDiscountQueryRq extends QuickBooks_QBXM
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'ListID',
-  1 => 'FullName',
-  2 => 'MaxReturned',
-  3 => 'ActiveStatus',
-  4 => 'FromModifiedDate',
-  5 => 'ToModifiedDate',
-  6 => 'NameFilter MatchCriterion',
-  7 => 'NameFilter Name',
-  8 => 'NameRangeFilter FromName',
-  9 => 'NameRangeFilter ToName',
-  10 => 'IncludeRetElement',
-  11 => 'OwnerID',
-);
+		static $paths = [
+  'ListID',
+  'FullName',
+  'MaxReturned',
+  'ActiveStatus',
+  'FromModifiedDate',
+  'ToModifiedDate',
+  'NameFilter',
+  'NameFilter MatchCriterion',
+  'NameFilter Name',
+  'NameRangeFilter',
+  'NameRangeFilter FromName',
+  'NameRangeFilter ToName',
+  'ClassFilter',
+  'ClassFilter ListID',
+  'ClassFilter FullName',
+  'ClassFilter ListIDWithChildren',
+  'ClassFilter FullNameWithChildren',
+  'IncludeRetElement',
+  'OwnerID'
+];
 			
 		return $paths;
 	}
 }
-
-?>

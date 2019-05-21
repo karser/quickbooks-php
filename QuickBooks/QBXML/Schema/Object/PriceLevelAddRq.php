@@ -27,7 +27,7 @@ class QuickBooks_QBXML_Schema_Object_PriceLevelAddRq extends QuickBooks_QBXML_Sc
 {
 	protected function &_qbxmlWrapper()
 	{
-		static $wrapper = '';
+		static $wrapper = 'PriceLevelAdd';
 		
 		return $wrapper;
 	}
@@ -35,15 +35,17 @@ class QuickBooks_QBXML_Schema_Object_PriceLevelAddRq extends QuickBooks_QBXML_Sc
 	protected function &_dataTypePaths()
 	{
 		static $paths = array (
-  'PriceLevelAdd Name' => 'STRTYPE',
-  'PriceLevelAdd IsActive' => 'BOOLTYPE',
-  'PriceLevelAdd PriceLevelFixedPercentage' => 'PERCENTTYPE',
-  'PriceLevelAdd PriceLevelPerItem ItemRef ListID' => 'IDTYPE',
-  'PriceLevelAdd PriceLevelPerItem ItemRef FullName' => 'STRTYPE',
-  'PriceLevelAdd PriceLevelPerItem CustomPrice' => 'PRICETYPE',
-  'PriceLevelAdd PriceLevelPerItem CustomPricePercent' => 'PERCENTTYPE',
-  'PriceLevelAdd PriceLevelPerItem AdjustPercentage' => 'PERCENTTYPE',
-  'PriceLevelAdd PriceLevelPerItem AdjustRelativeTo' => 'ENUMTYPE',
+  'Name' => 'STRTYPE',
+  'IsActive' => 'BOOLTYPE',
+  'PriceLevelFixedPercentage' => 'PERCENTTYPE',
+  'PriceLevelPerItem ItemRef ListID' => 'IDTYPE',
+  'PriceLevelPerItem ItemRef FullName' => 'STRTYPE',
+  'PriceLevelPerItem CustomPrice' => 'PRICETYPE',
+  'PriceLevelPerItem CustomPricePercent' => 'PERCENTTYPE',
+  'PriceLevelPerItem AdjustPercentage' => 'PERCENTTYPE',
+  'PriceLevelPerItem AdjustRelativeTo' => 'ENUMTYPE',
+  'CurrencyRef ListID' => 'IDTYPE',
+  'CurrencyRef FullName' => 'STRTYPE',
   'IncludeRetElement' => 'STRTYPE',
 );
 		
@@ -53,15 +55,17 @@ class QuickBooks_QBXML_Schema_Object_PriceLevelAddRq extends QuickBooks_QBXML_Sc
 	protected function &_maxLengthPaths()
 	{
 		static $paths = array (
-  'PriceLevelAdd Name' => 31,
-  'PriceLevelAdd IsActive' => 0,
-  'PriceLevelAdd PriceLevelFixedPercentage' => 0,
-  'PriceLevelAdd PriceLevelPerItem ItemRef ListID' => 0,
-  'PriceLevelAdd PriceLevelPerItem ItemRef FullName' => 0,
-  'PriceLevelAdd PriceLevelPerItem CustomPrice' => 0,
-  'PriceLevelAdd PriceLevelPerItem CustomPricePercent' => 0,
-  'PriceLevelAdd PriceLevelPerItem AdjustPercentage' => 0,
-  'PriceLevelAdd PriceLevelPerItem AdjustRelativeTo' => 0,
+  'Name' => 31,
+  'IsActive' => 0,
+  'PriceLevelFixedPercentage' => 0,
+  'PriceLevelPerItem ItemRef ListID' => 0,
+  'PriceLevelPerItem ItemRef FullName' => 0,
+  'PriceLevelPerItem CustomPrice' => 0,
+  'PriceLevelPerItem CustomPricePercent' => 0,
+  'PriceLevelPerItem AdjustPercentage' => 0,
+  'PriceLevelPerItem AdjustRelativeTo' => 0,
+  'CurrencyRef ListID' => 0,
+  'CurrencyRef FullName' => 0,
   'IncludeRetElement' => 50,
 );
 		
@@ -71,15 +75,17 @@ class QuickBooks_QBXML_Schema_Object_PriceLevelAddRq extends QuickBooks_QBXML_Sc
 	protected function &_isOptionalPaths()
 	{
 		static $paths = array (
-  'PriceLevelAdd Name' => false,
-  'PriceLevelAdd IsActive' => true,
-  'PriceLevelAdd PriceLevelFixedPercentage' => false,
-  'PriceLevelAdd PriceLevelPerItem ItemRef ListID' => true,
-  'PriceLevelAdd PriceLevelPerItem ItemRef FullName' => true,
-  'PriceLevelAdd PriceLevelPerItem CustomPrice' => false,
-  'PriceLevelAdd PriceLevelPerItem CustomPricePercent' => false,
-  'PriceLevelAdd PriceLevelPerItem AdjustPercentage' => false,
-  'PriceLevelAdd PriceLevelPerItem AdjustRelativeTo' => false,
+  'Name' => false,
+  'IsActive' => true,
+  'PriceLevelFixedPercentage' => false,
+  'PriceLevelPerItem ItemRef ListID' => true,
+  'PriceLevelPerItem ItemRef FullName' => true,
+  'PriceLevelPerItem CustomPrice' => false,
+  'PriceLevelPerItem CustomPricePercent' => false,
+  'PriceLevelPerItem AdjustPercentage' => false,
+  'PriceLevelPerItem AdjustRelativeTo' => false,
+  'CurrencyRef ListID' => true,
+  'CurrencyRef FullName' => true,
   'IncludeRetElement' => true,
 );
 	}
@@ -87,15 +93,17 @@ class QuickBooks_QBXML_Schema_Object_PriceLevelAddRq extends QuickBooks_QBXML_Sc
 	protected function &_sinceVersionPaths()
 	{
 		static $paths = array (
-  'PriceLevelAdd Name' => 999.99,
-  'PriceLevelAdd IsActive' => 999.99,
-  'PriceLevelAdd PriceLevelFixedPercentage' => 999.99,
-  'PriceLevelAdd PriceLevelPerItem ItemRef ListID' => 999.99,
-  'PriceLevelAdd PriceLevelPerItem ItemRef FullName' => 999.99,
-  'PriceLevelAdd PriceLevelPerItem CustomPrice' => 999.99,
-  'PriceLevelAdd PriceLevelPerItem CustomPricePercent' => 999.99,
-  'PriceLevelAdd PriceLevelPerItem AdjustPercentage' => 999.99,
-  'PriceLevelAdd PriceLevelPerItem AdjustRelativeTo' => 999.99,
+  'Name' => 999.99,
+  'IsActive' => 999.99,
+  'PriceLevelFixedPercentage' => 999.99,
+  'PriceLevelPerItem ItemRef ListID' => 999.99,
+  'PriceLevelPerItem ItemRef FullName' => 999.99,
+  'PriceLevelPerItem CustomPrice' => 999.99,
+  'PriceLevelPerItem CustomPricePercent' => 999.99,
+  'PriceLevelPerItem AdjustPercentage' => 999.99,
+  'PriceLevelPerItem AdjustRelativeTo' => 999.99,
+  'CurrencyRef ListID' => 999.99,
+  'CurrencyRef FullName' => 999.99,
   'IncludeRetElement' => 999.99,
 );
 		
@@ -105,15 +113,17 @@ class QuickBooks_QBXML_Schema_Object_PriceLevelAddRq extends QuickBooks_QBXML_Sc
 	protected function &_isRepeatablePaths()
 	{
 		static $paths = array (
-  'PriceLevelAdd Name' => false,
-  'PriceLevelAdd IsActive' => false,
-  'PriceLevelAdd PriceLevelFixedPercentage' => false,
-  'PriceLevelAdd PriceLevelPerItem ItemRef ListID' => false,
-  'PriceLevelAdd PriceLevelPerItem ItemRef FullName' => false,
-  'PriceLevelAdd PriceLevelPerItem CustomPrice' => false,
-  'PriceLevelAdd PriceLevelPerItem CustomPricePercent' => false,
-  'PriceLevelAdd PriceLevelPerItem AdjustPercentage' => false,
-  'PriceLevelAdd PriceLevelPerItem AdjustRelativeTo' => false,
+  'Name' => false,
+  'IsActive' => false,
+  'PriceLevelFixedPercentage' => false,
+  'PriceLevelPerItem ItemRef ListID' => false,
+  'PriceLevelPerItem ItemRef FullName' => false,
+  'PriceLevelPerItem CustomPrice' => false,
+  'PriceLevelPerItem CustomPricePercent' => false,
+  'PriceLevelPerItem AdjustPercentage' => false,
+  'PriceLevelPerItem AdjustRelativeTo' => false,
+  'CurrencyRef ListID' => false,
+  'CurrencyRef FullName' => false,
   'IncludeRetElement' => true,
 );
 			
@@ -134,24 +144,24 @@ class QuickBooks_QBXML_Schema_Object_PriceLevelAddRq extends QuickBooks_QBXML_Sc
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'PriceLevelAdd Name',
-  1 => 'PriceLevelAdd IsActive',
-  2 => 'PriceLevelAdd PriceLevelFixedPercentage',
-  3 => 'PriceLevelAdd',
-  4 => 'PriceLevelAdd PriceLevelPerItem',
-  5 => 'PriceLevelAdd PriceLevelPerItem ItemRef',
-  6 => 'PriceLevelAdd PriceLevelPerItem ItemRef ListID',
-  7 => 'PriceLevelAdd PriceLevelPerItem ItemRef FullName',
-  8 => 'PriceLevelAdd PriceLevelPerItem CustomPrice',
-  9 => 'PriceLevelAdd PriceLevelPerItem CustomPricePercent',
-  10 => 'PriceLevelAdd PriceLevelPerItem AdjustPercentage',
-  11 => 'PriceLevelAdd PriceLevelPerItem AdjustRelativeTo',
-  12 => 'IncludeRetElement',
-);
+		static $paths = [
+  'Name',
+  'IsActive',
+  'PriceLevelFixedPercentage',
+  'PriceLevelPerItem',
+  'PriceLevelPerItem ItemRef',
+  'PriceLevelPerItem ItemRef ListID',
+  'PriceLevelPerItem ItemRef FullName',
+  'PriceLevelPerItem CustomPrice',
+  'PriceLevelPerItem CustomPricePercent',
+  'PriceLevelPerItem AdjustPercentage',
+  'PriceLevelPerItem AdjustRelativeTo',
+  'CurrencyRef',
+  'CurrencyRef ListID',
+  'CurrencyRef FullName',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

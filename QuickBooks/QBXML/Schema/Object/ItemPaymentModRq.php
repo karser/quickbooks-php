@@ -38,7 +38,12 @@ class QuickBooks_QBXML_Schema_Object_ItemPaymentModRq extends QuickBooks_QBXML_S
   'ListID' => 'IDTYPE',
   'EditSequence' => 'STRTYPE',
   'Name' => 'STRTYPE',
+  'BarCode BarCodeValue' => 'STRTYPE',
+  'BarCode AssignEvenIfUsed' => 'BOOLTYPE',
+  'BarCode AllowOverride' => 'BOOLTYPE',
   'IsActive' => 'BOOLTYPE',
+  'ClassRef ListID' => 'IDTYPE',
+  'ClassRef FullName' => 'STRTYPE',
   'ItemDesc' => 'STRTYPE',
   'DepositToAccountRef ListID' => 'IDTYPE',
   'DepositToAccountRef FullName' => 'STRTYPE',
@@ -56,7 +61,12 @@ class QuickBooks_QBXML_Schema_Object_ItemPaymentModRq extends QuickBooks_QBXML_S
   'ListID' => 0,
   'EditSequence' => 16,
   'Name' => 31,
+  'BarCode BarCodeValue' => 50,
+  'BarCode AssignEvenIfUsed' => 0,
+  'BarCode AllowOverride' => 0,
   'IsActive' => 0,
+  'ClassRef ListID' => 0,
+  'ClassRef FullName' => 159,
   'ItemDesc' => 4095,
   'DepositToAccountRef ListID' => 0,
   'DepositToAccountRef FullName' => 159,
@@ -74,7 +84,12 @@ class QuickBooks_QBXML_Schema_Object_ItemPaymentModRq extends QuickBooks_QBXML_S
   'ListID' => false,
   'EditSequence' => false,
   'Name' => true,
+  'BarCode BarCodeValue' => true,
+  'BarCode AssignEvenIfUsed' => true,
+  'BarCode AllowOverride' => true,
   'IsActive' => true,
+  'ClassRef ListID' => false,
+  'ClassRef FullName' => true,
   'ItemDesc' => true,
   'DepositToAccountRef ListID' => false,
   'DepositToAccountRef FullName' => true,
@@ -90,13 +105,18 @@ class QuickBooks_QBXML_Schema_Object_ItemPaymentModRq extends QuickBooks_QBXML_S
   'ListID' => 999.99,
   'EditSequence' => 999.99,
   'Name' => 999.99,
+  'BarCode BarCodeValue' => 999.99,
+  'BarCode AssignEvenIfUsed' => 999.99,
+  'BarCode AllowOverride' => 999.99,
   'IsActive' => 999.99,
+  'ClassRef ListID' => 999.99,
+  'ClassRef FullName' => 999.99,
   'ItemDesc' => 999.99,
   'DepositToAccountRef ListID' => 999.99,
   'DepositToAccountRef FullName' => 999.99,
   'PaymentMethodRef ListID' => 999.99,
   'PaymentMethodRef FullName' => 999.99,
-  'IncludeRetElement' => 4,
+  'IncludeRetElement' => 4.0,
 );
 		
 		return $paths;
@@ -108,7 +128,12 @@ class QuickBooks_QBXML_Schema_Object_ItemPaymentModRq extends QuickBooks_QBXML_S
   'ListID' => false,
   'EditSequence' => false,
   'Name' => false,
+  'BarCode BarCodeValue' => false,
+  'BarCode AssignEvenIfUsed' => false,
+  'BarCode AllowOverride' => false,
   'IsActive' => false,
+  'ClassRef ListID' => false,
+  'ClassRef FullName' => false,
   'ItemDesc' => false,
   'DepositToAccountRef ListID' => false,
   'DepositToAccountRef FullName' => false,
@@ -134,21 +159,28 @@ class QuickBooks_QBXML_Schema_Object_ItemPaymentModRq extends QuickBooks_QBXML_S
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'ListID',
-  1 => 'EditSequence',
-  2 => 'Name',
-  3 => 'IsActive',
-  4 => 'ItemDesc',
-  5 => 'DepositToAccountRef ListID',
-  6 => 'DepositToAccountRef FullName',
-  7 => 'PaymentMethodRef ListID',
-  8 => 'PaymentMethodRef FullName',
-  9 => 'IncludeRetElement',
-);
+		static $paths = [
+  'ListID',
+  'EditSequence',
+  'Name',
+  'BarCode',
+  'BarCode BarCodeValue',
+  'BarCode AssignEvenIfUsed',
+  'BarCode AllowOverride',
+  'IsActive',
+  'ClassRef',
+  'ClassRef ListID',
+  'ClassRef FullName',
+  'ItemDesc',
+  'DepositToAccountRef',
+  'DepositToAccountRef ListID',
+  'DepositToAccountRef FullName',
+  'PaymentMethodRef',
+  'PaymentMethodRef ListID',
+  'PaymentMethodRef FullName',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

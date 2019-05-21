@@ -94,13 +94,11 @@ class QuickBooks_QBXML_Schema_Object_DataExtDefDelRq extends QuickBooks_QBXML_Sc
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'OwnerID',
-  1 => 'DataExtName',
-);
+		static $paths = [
+  'OwnerID',
+  'DataExtName'
+];
 			
 		return $paths;
 	}
 }
-
-?>

@@ -94,13 +94,11 @@ class QuickBooks_QBXML_Schema_Object_TxnVoidRq extends QuickBooks_QBXML_Schema_O
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'TxnVoidType',
-  1 => 'TxnID',
-);
+		static $paths = [
+  'TxnVoidType',
+  'TxnID'
+];
 			
 		return $paths;
 	}
 }
-
-?>

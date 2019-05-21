@@ -95,7 +95,7 @@ class QuickBooks_QBXML_Schema_Object_BillingRateQueryRq extends QuickBooks_QBXML
 		static $paths = array (
   'ListID' => 999.99,
   'FullName' => 999.99,
-  'MaxReturned' => 0,
+  'MaxReturned' => 0.0,
   'FromModifiedDate' => 999.99,
   'ToModifiedDate' => 999.99,
   'NameFilter MatchCriterion' => 999.99,
@@ -144,23 +144,24 @@ class QuickBooks_QBXML_Schema_Object_BillingRateQueryRq extends QuickBooks_QBXML
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'ListID',
-  1 => 'FullName',
-  2 => 'MaxReturned',
-  3 => 'FromModifiedDate',
-  4 => 'ToModifiedDate',
-  5 => 'NameFilter MatchCriterion',
-  6 => 'NameFilter Name',
-  7 => 'NameRangeFilter FromName',
-  8 => 'NameRangeFilter ToName',
-  9 => 'ItemRef ListID',
-  10 => 'ItemRef FullName',
-  11 => 'IncludeRetElement',
-);
+		static $paths = [
+  'ListID',
+  'FullName',
+  'MaxReturned',
+  'FromModifiedDate',
+  'ToModifiedDate',
+  'NameFilter',
+  'NameFilter MatchCriterion',
+  'NameFilter Name',
+  'NameRangeFilter',
+  'NameRangeFilter FromName',
+  'NameRangeFilter ToName',
+  'ItemRef',
+  'ItemRef ListID',
+  'ItemRef FullName',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

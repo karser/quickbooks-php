@@ -35,7 +35,7 @@ class QuickBooks_QBXML_Schema_Object_PreferencesQueryRq extends QuickBooks_QBXML
 	protected function &_dataTypePaths()
 	{
 		static $paths = array (
-  'AccountingPreferences IsRequiringAccounts' => 'BOOLTYPE', 
+  'IncludeRetElement' => 'STRTYPE',
 );
 		
 		return $paths;
@@ -60,7 +60,7 @@ class QuickBooks_QBXML_Schema_Object_PreferencesQueryRq extends QuickBooks_QBXML
 	protected function &_sinceVersionPaths()
 	{
 		static $paths = array (
-  'IncludeRetElement' => 4,
+  'IncludeRetElement' => 4.0,
 );
 		
 		return $paths;
@@ -89,12 +89,10 @@ class QuickBooks_QBXML_Schema_Object_PreferencesQueryRq extends QuickBooks_QBXML
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'IncludeRetElement',
-);
+		static $paths = [
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

@@ -40,6 +40,8 @@ class QuickBooks_QBXML_Schema_Object_BillToPayQueryRq extends QuickBooks_QBXML_S
   'APAccountRef ListID' => 'IDTYPE',
   'APAccountRef FullName' => 'STRTYPE',
   'DueDate' => 'DATETYPE',
+  'CurrencyFilter ListID' => 'IDTYPE',
+  'CurrencyFilter FullName' => 'STRTYPE',
   'IncludeRetElement' => 'STRTYPE',
 );
 		
@@ -54,6 +56,8 @@ class QuickBooks_QBXML_Schema_Object_BillToPayQueryRq extends QuickBooks_QBXML_S
   'APAccountRef ListID' => 0,
   'APAccountRef FullName' => 209,
   'DueDate' => 0,
+  'CurrencyFilter ListID' => 0,
+  'CurrencyFilter FullName' => 209,
   'IncludeRetElement' => 50,
 );
 		
@@ -68,6 +72,8 @@ class QuickBooks_QBXML_Schema_Object_BillToPayQueryRq extends QuickBooks_QBXML_S
   'APAccountRef ListID' => true,
   'APAccountRef FullName' => true,
   'DueDate' => true,
+  'CurrencyFilter ListID' => true,
+  'CurrencyFilter FullName' => true,
   'IncludeRetElement' => true,
 );
 	}
@@ -80,7 +86,9 @@ class QuickBooks_QBXML_Schema_Object_BillToPayQueryRq extends QuickBooks_QBXML_S
   'APAccountRef ListID' => 999.99,
   'APAccountRef FullName' => 999.99,
   'DueDate' => 999.99,
-  'IncludeRetElement' => 4,
+  'CurrencyFilter ListID' => 999.99,
+  'CurrencyFilter FullName' => 999.99,
+  'IncludeRetElement' => 4.0,
 );
 		
 		return $paths;
@@ -94,6 +102,8 @@ class QuickBooks_QBXML_Schema_Object_BillToPayQueryRq extends QuickBooks_QBXML_S
   'APAccountRef ListID' => false,
   'APAccountRef FullName' => false,
   'DueDate' => false,
+  'CurrencyFilter ListID' => false,
+  'CurrencyFilter FullName' => false,
   'IncludeRetElement' => true,
 );
 			
@@ -114,17 +124,20 @@ class QuickBooks_QBXML_Schema_Object_BillToPayQueryRq extends QuickBooks_QBXML_S
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'PayeeEntityRef ListID',
-  1 => 'PayeeEntityRef FullName',
-  2 => 'APAccountRef ListID',
-  3 => 'APAccountRef FullName',
-  4 => 'DueDate',
-  5 => 'IncludeRetElement',
-);
+		static $paths = [
+  'PayeeEntityRef',
+  'PayeeEntityRef ListID',
+  'PayeeEntityRef FullName',
+  'APAccountRef',
+  'APAccountRef ListID',
+  'APAccountRef FullName',
+  'DueDate',
+  'CurrencyFilter',
+  'CurrencyFilter ListID',
+  'CurrencyFilter FullName',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

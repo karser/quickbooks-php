@@ -27,7 +27,7 @@ class QuickBooks_QBXML_Schema_Object_PaymentMethodAddRq extends QuickBooks_QBXML
 {
 	protected function &_qbxmlWrapper()
 	{
-		static $wrapper = '';
+		static $wrapper = 'PaymentMethodAdd';
 		
 		return $wrapper;
 	}
@@ -35,10 +35,11 @@ class QuickBooks_QBXML_Schema_Object_PaymentMethodAddRq extends QuickBooks_QBXML
 	protected function &_dataTypePaths()
 	{
 		static $paths = array (
-			'Name' => 'STRTYPE',
-			'IsActive' => 'BOOLTYPE',
-			'PaymentMethodType' => 'ENUMTYPE',
-		);
+  'Name' => 'STRTYPE',
+  'IsActive' => 'BOOLTYPE',
+  'PaymentMethodType' => 'ENUMTYPE',
+  'IncludeRetElement' => 'STRTYPE',
+);
 		
 		return $paths;
 	}
@@ -46,10 +47,11 @@ class QuickBooks_QBXML_Schema_Object_PaymentMethodAddRq extends QuickBooks_QBXML
 	protected function &_maxLengthPaths()
 	{
 		static $paths = array (
-			'Name' => 31,
-			'IsActive' => 0,
-			'PaymentMethodType' => 0,
-			);
+  'Name' => 31,
+  'IsActive' => 0,
+  'PaymentMethodType' => 0,
+  'IncludeRetElement' => 50,
+);
 		
 		return $paths;
 	}
@@ -57,19 +59,20 @@ class QuickBooks_QBXML_Schema_Object_PaymentMethodAddRq extends QuickBooks_QBXML
 	protected function &_isOptionalPaths()
 	{
 		static $paths = array (
-			'Name' => false,
-			'IsActive' => true,
-			'PaymentMethodType' => true,
-			);
+  'Name' => false,
+  'IsActive' => true,
+  'PaymentMethodType' => true,
+  'IncludeRetElement' => true,
+);
 	}
 	
 	protected function &_sinceVersionPaths()
 	{
 		static $paths = array (
-  'PaymentMethodAdd Name' => 999.99,
-  'PaymentMethodAdd IsActive' => 999.99,
-  'PaymentMethodAdd PaymentMethodType' => 7,
-  'IncludeRetElement' => 4,
+  'Name' => 999.99,
+  'IsActive' => 999.99,
+  'PaymentMethodType' => 7.0,
+  'IncludeRetElement' => 4.0,
 );
 		
 		return $paths;
@@ -78,10 +81,11 @@ class QuickBooks_QBXML_Schema_Object_PaymentMethodAddRq extends QuickBooks_QBXML
 	protected function &_isRepeatablePaths()
 	{
 		static $paths = array (
-			'Name' => false,
-			'IsActive' => false,
-			'PaymentMethodType' => false,
-			);
+  'Name' => false,
+  'IsActive' => false,
+  'PaymentMethodType' => false,
+  'IncludeRetElement' => true,
+);
 			
 		return $paths;
 	}
@@ -100,14 +104,13 @@ class QuickBooks_QBXML_Schema_Object_PaymentMethodAddRq extends QuickBooks_QBXML
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-			0 => 'Name',
-			1 => 'IsActive',
-			2 => 'PaymentMethodType',
-			);
+		static $paths = [
+  'Name',
+  'IsActive',
+  'PaymentMethodType',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

@@ -27,7 +27,7 @@ class QuickBooks_QBXML_Schema_Object_WorkersCompCodeModRq extends QuickBooks_QBX
 {
 	protected function &_qbxmlWrapper()
 	{
-		static $wrapper = '';
+		static $wrapper = 'WorkersCompCodeMod';
 		
 		return $wrapper;
 	}
@@ -35,13 +35,13 @@ class QuickBooks_QBXML_Schema_Object_WorkersCompCodeModRq extends QuickBooks_QBX
 	protected function &_dataTypePaths()
 	{
 		static $paths = array (
-  'WorkersCompCodeMod ListID' => 'IDTYPE',
-  'WorkersCompCodeMod EditSequence' => 'STRTYPE',
-  'WorkersCompCodeMod Name' => 'STRTYPE',
-  'WorkersCompCodeMod IsActive' => 'BOOLTYPE',
-  'WorkersCompCodeMod Desc' => 'STRTYPE',
-  'WorkersCompCodeMod RateEntry Rate' => 'PRICETYPE',
-  'WorkersCompCodeMod RateEntry EffectiveDate' => 'DATETYPE',
+  'ListID' => 'IDTYPE',
+  'EditSequence' => 'STRTYPE',
+  'Name' => 'STRTYPE',
+  'IsActive' => 'BOOLTYPE',
+  'Desc' => 'STRTYPE',
+  'RateEntry Rate' => 'PRICETYPE',
+  'RateEntry EffectiveDate' => 'DATETYPE',
   'IncludeRetElement' => 'STRTYPE',
 );
 		
@@ -51,13 +51,13 @@ class QuickBooks_QBXML_Schema_Object_WorkersCompCodeModRq extends QuickBooks_QBX
 	protected function &_maxLengthPaths()
 	{
 		static $paths = array (
-  'WorkersCompCodeMod ListID' => 0,
-  'WorkersCompCodeMod EditSequence' => 16,
-  'WorkersCompCodeMod Name' => 13,
-  'WorkersCompCodeMod IsActive' => 0,
-  'WorkersCompCodeMod Desc' => 31,
-  'WorkersCompCodeMod RateEntry Rate' => 0,
-  'WorkersCompCodeMod RateEntry EffectiveDate' => 0,
+  'ListID' => 0,
+  'EditSequence' => 16,
+  'Name' => 13,
+  'IsActive' => 0,
+  'Desc' => 31,
+  'RateEntry Rate' => 0,
+  'RateEntry EffectiveDate' => 0,
   'IncludeRetElement' => 50,
 );
 		
@@ -67,13 +67,13 @@ class QuickBooks_QBXML_Schema_Object_WorkersCompCodeModRq extends QuickBooks_QBX
 	protected function &_isOptionalPaths()
 	{
 		static $paths = array (
-  'WorkersCompCodeMod ListID' => false,
-  'WorkersCompCodeMod EditSequence' => false,
-  'WorkersCompCodeMod Name' => true,
-  'WorkersCompCodeMod IsActive' => true,
-  'WorkersCompCodeMod Desc' => true,
-  'WorkersCompCodeMod RateEntry Rate' => false,
-  'WorkersCompCodeMod RateEntry EffectiveDate' => false,
+  'ListID' => false,
+  'EditSequence' => false,
+  'Name' => true,
+  'IsActive' => true,
+  'Desc' => true,
+  'RateEntry Rate' => false,
+  'RateEntry EffectiveDate' => false,
   'IncludeRetElement' => true,
 );
 	}
@@ -81,13 +81,13 @@ class QuickBooks_QBXML_Schema_Object_WorkersCompCodeModRq extends QuickBooks_QBX
 	protected function &_sinceVersionPaths()
 	{
 		static $paths = array (
-  'WorkersCompCodeMod ListID' => 999.99,
-  'WorkersCompCodeMod EditSequence' => 999.99,
-  'WorkersCompCodeMod Name' => 999.99,
-  'WorkersCompCodeMod IsActive' => 999.99,
-  'WorkersCompCodeMod Desc' => 999.99,
-  'WorkersCompCodeMod RateEntry Rate' => 999.99,
-  'WorkersCompCodeMod RateEntry EffectiveDate' => 999.99,
+  'ListID' => 999.99,
+  'EditSequence' => 999.99,
+  'Name' => 999.99,
+  'IsActive' => 999.99,
+  'Desc' => 999.99,
+  'RateEntry Rate' => 999.99,
+  'RateEntry EffectiveDate' => 999.99,
   'IncludeRetElement' => 999.99,
 );
 		
@@ -97,13 +97,13 @@ class QuickBooks_QBXML_Schema_Object_WorkersCompCodeModRq extends QuickBooks_QBX
 	protected function &_isRepeatablePaths()
 	{
 		static $paths = array (
-  'WorkersCompCodeMod ListID' => false,
-  'WorkersCompCodeMod EditSequence' => false,
-  'WorkersCompCodeMod Name' => false,
-  'WorkersCompCodeMod IsActive' => false,
-  'WorkersCompCodeMod Desc' => false,
-  'WorkersCompCodeMod RateEntry Rate' => false,
-  'WorkersCompCodeMod RateEntry EffectiveDate' => false,
+  'ListID' => false,
+  'EditSequence' => false,
+  'Name' => false,
+  'IsActive' => false,
+  'Desc' => false,
+  'RateEntry Rate' => false,
+  'RateEntry EffectiveDate' => false,
   'IncludeRetElement' => true,
 );
 			
@@ -124,19 +124,18 @@ class QuickBooks_QBXML_Schema_Object_WorkersCompCodeModRq extends QuickBooks_QBX
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'WorkersCompCodeMod ListID',
-  1 => 'WorkersCompCodeMod EditSequence',
-  2 => 'WorkersCompCodeMod Name',
-  3 => 'WorkersCompCodeMod IsActive',
-  4 => 'WorkersCompCodeMod Desc',
-  5 => 'WorkersCompCodeMod RateEntry Rate',
-  6 => 'WorkersCompCodeMod RateEntry EffectiveDate',
-  7 => 'IncludeRetElement',
-);
+		static $paths = [
+  'ListID',
+  'EditSequence',
+  'Name',
+  'IsActive',
+  'Desc',
+  'RateEntry',
+  'RateEntry Rate',
+  'RateEntry EffectiveDate',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

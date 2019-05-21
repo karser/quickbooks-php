@@ -114,17 +114,15 @@ class QuickBooks_QBXML_Schema_Object_VehicleModRq extends QuickBooks_QBXML_Schem
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'ListID',
-  1 => 'EditSequence',
-  2 => 'Name',
-  3 => 'IsActive',
-  4 => 'Desc',
-  5 => 'IncludeRetElement',
-);
+		static $paths = [
+  'ListID',
+  'EditSequence',
+  'Name',
+  'IsActive',
+  'Desc',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

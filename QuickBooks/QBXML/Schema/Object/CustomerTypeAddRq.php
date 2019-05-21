@@ -27,7 +27,7 @@ class QuickBooks_QBXML_Schema_Object_CustomerTypeAddRq extends QuickBooks_QBXML_
 {
 	protected function &_qbxmlWrapper()
 	{
-		static $wrapper = '';
+		static $wrapper = 'CustomerTypeAdd';
 		
 		return $wrapper;
 	}
@@ -35,10 +35,10 @@ class QuickBooks_QBXML_Schema_Object_CustomerTypeAddRq extends QuickBooks_QBXML_
 	protected function &_dataTypePaths()
 	{
 		static $paths = array (
-  'CustomerTypeAdd Name' => 'STRTYPE',
-  'CustomerTypeAdd IsActive' => 'BOOLTYPE',
-  'CustomerTypeAdd ParentRef ListID' => 'IDTYPE',
-  'CustomerTypeAdd ParentRef FullName' => 'STRTYPE',
+  'Name' => 'STRTYPE',
+  'IsActive' => 'BOOLTYPE',
+  'ParentRef ListID' => 'IDTYPE',
+  'ParentRef FullName' => 'STRTYPE',
   'IncludeRetElement' => 'STRTYPE',
 );
 		
@@ -48,10 +48,10 @@ class QuickBooks_QBXML_Schema_Object_CustomerTypeAddRq extends QuickBooks_QBXML_
 	protected function &_maxLengthPaths()
 	{
 		static $paths = array (
-  'CustomerTypeAdd Name' => 31,
-  'CustomerTypeAdd IsActive' => 0,
-  'CustomerTypeAdd ParentRef ListID' => 0,
-  'CustomerTypeAdd ParentRef FullName' => 0,
+  'Name' => 31,
+  'IsActive' => 0,
+  'ParentRef ListID' => 0,
+  'ParentRef FullName' => 0,
   'IncludeRetElement' => 50,
 );
 		
@@ -61,10 +61,10 @@ class QuickBooks_QBXML_Schema_Object_CustomerTypeAddRq extends QuickBooks_QBXML_
 	protected function &_isOptionalPaths()
 	{
 		static $paths = array (
-  'CustomerTypeAdd Name' => false,
-  'CustomerTypeAdd IsActive' => true,
-  'CustomerTypeAdd ParentRef ListID' => true,
-  'CustomerTypeAdd ParentRef FullName' => true,
+  'Name' => false,
+  'IsActive' => true,
+  'ParentRef ListID' => true,
+  'ParentRef FullName' => true,
   'IncludeRetElement' => true,
 );
 	}
@@ -72,11 +72,11 @@ class QuickBooks_QBXML_Schema_Object_CustomerTypeAddRq extends QuickBooks_QBXML_
 	protected function &_sinceVersionPaths()
 	{
 		static $paths = array (
-  'CustomerTypeAdd Name' => 999.99,
-  'CustomerTypeAdd IsActive' => 999.99,
-  'CustomerTypeAdd ParentRef ListID' => 999.99,
-  'CustomerTypeAdd ParentRef FullName' => 999.99,
-  'IncludeRetElement' => 4,
+  'Name' => 999.99,
+  'IsActive' => 999.99,
+  'ParentRef ListID' => 999.99,
+  'ParentRef FullName' => 999.99,
+  'IncludeRetElement' => 4.0,
 );
 		
 		return $paths;
@@ -85,10 +85,10 @@ class QuickBooks_QBXML_Schema_Object_CustomerTypeAddRq extends QuickBooks_QBXML_
 	protected function &_isRepeatablePaths()
 	{
 		static $paths = array (
-  'CustomerTypeAdd Name' => false,
-  'CustomerTypeAdd IsActive' => false,
-  'CustomerTypeAdd ParentRef ListID' => false,
-  'CustomerTypeAdd ParentRef FullName' => false,
+  'Name' => false,
+  'IsActive' => false,
+  'ParentRef ListID' => false,
+  'ParentRef FullName' => false,
   'IncludeRetElement' => true,
 );
 			
@@ -109,16 +109,15 @@ class QuickBooks_QBXML_Schema_Object_CustomerTypeAddRq extends QuickBooks_QBXML_
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'CustomerTypeAdd Name',
-  1 => 'CustomerTypeAdd IsActive',
-  2 => 'CustomerTypeAdd ParentRef ListID',
-  3 => 'CustomerTypeAdd ParentRef FullName',
-  4 => 'IncludeRetElement',
-);
+		static $paths = [
+  'Name',
+  'IsActive',
+  'ParentRef',
+  'ParentRef ListID',
+  'ParentRef FullName',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

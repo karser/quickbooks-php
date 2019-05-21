@@ -27,7 +27,7 @@ class QuickBooks_QBXML_Schema_Object_VendorTypeAddRq extends QuickBooks_QBXML_Sc
 {
 	protected function &_qbxmlWrapper()
 	{
-		static $wrapper = '';
+		static $wrapper = 'VendorTypeAdd';
 		
 		return $wrapper;
 	}
@@ -35,10 +35,10 @@ class QuickBooks_QBXML_Schema_Object_VendorTypeAddRq extends QuickBooks_QBXML_Sc
 	protected function &_dataTypePaths()
 	{
 		static $paths = array (
-  'VendorTypeAdd Name' => 'STRTYPE',
-  'VendorTypeAdd IsActive' => 'BOOLTYPE',
-  'VendorTypeAdd ParentRef ListID' => 'IDTYPE',
-  'VendorTypeAdd ParentRef FullName' => 'STRTYPE',
+  'Name' => 'STRTYPE',
+  'IsActive' => 'BOOLTYPE',
+  'ParentRef ListID' => 'IDTYPE',
+  'ParentRef FullName' => 'STRTYPE',
   'IncludeRetElement' => 'STRTYPE',
 );
 		
@@ -48,10 +48,10 @@ class QuickBooks_QBXML_Schema_Object_VendorTypeAddRq extends QuickBooks_QBXML_Sc
 	protected function &_maxLengthPaths()
 	{
 		static $paths = array (
-  'VendorTypeAdd Name' => 31,
-  'VendorTypeAdd IsActive' => 0,
-  'VendorTypeAdd ParentRef ListID' => 0,
-  'VendorTypeAdd ParentRef FullName' => 0,
+  'Name' => 31,
+  'IsActive' => 0,
+  'ParentRef ListID' => 0,
+  'ParentRef FullName' => 0,
   'IncludeRetElement' => 50,
 );
 		
@@ -61,10 +61,10 @@ class QuickBooks_QBXML_Schema_Object_VendorTypeAddRq extends QuickBooks_QBXML_Sc
 	protected function &_isOptionalPaths()
 	{
 		static $paths = array (
-  'VendorTypeAdd Name' => false,
-  'VendorTypeAdd IsActive' => true,
-  'VendorTypeAdd ParentRef ListID' => true,
-  'VendorTypeAdd ParentRef FullName' => true,
+  'Name' => false,
+  'IsActive' => true,
+  'ParentRef ListID' => true,
+  'ParentRef FullName' => true,
   'IncludeRetElement' => true,
 );
 	}
@@ -72,11 +72,11 @@ class QuickBooks_QBXML_Schema_Object_VendorTypeAddRq extends QuickBooks_QBXML_Sc
 	protected function &_sinceVersionPaths()
 	{
 		static $paths = array (
-  'VendorTypeAdd Name' => 999.99,
-  'VendorTypeAdd IsActive' => 999.99,
-  'VendorTypeAdd ParentRef ListID' => 999.99,
-  'VendorTypeAdd ParentRef FullName' => 999.99,
-  'IncludeRetElement' => 4,
+  'Name' => 999.99,
+  'IsActive' => 999.99,
+  'ParentRef ListID' => 999.99,
+  'ParentRef FullName' => 999.99,
+  'IncludeRetElement' => 4.0,
 );
 		
 		return $paths;
@@ -85,10 +85,10 @@ class QuickBooks_QBXML_Schema_Object_VendorTypeAddRq extends QuickBooks_QBXML_Sc
 	protected function &_isRepeatablePaths()
 	{
 		static $paths = array (
-  'VendorTypeAdd Name' => false,
-  'VendorTypeAdd IsActive' => false,
-  'VendorTypeAdd ParentRef ListID' => false,
-  'VendorTypeAdd ParentRef FullName' => false,
+  'Name' => false,
+  'IsActive' => false,
+  'ParentRef ListID' => false,
+  'ParentRef FullName' => false,
   'IncludeRetElement' => true,
 );
 			
@@ -109,16 +109,15 @@ class QuickBooks_QBXML_Schema_Object_VendorTypeAddRq extends QuickBooks_QBXML_Sc
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'VendorTypeAdd Name',
-  1 => 'VendorTypeAdd IsActive',
-  2 => 'VendorTypeAdd ParentRef ListID',
-  3 => 'VendorTypeAdd ParentRef FullName',
-  4 => 'IncludeRetElement',
-);
+		static $paths = [
+  'Name',
+  'IsActive',
+  'ParentRef',
+  'ParentRef ListID',
+  'ParentRef FullName',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

@@ -60,7 +60,7 @@ class QuickBooks_QBXML_Schema_Object_CompanyActivityQueryRq extends QuickBooks_Q
 	protected function &_sinceVersionPaths()
 	{
 		static $paths = array (
-  'IncludeRetElement' => 4,
+  'IncludeRetElement' => 4.0,
 );
 		
 		return $paths;
@@ -89,12 +89,10 @@ class QuickBooks_QBXML_Schema_Object_CompanyActivityQueryRq extends QuickBooks_Q
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'IncludeRetElement',
-);
+		static $paths = [
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

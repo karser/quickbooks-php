@@ -27,7 +27,7 @@ class QuickBooks_QBXML_Schema_Object_WorkersCompCodeAddRq extends QuickBooks_QBX
 {
 	protected function &_qbxmlWrapper()
 	{
-		static $wrapper = '';
+		static $wrapper = 'WorkersCompCodeAdd';
 		
 		return $wrapper;
 	}
@@ -35,11 +35,11 @@ class QuickBooks_QBXML_Schema_Object_WorkersCompCodeAddRq extends QuickBooks_QBX
 	protected function &_dataTypePaths()
 	{
 		static $paths = array (
-  'WorkersCompCodeAdd Name' => 'STRTYPE',
-  'WorkersCompCodeAdd IsActive' => 'BOOLTYPE',
-  'WorkersCompCodeAdd Desc' => 'STRTYPE',
-  'WorkersCompCodeAdd RateEntry Rate' => 'PRICETYPE',
-  'WorkersCompCodeAdd RateEntry EffectiveDate' => 'DATETYPE',
+  'Name' => 'STRTYPE',
+  'IsActive' => 'BOOLTYPE',
+  'Desc' => 'STRTYPE',
+  'RateEntry Rate' => 'PRICETYPE',
+  'RateEntry EffectiveDate' => 'DATETYPE',
   'IncludeRetElement' => 'STRTYPE',
 );
 		
@@ -49,11 +49,11 @@ class QuickBooks_QBXML_Schema_Object_WorkersCompCodeAddRq extends QuickBooks_QBX
 	protected function &_maxLengthPaths()
 	{
 		static $paths = array (
-  'WorkersCompCodeAdd Name' => 13,
-  'WorkersCompCodeAdd IsActive' => 0,
-  'WorkersCompCodeAdd Desc' => 31,
-  'WorkersCompCodeAdd RateEntry Rate' => 0,
-  'WorkersCompCodeAdd RateEntry EffectiveDate' => 0,
+  'Name' => 13,
+  'IsActive' => 0,
+  'Desc' => 31,
+  'RateEntry Rate' => 0,
+  'RateEntry EffectiveDate' => 0,
   'IncludeRetElement' => 50,
 );
 		
@@ -63,11 +63,11 @@ class QuickBooks_QBXML_Schema_Object_WorkersCompCodeAddRq extends QuickBooks_QBX
 	protected function &_isOptionalPaths()
 	{
 		static $paths = array (
-  'WorkersCompCodeAdd Name' => false,
-  'WorkersCompCodeAdd IsActive' => true,
-  'WorkersCompCodeAdd Desc' => true,
-  'WorkersCompCodeAdd RateEntry Rate' => false,
-  'WorkersCompCodeAdd RateEntry EffectiveDate' => false,
+  'Name' => false,
+  'IsActive' => true,
+  'Desc' => true,
+  'RateEntry Rate' => false,
+  'RateEntry EffectiveDate' => false,
   'IncludeRetElement' => true,
 );
 	}
@@ -75,11 +75,11 @@ class QuickBooks_QBXML_Schema_Object_WorkersCompCodeAddRq extends QuickBooks_QBX
 	protected function &_sinceVersionPaths()
 	{
 		static $paths = array (
-  'WorkersCompCodeAdd Name' => 999.99,
-  'WorkersCompCodeAdd IsActive' => 999.99,
-  'WorkersCompCodeAdd Desc' => 999.99,
-  'WorkersCompCodeAdd RateEntry Rate' => 999.99,
-  'WorkersCompCodeAdd RateEntry EffectiveDate' => 999.99,
+  'Name' => 999.99,
+  'IsActive' => 999.99,
+  'Desc' => 999.99,
+  'RateEntry Rate' => 999.99,
+  'RateEntry EffectiveDate' => 999.99,
   'IncludeRetElement' => 999.99,
 );
 		
@@ -89,11 +89,11 @@ class QuickBooks_QBXML_Schema_Object_WorkersCompCodeAddRq extends QuickBooks_QBX
 	protected function &_isRepeatablePaths()
 	{
 		static $paths = array (
-  'WorkersCompCodeAdd Name' => false,
-  'WorkersCompCodeAdd IsActive' => false,
-  'WorkersCompCodeAdd Desc' => false,
-  'WorkersCompCodeAdd RateEntry Rate' => false,
-  'WorkersCompCodeAdd RateEntry EffectiveDate' => false,
+  'Name' => false,
+  'IsActive' => false,
+  'Desc' => false,
+  'RateEntry Rate' => false,
+  'RateEntry EffectiveDate' => false,
   'IncludeRetElement' => true,
 );
 			
@@ -114,17 +114,16 @@ class QuickBooks_QBXML_Schema_Object_WorkersCompCodeAddRq extends QuickBooks_QBX
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'WorkersCompCodeAdd Name',
-  1 => 'WorkersCompCodeAdd IsActive',
-  2 => 'WorkersCompCodeAdd Desc',
-  3 => 'WorkersCompCodeAdd RateEntry Rate',
-  4 => 'WorkersCompCodeAdd RateEntry EffectiveDate',
-  5 => 'IncludeRetElement',
-);
+		static $paths = [
+  'Name',
+  'IsActive',
+  'Desc',
+  'RateEntry',
+  'RateEntry Rate',
+  'RateEntry EffectiveDate',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

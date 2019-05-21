@@ -27,7 +27,7 @@ class QuickBooks_QBXML_Schema_Object_CustomerMsgAddRq extends QuickBooks_QBXML_S
 {
 	protected function &_qbxmlWrapper()
 	{
-		static $wrapper = '';
+		static $wrapper = 'CustomerMsgAdd';
 		
 		return $wrapper;
 	}
@@ -37,6 +37,7 @@ class QuickBooks_QBXML_Schema_Object_CustomerMsgAddRq extends QuickBooks_QBXML_S
 		static $paths = array (
   'Name' => 'STRTYPE',
   'IsActive' => 'BOOLTYPE',
+  'IncludeRetElement' => 'STRTYPE',
 );
 		
 		return $paths;
@@ -47,6 +48,7 @@ class QuickBooks_QBXML_Schema_Object_CustomerMsgAddRq extends QuickBooks_QBXML_S
 		static $paths = array (
   'Name' => 101,
   'IsActive' => 0,
+  'IncludeRetElement' => 50,
 );
 		
 		return $paths;
@@ -57,6 +59,7 @@ class QuickBooks_QBXML_Schema_Object_CustomerMsgAddRq extends QuickBooks_QBXML_S
 		static $paths = array (
   'Name' => false,
   'IsActive' => true,
+  'IncludeRetElement' => true,
 );
 	}
 	
@@ -65,6 +68,7 @@ class QuickBooks_QBXML_Schema_Object_CustomerMsgAddRq extends QuickBooks_QBXML_S
 		static $paths = array (
   'Name' => 999.99,
   'IsActive' => 999.99,
+  'IncludeRetElement' => 4.0,
 );
 		
 		return $paths;
@@ -75,6 +79,7 @@ class QuickBooks_QBXML_Schema_Object_CustomerMsgAddRq extends QuickBooks_QBXML_S
 		static $paths = array (
   'Name' => false,
   'IsActive' => false,
+  'IncludeRetElement' => true,
 );
 			
 		return $paths;
@@ -94,10 +99,11 @@ class QuickBooks_QBXML_Schema_Object_CustomerMsgAddRq extends QuickBooks_QBXML_S
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-			'Name',
-			'IsActive',
-			);
+		static $paths = [
+  'Name',
+  'IsActive',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}

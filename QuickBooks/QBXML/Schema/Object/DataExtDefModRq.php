@@ -27,7 +27,7 @@ class QuickBooks_QBXML_Schema_Object_DataExtDefModRq extends QuickBooks_QBXML_Sc
 {
 	protected function &_qbxmlWrapper()
 	{
-		static $wrapper = '';
+		static $wrapper = 'DataExtDefMod';
 		
 		return $wrapper;
 	}
@@ -35,11 +35,14 @@ class QuickBooks_QBXML_Schema_Object_DataExtDefModRq extends QuickBooks_QBXML_Sc
 	protected function &_dataTypePaths()
 	{
 		static $paths = array (
-  'DataExtDefMod OwnerID' => 'GUIDTYPE',
-  'DataExtDefMod DataExtName' => 'STRTYPE',
-  'DataExtDefMod DataExtNewName' => 'STRTYPE',
-  'DataExtDefMod AssignToObject' => 'ENUMTYPE',
-  'DataExtDefMod RemoveFromObject' => 'ENUMTYPE',
+  'OwnerID' => 'GUIDTYPE',
+  'DataExtName' => 'STRTYPE',
+  'DataExtNewName' => 'STRTYPE',
+  'AssignToObject' => 'ENUMTYPE',
+  'RemoveFromObject' => 'ENUMTYPE',
+  'DataExtListRequire' => 'BOOLTYPE',
+  'DataExtTxnRequire' => 'BOOLTYPE',
+  'DataExtFormatString' => 'STRTYPE',
   'IncludeRetElement' => 'STRTYPE',
 );
 		
@@ -49,11 +52,14 @@ class QuickBooks_QBXML_Schema_Object_DataExtDefModRq extends QuickBooks_QBXML_Sc
 	protected function &_maxLengthPaths()
 	{
 		static $paths = array (
-  'DataExtDefMod OwnerID' => 0,
-  'DataExtDefMod DataExtName' => 31,
-  'DataExtDefMod DataExtNewName' => 31,
-  'DataExtDefMod AssignToObject' => 0,
-  'DataExtDefMod RemoveFromObject' => 0,
+  'OwnerID' => 0,
+  'DataExtName' => 31,
+  'DataExtNewName' => 31,
+  'AssignToObject' => 0,
+  'RemoveFromObject' => 0,
+  'DataExtListRequire' => 0,
+  'DataExtTxnRequire' => 0,
+  'DataExtFormatString' => 0,
   'IncludeRetElement' => 50,
 );
 		
@@ -63,11 +69,14 @@ class QuickBooks_QBXML_Schema_Object_DataExtDefModRq extends QuickBooks_QBXML_Sc
 	protected function &_isOptionalPaths()
 	{
 		static $paths = array (
-  'DataExtDefMod OwnerID' => false,
-  'DataExtDefMod DataExtName' => false,
-  'DataExtDefMod DataExtNewName' => true,
-  'DataExtDefMod AssignToObject' => true,
-  'DataExtDefMod RemoveFromObject' => true,
+  'OwnerID' => false,
+  'DataExtName' => false,
+  'DataExtNewName' => true,
+  'AssignToObject' => true,
+  'RemoveFromObject' => true,
+  'DataExtListRequire' => true,
+  'DataExtTxnRequire' => true,
+  'DataExtFormatString' => true,
   'IncludeRetElement' => true,
 );
 	}
@@ -75,12 +84,15 @@ class QuickBooks_QBXML_Schema_Object_DataExtDefModRq extends QuickBooks_QBXML_Sc
 	protected function &_sinceVersionPaths()
 	{
 		static $paths = array (
-  'DataExtDefMod OwnerID' => 999.99,
-  'DataExtDefMod DataExtName' => 999.99,
-  'DataExtDefMod DataExtNewName' => 999.99,
-  'DataExtDefMod AssignToObject' => 999.99,
-  'DataExtDefMod RemoveFromObject' => 999.99,
-  'IncludeRetElement' => 4,
+  'OwnerID' => 999.99,
+  'DataExtName' => 999.99,
+  'DataExtNewName' => 999.99,
+  'AssignToObject' => 999.99,
+  'RemoveFromObject' => 999.99,
+  'DataExtListRequire' => 12.0,
+  'DataExtTxnRequire' => 12.0,
+  'DataExtFormatString' => 12.0,
+  'IncludeRetElement' => 4.0,
 );
 		
 		return $paths;
@@ -89,11 +101,14 @@ class QuickBooks_QBXML_Schema_Object_DataExtDefModRq extends QuickBooks_QBXML_Sc
 	protected function &_isRepeatablePaths()
 	{
 		static $paths = array (
-  'DataExtDefMod OwnerID' => false,
-  'DataExtDefMod DataExtName' => false,
-  'DataExtDefMod DataExtNewName' => false,
-  'DataExtDefMod AssignToObject' => true,
-  'DataExtDefMod RemoveFromObject' => true,
+  'OwnerID' => false,
+  'DataExtName' => false,
+  'DataExtNewName' => false,
+  'AssignToObject' => true,
+  'RemoveFromObject' => true,
+  'DataExtListRequire' => false,
+  'DataExtTxnRequire' => false,
+  'DataExtFormatString' => false,
   'IncludeRetElement' => true,
 );
 			
@@ -114,17 +129,18 @@ class QuickBooks_QBXML_Schema_Object_DataExtDefModRq extends QuickBooks_QBXML_Sc
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'DataExtDefMod OwnerID',
-  1 => 'DataExtDefMod DataExtName',
-  2 => 'DataExtDefMod DataExtNewName',
-  3 => 'DataExtDefMod AssignToObject',
-  4 => 'DataExtDefMod RemoveFromObject',
-  5 => 'IncludeRetElement',
-);
+		static $paths = [
+  'OwnerID',
+  'DataExtName',
+  'DataExtNewName',
+  'AssignToObject',
+  'RemoveFromObject',
+  'DataExtListRequire',
+  'DataExtTxnRequire',
+  'DataExtFormatString',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

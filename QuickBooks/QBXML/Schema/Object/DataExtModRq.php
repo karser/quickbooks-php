@@ -94,7 +94,7 @@ class QuickBooks_QBXML_Schema_Object_DataExtModRq extends QuickBooks_QBXML_Schem
   'ListObjRef FullName' => 999.99,
   'TxnDataExtType' => 999.99,
   'TxnID' => 999.99,
-  'TxnLineID' => 3,
+  'TxnLineID' => 3.0,
   'OtherDataExtType' => 999.99,
   'DataExtValue' => 999.99,
 );
@@ -134,21 +134,20 @@ class QuickBooks_QBXML_Schema_Object_DataExtModRq extends QuickBooks_QBXML_Schem
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'OwnerID',
-  1 => 'DataExtName',
-  2 => 'ListDataExtType',
-  3 => 'ListObjRef ListID',
-  4 => 'ListObjRef FullName',
-  5 => 'TxnDataExtType',
-  6 => 'TxnID',
-  7 => 'TxnLineID',
-  8 => 'OtherDataExtType',
-  9 => 'DataExtValue',
-);
+		static $paths = [
+  'OwnerID',
+  'DataExtName',
+  'ListDataExtType',
+  'ListObjRef',
+  'ListObjRef ListID',
+  'ListObjRef FullName',
+  'TxnDataExtType',
+  'TxnID',
+  'TxnLineID',
+  'OtherDataExtType',
+  'DataExtValue'
+];
 			
 		return $paths;
 	}
 }
-
-?>

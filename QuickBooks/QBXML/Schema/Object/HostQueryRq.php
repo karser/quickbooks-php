@@ -13,12 +13,12 @@
 /**
  * 
  */
-//require_once 'QuickBooks.php';
+require_once 'QuickBooks.php';
 
 /**
  * 
  */
-//require_once 'QuickBooks/QBXML/Schema/Object.php';
+require_once 'QuickBooks/QBXML/Schema/Object.php';
 
 /**
  * 
@@ -64,7 +64,7 @@ class QuickBooks_QBXML_Schema_Object_HostQueryRq extends QuickBooks_QBXML_Schema
 	{
 		static $paths = array (
   'IncludeListMetaData IncludeMaxCapacity' => 999.99,
-  'IncludeRetElement' => 4,
+  'IncludeRetElement' => 4.0,
 );
 		
 		return $paths;
@@ -94,10 +94,11 @@ class QuickBooks_QBXML_Schema_Object_HostQueryRq extends QuickBooks_QBXML_Schema
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'IncludeListMetaData IncludeMaxCapacity',
-  1 => 'IncludeRetElement',
-);
+		static $paths = [
+  'IncludeListMetaData',
+  'IncludeListMetaData IncludeMaxCapacity',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}

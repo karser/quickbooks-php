@@ -66,8 +66,8 @@ class QuickBooks_QBXML_Schema_Object_ClearedStatusModRq extends QuickBooks_QBXML
 	protected function &_sinceVersionPaths()
 	{
 		static $paths = array (
-  'ClearedStatusMod TxnID' => 0,
-  'ClearedStatusMod TxnLineID' => 0,
+  'ClearedStatusMod TxnID' => 0.0,
+  'ClearedStatusMod TxnLineID' => 0.0,
   'ClearedStatusMod ClearedStatus' => 999.99,
 );
 		
@@ -99,14 +99,13 @@ class QuickBooks_QBXML_Schema_Object_ClearedStatusModRq extends QuickBooks_QBXML
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'ClearedStatusMod TxnID',
-  1 => 'ClearedStatusMod TxnLineID',
-  2 => 'ClearedStatusMod ClearedStatus',
-);
+		static $paths = [
+  'ClearedStatusMod',
+  'ClearedStatusMod TxnID',
+  'ClearedStatusMod TxnLineID',
+  'ClearedStatusMod ClearedStatus'
+];
 			
 		return $paths;
 	}
 }
-
-?>

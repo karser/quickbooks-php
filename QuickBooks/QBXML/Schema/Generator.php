@@ -29,9 +29,14 @@ class QuickBooks_QBXML_Schema_Generator
 		$this->_xml = $xml;
 	}
 	
-	public function saveAll($dir)
+	public function saveAll($dir = null)
 	{
-		$Parser = new QuickBooks_XML($this->_xml);
+	    if ($dir === null) {
+            $dir = __DIR__.'/Object';
+        }
+        $dir = realpath($dir);
+
+		$Parser = new QuickBooks_XML_Parser($this->_xml);
 		
 		$arr_actions_adds = QuickBooks_Utilities::listActions('*Add', false);
 		$arr_actions_mods = QuickBooks_Utilities::listActions('*Mod', false);
@@ -92,7 +97,7 @@ class QuickBooks_QBXML_Schema_Generator
 				
 				//$curdepth = 0;
 				$lastdepth = 0;
-				$paths = $Action->asArray(QUICKBOOKS_XML_ARRAY_PATHS);
+				$paths = $Action->asArray(QuickBooks_XML::ARRAY_PATHS);
 				foreach ($paths as $path => $datatype)
 				{
 					$tmp = explode(' ', $path);
@@ -138,19 +143,23 @@ class QuickBooks_QBXML_Schema_Generator
 				//print(var_export($paths_sinceversion));
 				//print(var_export($paths_isrepeatable));
 				//print(var_export($paths_reorder));
-				
-				$contents = file_get_contents('/home/asdg/QuickBooks/QBXML/Schema/Object/Template.php');
-				
+
+                $tplPath = realpath(__DIR__.'/Template.php');
+				$contents = file_get_contents($tplPath);
+
+				$a = $this->renderVar($paths_reorder);
+
+
 				$contents = str_replace('Template', $Action->name(), $contents);
-				$contents = str_replace('\'_qbxmlWrapper\'', var_export($wrapper, true), $contents);
-				$contents = str_replace('\'_dataTypePaths\'', var_export($paths_datatype, true), $contents);
-				$contents = str_replace('\'_maxLengthPaths\'', var_export($paths_maxlength, true), $contents);
-				$contents = str_replace('\'_isOptionalPaths\'', var_export($paths_isoptional, true), $contents);
-				$contents = str_replace('\'_sinceVersionPaths\'', var_export($paths_sinceversion, true), $contents);
-				$contents = str_replace('\'_isRepeatablePaths\'', var_export($paths_isrepeatable, true), $contents);
-				$contents = str_replace('\'_reorderPaths\'', var_export($paths_reorder, true), $contents);
-				
-				$fp = fopen('/home/adg/QuickBooks/tmp/' . $Action->name() . '.php', 'w+');
+				$contents = str_replace('\'_qbxmlWrapper\'', $this->renderVar($wrapper), $contents);
+				$contents = str_replace('\'_dataTypePaths\'', $this->renderVar($paths_datatype), $contents);
+				$contents = str_replace('\'_maxLengthPaths\'', $this->renderVar($paths_maxlength), $contents);
+				$contents = str_replace('\'_isOptionalPaths\'', $this->renderVar($paths_isoptional), $contents);
+				$contents = str_replace('\'_sinceVersionPaths\'', $this->renderVar($paths_sinceversion), $contents);
+				$contents = str_replace('\'_isRepeatablePaths\'', $this->renderVar($paths_isrepeatable), $contents);
+				$contents = str_replace('\'_reorderPaths\'', $this->renderVar($paths_reorder, true), $contents);
+
+				$fp = fopen($dir.'/' . $Action->name() . '.php', 'w+');
 				fwrite($fp, $contents);
 				fclose($fp);
 				
@@ -165,8 +174,50 @@ class QuickBooks_QBXML_Schema_Generator
 			}
 		}
 	}
-	
-	protected function _parseComment($comment)
+
+    /**
+     * @param array|string $input
+     * @param bool $fixRootNodes
+     * @return string
+     */
+    private function renderVar($input, $fixRootNodes = false)
+    {
+        if (is_array($input) && $this->isSequential($input)) {
+            if ($fixRootNodes) {
+                $input = $this->fixRootNodes($input);
+            }
+
+//            return json_encode($input, JSON_PRETTY_PRINT);
+            return "[\n  '".implode("',\n  '", $input)."'\n]";
+        }
+        return var_export($input, true);
+    }
+
+    private function fixRootNodes($input)
+    {
+        $new = [];
+        foreach ($input as $item) {
+            if (false !== strpos($item, ' ')) {
+                list($key) = explode(' ', $item);
+                if (!in_array($key, $new, true)) {
+                    $new[] = $key;
+                }
+            }
+            $new[] = $item;
+        }
+        return $new;
+    }
+
+    /**
+     * @param array $arr
+     * @return bool
+     */
+    private function isSequential(array $arr)
+    {
+        return array_keys($arr) === range(0, count($arr) - 1);
+    }
+
+    protected function _parseComment($comment)
 	{
 		$defaults = array(
 			'maxlength' => 0, 

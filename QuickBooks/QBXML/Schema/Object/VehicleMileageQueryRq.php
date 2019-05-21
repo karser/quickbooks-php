@@ -82,7 +82,7 @@ class QuickBooks_QBXML_Schema_Object_VehicleMileageQueryRq extends QuickBooks_QB
 	{
 		static $paths = array (
   'TxnID' => 999.99,
-  'MaxReturned' => 0,
+  'MaxReturned' => 0.0,
   'ModifiedDateRangeFilter FromModifiedDate' => 999.99,
   'ModifiedDateRangeFilter ToModifiedDate' => 999.99,
   'TxnDateRangeFilter FromTxnDate' => 999.99,
@@ -124,19 +124,19 @@ class QuickBooks_QBXML_Schema_Object_VehicleMileageQueryRq extends QuickBooks_QB
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'TxnID',
-  1 => 'MaxReturned',
-  2 => 'ModifiedDateRangeFilter FromModifiedDate',
-  3 => 'ModifiedDateRangeFilter ToModifiedDate',
-  4 => 'TxnDateRangeFilter FromTxnDate',
-  5 => 'TxnDateRangeFilter ToTxnDate',
-  6 => 'TxnDateRangeFilter DateMacro',
-  7 => 'IncludeRetElement',
-);
+		static $paths = [
+  'TxnID',
+  'MaxReturned',
+  'ModifiedDateRangeFilter',
+  'ModifiedDateRangeFilter FromModifiedDate',
+  'ModifiedDateRangeFilter ToModifiedDate',
+  'TxnDateRangeFilter',
+  'TxnDateRangeFilter FromTxnDate',
+  'TxnDateRangeFilter ToTxnDate',
+  'TxnDateRangeFilter DateMacro',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

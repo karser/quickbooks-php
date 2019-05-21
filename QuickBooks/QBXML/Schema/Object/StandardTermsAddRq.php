@@ -80,7 +80,7 @@ class QuickBooks_QBXML_Schema_Object_StandardTermsAddRq extends QuickBooks_QBXML
   'StdDueDays' => 999.99,
   'StdDiscountDays' => 999.99,
   'DiscountPct' => 999.99,
-  'IncludeRetElement' => 4,
+  'IncludeRetElement' => 4.0,
 );
 		
 		return $paths;
@@ -114,17 +114,15 @@ class QuickBooks_QBXML_Schema_Object_StandardTermsAddRq extends QuickBooks_QBXML
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'Name',
-  1 => 'IsActive',
-  2 => 'StdDueDays',
-  3 => 'StdDiscountDays',
-  4 => 'DiscountPct',
-  5 => 'IncludeRetElement',
-);
+		static $paths = [
+  'Name',
+  'IsActive',
+  'StdDueDays',
+  'StdDiscountDays',
+  'DiscountPct',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

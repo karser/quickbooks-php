@@ -36,7 +36,12 @@ class QuickBooks_QBXML_Schema_Object_ItemFixedAssetAddRq extends QuickBooks_QBXM
 	{
 		static $paths = array (
   'Name' => 'STRTYPE',
+  'BarCode BarCodeValue' => 'STRTYPE',
+  'BarCode AssignEvenIfUsed' => 'BOOLTYPE',
+  'BarCode AllowOverride' => 'BOOLTYPE',
   'IsActive' => 'BOOLTYPE',
+  'ClassRef ListID' => 'IDTYPE',
+  'ClassRef FullName' => 'STRTYPE',
   'AcquiredAs' => 'ENUMTYPE',
   'PurchaseDesc' => 'STRTYPE',
   'PurchaseDate' => 'DATETYPE',
@@ -58,6 +63,7 @@ class QuickBooks_QBXML_Schema_Object_ItemFixedAssetAddRq extends QuickBooks_QBXM
   'CostBasis' => 'AMTTYPE',
   'YearEndAccumulatedDepreciation' => 'AMTTYPE',
   'YearEndBookValue' => 'AMTTYPE',
+  'ExternalGUID' => 'GUIDTYPE',
   'IncludeRetElement' => 'STRTYPE',
 );
 		
@@ -68,7 +74,12 @@ class QuickBooks_QBXML_Schema_Object_ItemFixedAssetAddRq extends QuickBooks_QBXM
 	{
 		static $paths = array (
   'Name' => 31,
+  'BarCode BarCodeValue' => 50,
+  'BarCode AssignEvenIfUsed' => 0,
+  'BarCode AllowOverride' => 0,
   'IsActive' => 0,
+  'ClassRef ListID' => 0,
+  'ClassRef FullName' => 159,
   'AcquiredAs' => 0,
   'PurchaseDesc' => 50,
   'PurchaseDate' => 0,
@@ -90,6 +101,7 @@ class QuickBooks_QBXML_Schema_Object_ItemFixedAssetAddRq extends QuickBooks_QBXM
   'CostBasis' => 0,
   'YearEndAccumulatedDepreciation' => 0,
   'YearEndBookValue' => 0,
+  'ExternalGUID' => 0,
   'IncludeRetElement' => 50,
 );
 		
@@ -100,7 +112,12 @@ class QuickBooks_QBXML_Schema_Object_ItemFixedAssetAddRq extends QuickBooks_QBXM
 	{
 		static $paths = array (
   'Name' => false,
+  'BarCode BarCodeValue' => true,
+  'BarCode AssignEvenIfUsed' => true,
+  'BarCode AllowOverride' => true,
   'IsActive' => true,
+  'ClassRef ListID' => true,
+  'ClassRef FullName' => true,
   'AcquiredAs' => false,
   'PurchaseDesc' => false,
   'PurchaseDate' => false,
@@ -122,6 +139,7 @@ class QuickBooks_QBXML_Schema_Object_ItemFixedAssetAddRq extends QuickBooks_QBXM
   'CostBasis' => true,
   'YearEndAccumulatedDepreciation' => true,
   'YearEndBookValue' => true,
+  'ExternalGUID' => true,
   'IncludeRetElement' => true,
 );
 	}
@@ -130,7 +148,12 @@ class QuickBooks_QBXML_Schema_Object_ItemFixedAssetAddRq extends QuickBooks_QBXM
 	{
 		static $paths = array (
   'Name' => 999.99,
+  'BarCode BarCodeValue' => 999.99,
+  'BarCode AssignEvenIfUsed' => 999.99,
+  'BarCode AllowOverride' => 999.99,
   'IsActive' => 999.99,
+  'ClassRef ListID' => 999.99,
+  'ClassRef FullName' => 999.99,
   'AcquiredAs' => 999.99,
   'PurchaseDesc' => 999.99,
   'PurchaseDate' => 999.99,
@@ -152,7 +175,8 @@ class QuickBooks_QBXML_Schema_Object_ItemFixedAssetAddRq extends QuickBooks_QBXM
   'CostBasis' => 999.99,
   'YearEndAccumulatedDepreciation' => 999.99,
   'YearEndBookValue' => 999.99,
-  'IncludeRetElement' => 4,
+  'ExternalGUID' => 8.0,
+  'IncludeRetElement' => 4.0,
 );
 		
 		return $paths;
@@ -162,7 +186,12 @@ class QuickBooks_QBXML_Schema_Object_ItemFixedAssetAddRq extends QuickBooks_QBXM
 	{
 		static $paths = array (
   'Name' => false,
+  'BarCode BarCodeValue' => false,
+  'BarCode AssignEvenIfUsed' => false,
+  'BarCode AllowOverride' => false,
   'IsActive' => false,
+  'ClassRef ListID' => false,
+  'ClassRef FullName' => false,
   'AcquiredAs' => false,
   'PurchaseDesc' => false,
   'PurchaseDate' => false,
@@ -184,6 +213,7 @@ class QuickBooks_QBXML_Schema_Object_ItemFixedAssetAddRq extends QuickBooks_QBXM
   'CostBasis' => false,
   'YearEndAccumulatedDepreciation' => false,
   'YearEndBookValue' => false,
+  'ExternalGUID' => false,
   'IncludeRetElement' => true,
 );
 			
@@ -204,35 +234,43 @@ class QuickBooks_QBXML_Schema_Object_ItemFixedAssetAddRq extends QuickBooks_QBXM
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'Name',
-  1 => 'IsActive',
-  2 => 'AcquiredAs',
-  3 => 'PurchaseDesc',
-  4 => 'PurchaseDate',
-  5 => 'PurchaseCost',
-  6 => 'VendorOrPayeeName',
-  7 => 'AssetAccountRef ListID',
-  8 => 'AssetAccountRef FullName',
-  9 => 'FixedAssetSalesInfo SalesDesc',
-  10 => 'FixedAssetSalesInfo SalesDate',
-  11 => 'FixedAssetSalesInfo SalesPrice',
-  12 => 'FixedAssetSalesInfo SalesExpense',
-  13 => 'AssetDesc',
-  14 => 'Location',
-  15 => 'PONumber',
-  16 => 'SerialNumber',
-  17 => 'WarrantyExpDate',
-  18 => 'Notes',
-  19 => 'AssetNumber',
-  20 => 'CostBasis',
-  21 => 'YearEndAccumulatedDepreciation',
-  22 => 'YearEndBookValue',
-  23 => 'IncludeRetElement',
-);
+		static $paths = [
+  'Name',
+  'BarCode',
+  'BarCode BarCodeValue',
+  'BarCode AssignEvenIfUsed',
+  'BarCode AllowOverride',
+  'IsActive',
+  'ClassRef',
+  'ClassRef ListID',
+  'ClassRef FullName',
+  'AcquiredAs',
+  'PurchaseDesc',
+  'PurchaseDate',
+  'PurchaseCost',
+  'VendorOrPayeeName',
+  'AssetAccountRef',
+  'AssetAccountRef ListID',
+  'AssetAccountRef FullName',
+  'FixedAssetSalesInfo',
+  'FixedAssetSalesInfo SalesDesc',
+  'FixedAssetSalesInfo SalesDate',
+  'FixedAssetSalesInfo SalesPrice',
+  'FixedAssetSalesInfo SalesExpense',
+  'AssetDesc',
+  'Location',
+  'PONumber',
+  'SerialNumber',
+  'WarrantyExpDate',
+  'Notes',
+  'AssetNumber',
+  'CostBasis',
+  'YearEndAccumulatedDepreciation',
+  'YearEndBookValue',
+  'ExternalGUID',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

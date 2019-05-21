@@ -38,6 +38,9 @@ class QuickBooks_QBXML_Schema_Object_ItemSubtotalModRq extends QuickBooks_QBXML_
   'ListID' => 'IDTYPE',
   'EditSequence' => 'STRTYPE',
   'Name' => 'STRTYPE',
+  'BarCode BarCodeValue' => 'STRTYPE',
+  'BarCode AssignEvenIfUsed' => 'BOOLTYPE',
+  'BarCode AllowOverride' => 'BOOLTYPE',
   'IsActive' => 'BOOLTYPE',
   'ItemDesc' => 'STRTYPE',
   'IncludeRetElement' => 'STRTYPE',
@@ -52,6 +55,9 @@ class QuickBooks_QBXML_Schema_Object_ItemSubtotalModRq extends QuickBooks_QBXML_
   'ListID' => 0,
   'EditSequence' => 16,
   'Name' => 31,
+  'BarCode BarCodeValue' => 50,
+  'BarCode AssignEvenIfUsed' => 0,
+  'BarCode AllowOverride' => 0,
   'IsActive' => 0,
   'ItemDesc' => 4095,
   'IncludeRetElement' => 50,
@@ -66,6 +72,9 @@ class QuickBooks_QBXML_Schema_Object_ItemSubtotalModRq extends QuickBooks_QBXML_
   'ListID' => false,
   'EditSequence' => false,
   'Name' => true,
+  'BarCode BarCodeValue' => true,
+  'BarCode AssignEvenIfUsed' => true,
+  'BarCode AllowOverride' => true,
   'IsActive' => true,
   'ItemDesc' => true,
   'IncludeRetElement' => true,
@@ -78,9 +87,12 @@ class QuickBooks_QBXML_Schema_Object_ItemSubtotalModRq extends QuickBooks_QBXML_
   'ListID' => 999.99,
   'EditSequence' => 999.99,
   'Name' => 999.99,
+  'BarCode BarCodeValue' => 999.99,
+  'BarCode AssignEvenIfUsed' => 999.99,
+  'BarCode AllowOverride' => 999.99,
   'IsActive' => 999.99,
   'ItemDesc' => 999.99,
-  'IncludeRetElement' => 4,
+  'IncludeRetElement' => 4.0,
 );
 		
 		return $paths;
@@ -92,6 +104,9 @@ class QuickBooks_QBXML_Schema_Object_ItemSubtotalModRq extends QuickBooks_QBXML_
   'ListID' => false,
   'EditSequence' => false,
   'Name' => false,
+  'BarCode BarCodeValue' => false,
+  'BarCode AssignEvenIfUsed' => false,
+  'BarCode AllowOverride' => false,
   'IsActive' => false,
   'ItemDesc' => false,
   'IncludeRetElement' => true,
@@ -114,17 +129,19 @@ class QuickBooks_QBXML_Schema_Object_ItemSubtotalModRq extends QuickBooks_QBXML_
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'ListID',
-  1 => 'EditSequence',
-  2 => 'Name',
-  3 => 'IsActive',
-  4 => 'ItemDesc',
-  5 => 'IncludeRetElement',
-);
+		static $paths = [
+  'ListID',
+  'EditSequence',
+  'Name',
+  'BarCode',
+  'BarCode BarCodeValue',
+  'BarCode AssignEvenIfUsed',
+  'BarCode AllowOverride',
+  'IsActive',
+  'ItemDesc',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

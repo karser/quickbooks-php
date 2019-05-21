@@ -37,6 +37,12 @@ class QuickBooks_QBXML_Schema_Object_BuildAssemblyModRq extends QuickBooks_QBXML
 		static $paths = array (
   'BuildAssemblyMod TxnID' => 'IDTYPE',
   'BuildAssemblyMod EditSequence' => 'STRTYPE',
+  'BuildAssemblyMod InventorySiteRef ListID' => 'IDTYPE',
+  'BuildAssemblyMod InventorySiteRef FullName' => 'STRTYPE',
+  'BuildAssemblyMod InventorySiteLocationRef ListID' => 'IDTYPE',
+  'BuildAssemblyMod InventorySiteLocationRef FullName' => 'STRTYPE',
+  'BuildAssemblyMod SerialNumber' => 'STRTYPE',
+  'BuildAssemblyMod LotNumber' => 'STRTYPE',
   'BuildAssemblyMod TxnDate' => 'DATETYPE',
   'BuildAssemblyMod RefNumber' => 'STRTYPE',
   'BuildAssemblyMod Memo' => 'STRTYPE',
@@ -54,6 +60,12 @@ class QuickBooks_QBXML_Schema_Object_BuildAssemblyModRq extends QuickBooks_QBXML
 		static $paths = array (
   'BuildAssemblyMod TxnID' => 0,
   'BuildAssemblyMod EditSequence' => 16,
+  'BuildAssemblyMod InventorySiteRef ListID' => 0,
+  'BuildAssemblyMod InventorySiteRef FullName' => 31,
+  'BuildAssemblyMod InventorySiteLocationRef ListID' => 0,
+  'BuildAssemblyMod InventorySiteLocationRef FullName' => 31,
+  'BuildAssemblyMod SerialNumber' => 4095,
+  'BuildAssemblyMod LotNumber' => 40,
   'BuildAssemblyMod TxnDate' => 0,
   'BuildAssemblyMod RefNumber' => 11,
   'BuildAssemblyMod Memo' => 4095,
@@ -71,6 +83,12 @@ class QuickBooks_QBXML_Schema_Object_BuildAssemblyModRq extends QuickBooks_QBXML
 		static $paths = array (
   'BuildAssemblyMod TxnID' => false,
   'BuildAssemblyMod EditSequence' => false,
+  'BuildAssemblyMod InventorySiteRef ListID' => true,
+  'BuildAssemblyMod InventorySiteRef FullName' => true,
+  'BuildAssemblyMod InventorySiteLocationRef ListID' => true,
+  'BuildAssemblyMod InventorySiteLocationRef FullName' => true,
+  'BuildAssemblyMod SerialNumber' => true,
+  'BuildAssemblyMod LotNumber' => true,
   'BuildAssemblyMod TxnDate' => true,
   'BuildAssemblyMod RefNumber' => true,
   'BuildAssemblyMod Memo' => true,
@@ -84,13 +102,19 @@ class QuickBooks_QBXML_Schema_Object_BuildAssemblyModRq extends QuickBooks_QBXML
 	protected function &_sinceVersionPaths()
 	{
 		static $paths = array (
-  'BuildAssemblyMod TxnID' => 0,
+  'BuildAssemblyMod TxnID' => 0.0,
   'BuildAssemblyMod EditSequence' => 999.99,
+  'BuildAssemblyMod InventorySiteRef ListID' => 999.99,
+  'BuildAssemblyMod InventorySiteRef FullName' => 999.99,
+  'BuildAssemblyMod InventorySiteLocationRef ListID' => 999.99,
+  'BuildAssemblyMod InventorySiteLocationRef FullName' => 999.99,
+  'BuildAssemblyMod SerialNumber' => 999.99,
+  'BuildAssemblyMod LotNumber' => 999.99,
   'BuildAssemblyMod TxnDate' => 999.99,
   'BuildAssemblyMod RefNumber' => 999.99,
   'BuildAssemblyMod Memo' => 999.99,
   'BuildAssemblyMod QuantityToBuild' => 999.99,
-  'BuildAssemblyMod MarkPendingIfRequired' => 7,
+  'BuildAssemblyMod MarkPendingIfRequired' => 7.0,
   'BuildAssemblyMod RemovePending' => 999.99,
   'IncludeRetElement' => 999.99,
 );
@@ -103,6 +127,12 @@ class QuickBooks_QBXML_Schema_Object_BuildAssemblyModRq extends QuickBooks_QBXML
 		static $paths = array (
   'BuildAssemblyMod TxnID' => false,
   'BuildAssemblyMod EditSequence' => false,
+  'BuildAssemblyMod InventorySiteRef ListID' => false,
+  'BuildAssemblyMod InventorySiteRef FullName' => false,
+  'BuildAssemblyMod InventorySiteLocationRef ListID' => false,
+  'BuildAssemblyMod InventorySiteLocationRef FullName' => false,
+  'BuildAssemblyMod SerialNumber' => false,
+  'BuildAssemblyMod LotNumber' => false,
   'BuildAssemblyMod TxnDate' => false,
   'BuildAssemblyMod RefNumber' => false,
   'BuildAssemblyMod Memo' => false,
@@ -129,20 +159,25 @@ class QuickBooks_QBXML_Schema_Object_BuildAssemblyModRq extends QuickBooks_QBXML
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'BuildAssemblyMod TxnID',
-  1 => 'BuildAssemblyMod EditSequence',
-  2 => 'BuildAssemblyMod TxnDate',
-  3 => 'BuildAssemblyMod RefNumber',
-  4 => 'BuildAssemblyMod Memo',
-  5 => 'BuildAssemblyMod QuantityToBuild',
-  6 => 'BuildAssemblyMod MarkPendingIfRequired',
-  7 => 'BuildAssemblyMod RemovePending',
-  8 => 'IncludeRetElement',
-);
+		static $paths = [
+  'BuildAssemblyMod',
+  'BuildAssemblyMod TxnID',
+  'BuildAssemblyMod EditSequence',
+  'BuildAssemblyMod InventorySiteRef ListID',
+  'BuildAssemblyMod InventorySiteRef FullName',
+  'BuildAssemblyMod InventorySiteLocationRef ListID',
+  'BuildAssemblyMod InventorySiteLocationRef FullName',
+  'BuildAssemblyMod SerialNumber',
+  'BuildAssemblyMod LotNumber',
+  'BuildAssemblyMod TxnDate',
+  'BuildAssemblyMod RefNumber',
+  'BuildAssemblyMod Memo',
+  'BuildAssemblyMod QuantityToBuild',
+  'BuildAssemblyMod MarkPendingIfRequired',
+  'BuildAssemblyMod RemovePending',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

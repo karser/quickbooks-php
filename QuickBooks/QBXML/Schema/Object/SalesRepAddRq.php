@@ -76,7 +76,7 @@ class QuickBooks_QBXML_Schema_Object_SalesRepAddRq extends QuickBooks_QBXML_Sche
   'IsActive' => 999.99,
   'SalesRepEntityRef ListID' => 999.99,
   'SalesRepEntityRef FullName' => 999.99,
-  'IncludeRetElement' => 4,
+  'IncludeRetElement' => 4.0,
 );
 		
 		return $paths;
@@ -109,16 +109,15 @@ class QuickBooks_QBXML_Schema_Object_SalesRepAddRq extends QuickBooks_QBXML_Sche
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'Initial',
-  1 => 'IsActive',
-  2 => 'SalesRepEntityRef ListID',
-  3 => 'SalesRepEntityRef FullName',
-  4 => 'IncludeRetElement',
-);
+		static $paths = [
+  'Initial',
+  'IsActive',
+  'SalesRepEntityRef',
+  'SalesRepEntityRef ListID',
+  'SalesRepEntityRef FullName',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

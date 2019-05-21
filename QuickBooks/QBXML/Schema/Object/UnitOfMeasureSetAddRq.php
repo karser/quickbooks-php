@@ -97,7 +97,7 @@ class QuickBooks_QBXML_Schema_Object_UnitOfMeasureSetAddRq extends QuickBooks_QB
   'BaseUnit Abbreviation' => 999.99,
   'RelatedUnit Name' => 999.99,
   'RelatedUnit Abbreviation' => 999.99,
-  'RelatedUnit ConversionRatio' => 0,
+  'RelatedUnit ConversionRatio' => 0.0,
   'DefaultUnit UnitUsedFor' => 999.99,
   'DefaultUnit Unit' => 999.99,
   'IncludeRetElement' => 999.99,
@@ -114,11 +114,9 @@ class QuickBooks_QBXML_Schema_Object_UnitOfMeasureSetAddRq extends QuickBooks_QB
   'UnitOfMeasureType' => false,
   'BaseUnit Name' => false,
   'BaseUnit Abbreviation' => false,
-  'RelatedUnit' => true, 
   'RelatedUnit Name' => false,
   'RelatedUnit Abbreviation' => false,
   'RelatedUnit ConversionRatio' => false,
-  'DefaultUnit' => true, 
   'DefaultUnit UnitUsedFor' => false,
   'DefaultUnit Unit' => false,
   'IncludeRetElement' => true,
@@ -141,21 +139,22 @@ class QuickBooks_QBXML_Schema_Object_UnitOfMeasureSetAddRq extends QuickBooks_QB
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'Name',
-  1 => 'IsActive',
-  2 => 'UnitOfMeasureType',
-  3 => 'BaseUnit Name',
-  4 => 'BaseUnit Abbreviation',
-  5 => 'RelatedUnit', 
-  6 => 'RelatedUnit Name',
-  7 => 'RelatedUnit Abbreviation',
-  8 => 'RelatedUnit ConversionRatio',
-  9 => 'DefaultUnit', 
-  10 => 'DefaultUnit UnitUsedFor',
-  11 => 'DefaultUnit Unit',
-  12 => 'IncludeRetElement',
-);
+		static $paths = [
+  'Name',
+  'IsActive',
+  'UnitOfMeasureType',
+  'BaseUnit',
+  'BaseUnit Name',
+  'BaseUnit Abbreviation',
+  'RelatedUnit',
+  'RelatedUnit Name',
+  'RelatedUnit Abbreviation',
+  'RelatedUnit ConversionRatio',
+  'DefaultUnit',
+  'DefaultUnit UnitUsedFor',
+  'DefaultUnit Unit',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}

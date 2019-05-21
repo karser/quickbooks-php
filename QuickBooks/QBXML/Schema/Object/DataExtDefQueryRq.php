@@ -68,7 +68,7 @@ class QuickBooks_QBXML_Schema_Object_DataExtDefQueryRq extends QuickBooks_QBXML_
 		static $paths = array (
   'OwnerID' => 999.99,
   'AssignToObject' => 999.99,
-  'IncludeRetElement' => 4,
+  'IncludeRetElement' => 4.0,
 );
 		
 		return $paths;
@@ -99,14 +99,12 @@ class QuickBooks_QBXML_Schema_Object_DataExtDefQueryRq extends QuickBooks_QBXML_
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'OwnerID',
-  1 => 'AssignToObject',
-  2 => 'IncludeRetElement',
-);
+		static $paths = [
+  'OwnerID',
+  'AssignToObject',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

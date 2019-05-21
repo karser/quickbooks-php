@@ -36,6 +36,10 @@ class QuickBooks_QBXML_Schema_Object_SpecialItemAddRq extends QuickBooks_QBXML_S
 	{
 		static $paths = array (
   'SpecialItemType' => 'ENUMTYPE',
+  'BarCode BarCodeValue' => 'STRTYPE',
+  'BarCode AssignEvenIfUsed' => 'BOOLTYPE',
+  'BarCode AllowOverride' => 'BOOLTYPE',
+  'ExternalGUID' => 'GUIDTYPE',
   'IncludeRetElement' => 'STRTYPE',
 );
 		
@@ -46,6 +50,10 @@ class QuickBooks_QBXML_Schema_Object_SpecialItemAddRq extends QuickBooks_QBXML_S
 	{
 		static $paths = array (
   'SpecialItemType' => 0,
+  'BarCode BarCodeValue' => 50,
+  'BarCode AssignEvenIfUsed' => 0,
+  'BarCode AllowOverride' => 0,
+  'ExternalGUID' => 0,
   'IncludeRetElement' => 50,
 );
 		
@@ -56,6 +64,10 @@ class QuickBooks_QBXML_Schema_Object_SpecialItemAddRq extends QuickBooks_QBXML_S
 	{
 		static $paths = array (
   'SpecialItemType' => false,
+  'BarCode BarCodeValue' => true,
+  'BarCode AssignEvenIfUsed' => true,
+  'BarCode AllowOverride' => true,
+  'ExternalGUID' => true,
   'IncludeRetElement' => true,
 );
 	}
@@ -64,6 +76,10 @@ class QuickBooks_QBXML_Schema_Object_SpecialItemAddRq extends QuickBooks_QBXML_S
 	{
 		static $paths = array (
   'SpecialItemType' => 999.99,
+  'BarCode BarCodeValue' => 999.99,
+  'BarCode AssignEvenIfUsed' => 999.99,
+  'BarCode AllowOverride' => 999.99,
+  'ExternalGUID' => 8.0,
   'IncludeRetElement' => 999.99,
 );
 		
@@ -74,6 +90,10 @@ class QuickBooks_QBXML_Schema_Object_SpecialItemAddRq extends QuickBooks_QBXML_S
 	{
 		static $paths = array (
   'SpecialItemType' => false,
+  'BarCode BarCodeValue' => false,
+  'BarCode AssignEvenIfUsed' => false,
+  'BarCode AllowOverride' => false,
+  'ExternalGUID' => false,
   'IncludeRetElement' => true,
 );
 			
@@ -94,13 +114,16 @@ class QuickBooks_QBXML_Schema_Object_SpecialItemAddRq extends QuickBooks_QBXML_S
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'SpecialItemType',
-  1 => 'IncludeRetElement',
-);
+		static $paths = [
+  'SpecialItemType',
+  'BarCode',
+  'BarCode BarCodeValue',
+  'BarCode AssignEvenIfUsed',
+  'BarCode AllowOverride',
+  'ExternalGUID',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

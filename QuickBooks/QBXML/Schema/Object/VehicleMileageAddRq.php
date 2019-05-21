@@ -164,27 +164,29 @@ class QuickBooks_QBXML_Schema_Object_VehicleMileageAddRq extends QuickBooks_QBXM
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'VehicleRef ListID',
-  1 => 'VehicleRef FullName',
-  2 => 'CustomerRef ListID',
-  3 => 'CustomerRef FullName',
-  4 => 'ItemRef ListID',
-  5 => 'ItemRef FullName',
-  6 => 'ClassRef ListID',
-  7 => 'ClassRef FullName',
-  8 => 'TripStartDate',
-  9 => 'TripEndDate',
-  10 => 'OdometerStart',
-  11 => 'OdometerEnd',
-  12 => 'TotalMiles',
-  13 => 'Notes',
-  14 => 'BillableStatus',
-  15 => 'IncludeRetElement',
-);
+		static $paths = [
+  'VehicleRef',
+  'VehicleRef ListID',
+  'VehicleRef FullName',
+  'CustomerRef',
+  'CustomerRef ListID',
+  'CustomerRef FullName',
+  'ItemRef',
+  'ItemRef ListID',
+  'ItemRef FullName',
+  'ClassRef',
+  'ClassRef ListID',
+  'ClassRef FullName',
+  'TripStartDate',
+  'TripEndDate',
+  'OdometerStart',
+  'OdometerEnd',
+  'TotalMiles',
+  'Notes',
+  'BillableStatus',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

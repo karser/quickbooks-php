@@ -76,7 +76,7 @@ class QuickBooks_QBXML_Schema_Object_ClassAddRq extends QuickBooks_QBXML_Schema_
   'IsActive' => 999.99,
   'ParentRef ListID' => 999.99,
   'ParentRef FullName' => 999.99,
-  'IncludeRetElement' => 4,
+  'IncludeRetElement' => 4.0,
 );
 		
 		return $paths;
@@ -109,13 +109,14 @@ class QuickBooks_QBXML_Schema_Object_ClassAddRq extends QuickBooks_QBXML_Schema_
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'Name',
-  1 => 'IsActive',
-  2 => 'ParentRef ListID',
-  3 => 'ParentRef FullName',
-  4 => 'IncludeRetElement',
-);
+		static $paths = [
+  'Name',
+  'IsActive',
+  'ParentRef',
+  'ParentRef ListID',
+  'ParentRef FullName',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}

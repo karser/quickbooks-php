@@ -46,6 +46,8 @@ class QuickBooks_QBXML_Schema_Object_AccountQueryRq extends QuickBooks_QBXML_Sch
   'NameRangeFilter FromName' => 'STRTYPE',
   'NameRangeFilter ToName' => 'STRTYPE',
   'AccountType' => 'ENUMTYPE',
+  'CurrencyFilter ListID' => 'IDTYPE',
+  'CurrencyFilter FullName' => 'STRTYPE',
   'IncludeRetElement' => 'STRTYPE',
   'OwnerID' => 'GUIDTYPE',
 );
@@ -67,6 +69,8 @@ class QuickBooks_QBXML_Schema_Object_AccountQueryRq extends QuickBooks_QBXML_Sch
   'NameRangeFilter FromName' => 0,
   'NameRangeFilter ToName' => 0,
   'AccountType' => 0,
+  'CurrencyFilter ListID' => 0,
+  'CurrencyFilter FullName' => 0,
   'IncludeRetElement' => 50,
   'OwnerID' => 0,
 );
@@ -88,6 +92,8 @@ class QuickBooks_QBXML_Schema_Object_AccountQueryRq extends QuickBooks_QBXML_Sch
   'NameRangeFilter FromName' => true,
   'NameRangeFilter ToName' => true,
   'AccountType' => true,
+  'CurrencyFilter ListID' => false,
+  'CurrencyFilter FullName' => false,
   'IncludeRetElement' => true,
   'OwnerID' => true,
 );
@@ -98,7 +104,7 @@ class QuickBooks_QBXML_Schema_Object_AccountQueryRq extends QuickBooks_QBXML_Sch
 		static $paths = array (
   'ListID' => 999.99,
   'FullName' => 999.99,
-  'MaxReturned' => 0,
+  'MaxReturned' => 0.0,
   'ActiveStatus' => 999.99,
   'FromModifiedDate' => 999.99,
   'ToModifiedDate' => 999.99,
@@ -107,8 +113,10 @@ class QuickBooks_QBXML_Schema_Object_AccountQueryRq extends QuickBooks_QBXML_Sch
   'NameRangeFilter FromName' => 999.99,
   'NameRangeFilter ToName' => 999.99,
   'AccountType' => 999.99,
-  'IncludeRetElement' => 4,
-  'OwnerID' => 2,
+  'CurrencyFilter ListID' => 999.99,
+  'CurrencyFilter FullName' => 999.99,
+  'IncludeRetElement' => 4.0,
+  'OwnerID' => 2.0,
 );
 		
 		return $paths;
@@ -128,6 +136,8 @@ class QuickBooks_QBXML_Schema_Object_AccountQueryRq extends QuickBooks_QBXML_Sch
   'NameRangeFilter FromName' => false,
   'NameRangeFilter ToName' => false,
   'AccountType' => true,
+  'CurrencyFilter ListID' => true,
+  'CurrencyFilter FullName' => true,
   'IncludeRetElement' => true,
   'OwnerID' => true,
 );
@@ -149,24 +159,27 @@ class QuickBooks_QBXML_Schema_Object_AccountQueryRq extends QuickBooks_QBXML_Sch
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'ListID',
-  1 => 'FullName',
-  2 => 'MaxReturned',
-  3 => 'ActiveStatus',
-  4 => 'FromModifiedDate',
-  5 => 'ToModifiedDate',
-  6 => 'NameFilter MatchCriterion',
-  7 => 'NameFilter Name',
-  8 => 'NameRangeFilter FromName',
-  9 => 'NameRangeFilter ToName',
-  10 => 'AccountType',
-  11 => 'IncludeRetElement',
-  12 => 'OwnerID',
-);
+		static $paths = [
+  'ListID',
+  'FullName',
+  'MaxReturned',
+  'ActiveStatus',
+  'FromModifiedDate',
+  'ToModifiedDate',
+  'NameFilter',
+  'NameFilter MatchCriterion',
+  'NameFilter Name',
+  'NameRangeFilter',
+  'NameRangeFilter FromName',
+  'NameRangeFilter ToName',
+  'AccountType',
+  'CurrencyFilter',
+  'CurrencyFilter ListID',
+  'CurrencyFilter FullName',
+  'IncludeRetElement',
+  'OwnerID'
+];
 			
 		return $paths;
 	}
 }
-
-?>

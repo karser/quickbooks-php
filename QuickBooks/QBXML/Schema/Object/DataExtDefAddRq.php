@@ -27,7 +27,7 @@ class QuickBooks_QBXML_Schema_Object_DataExtDefAddRq extends QuickBooks_QBXML_Sc
 {
 	protected function &_qbxmlWrapper()
 	{
-		static $wrapper = '';
+		static $wrapper = 'DataExtDefAdd';
 		
 		return $wrapper;
 	}
@@ -35,10 +35,13 @@ class QuickBooks_QBXML_Schema_Object_DataExtDefAddRq extends QuickBooks_QBXML_Sc
 	protected function &_dataTypePaths()
 	{
 		static $paths = array (
-  'DataExtDefAdd OwnerID' => 'GUIDTYPE',
-  'DataExtDefAdd DataExtName' => 'STRTYPE',
-  'DataExtDefAdd DataExtType' => 'ENUMTYPE',
-  'DataExtDefAdd AssignToObject' => 'ENUMTYPE',
+  'OwnerID' => 'GUIDTYPE',
+  'DataExtName' => 'STRTYPE',
+  'DataExtType' => 'ENUMTYPE',
+  'AssignToObject' => 'ENUMTYPE',
+  'DataExtListRequire' => 'BOOLTYPE',
+  'DataExtTxnRequire' => 'BOOLTYPE',
+  'DataExtFormatString' => 'STRTYPE',
   'IncludeRetElement' => 'STRTYPE',
 );
 		
@@ -48,10 +51,13 @@ class QuickBooks_QBXML_Schema_Object_DataExtDefAddRq extends QuickBooks_QBXML_Sc
 	protected function &_maxLengthPaths()
 	{
 		static $paths = array (
-  'DataExtDefAdd OwnerID' => 0,
-  'DataExtDefAdd DataExtName' => 31,
-  'DataExtDefAdd DataExtType' => 0,
-  'DataExtDefAdd AssignToObject' => 0,
+  'OwnerID' => 0,
+  'DataExtName' => 31,
+  'DataExtType' => 0,
+  'AssignToObject' => 0,
+  'DataExtListRequire' => 0,
+  'DataExtTxnRequire' => 0,
+  'DataExtFormatString' => 0,
   'IncludeRetElement' => 50,
 );
 		
@@ -61,10 +67,13 @@ class QuickBooks_QBXML_Schema_Object_DataExtDefAddRq extends QuickBooks_QBXML_Sc
 	protected function &_isOptionalPaths()
 	{
 		static $paths = array (
-  'DataExtDefAdd OwnerID' => false,
-  'DataExtDefAdd DataExtName' => false,
-  'DataExtDefAdd DataExtType' => false,
-  'DataExtDefAdd AssignToObject' => true,
+  'OwnerID' => false,
+  'DataExtName' => false,
+  'DataExtType' => false,
+  'AssignToObject' => true,
+  'DataExtListRequire' => true,
+  'DataExtTxnRequire' => true,
+  'DataExtFormatString' => true,
   'IncludeRetElement' => true,
 );
 	}
@@ -72,11 +81,14 @@ class QuickBooks_QBXML_Schema_Object_DataExtDefAddRq extends QuickBooks_QBXML_Sc
 	protected function &_sinceVersionPaths()
 	{
 		static $paths = array (
-  'DataExtDefAdd OwnerID' => 999.99,
-  'DataExtDefAdd DataExtName' => 999.99,
-  'DataExtDefAdd DataExtType' => 999.99,
-  'DataExtDefAdd AssignToObject' => 999.99,
-  'IncludeRetElement' => 4,
+  'OwnerID' => 999.99,
+  'DataExtName' => 999.99,
+  'DataExtType' => 999.99,
+  'AssignToObject' => 999.99,
+  'DataExtListRequire' => 12.0,
+  'DataExtTxnRequire' => 12.0,
+  'DataExtFormatString' => 12.0,
+  'IncludeRetElement' => 4.0,
 );
 		
 		return $paths;
@@ -85,10 +97,13 @@ class QuickBooks_QBXML_Schema_Object_DataExtDefAddRq extends QuickBooks_QBXML_Sc
 	protected function &_isRepeatablePaths()
 	{
 		static $paths = array (
-  'DataExtDefAdd OwnerID' => false,
-  'DataExtDefAdd DataExtName' => false,
-  'DataExtDefAdd DataExtType' => false,
-  'DataExtDefAdd AssignToObject' => true,
+  'OwnerID' => false,
+  'DataExtName' => false,
+  'DataExtType' => false,
+  'AssignToObject' => true,
+  'DataExtListRequire' => false,
+  'DataExtTxnRequire' => false,
+  'DataExtFormatString' => false,
   'IncludeRetElement' => true,
 );
 			
@@ -109,16 +124,17 @@ class QuickBooks_QBXML_Schema_Object_DataExtDefAddRq extends QuickBooks_QBXML_Sc
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'DataExtDefAdd OwnerID',
-  1 => 'DataExtDefAdd DataExtName',
-  2 => 'DataExtDefAdd DataExtType',
-  3 => 'DataExtDefAdd AssignToObject',
-  4 => 'IncludeRetElement',
-);
+		static $paths = [
+  'OwnerID',
+  'DataExtName',
+  'DataExtType',
+  'AssignToObject',
+  'DataExtListRequire',
+  'DataExtTxnRequire',
+  'DataExtFormatString',
+  'IncludeRetElement'
+];
 			
 		return $paths;
 	}
 }
-
-?>

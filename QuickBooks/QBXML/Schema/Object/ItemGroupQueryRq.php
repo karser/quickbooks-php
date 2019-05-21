@@ -95,7 +95,7 @@ class QuickBooks_QBXML_Schema_Object_ItemGroupQueryRq extends QuickBooks_QBXML_S
 		static $paths = array (
   'ListID' => 999.99,
   'FullName' => 999.99,
-  'MaxReturned' => 0,
+  'MaxReturned' => 0.0,
   'ActiveStatus' => 999.99,
   'FromModifiedDate' => 999.99,
   'ToModifiedDate' => 999.99,
@@ -103,8 +103,8 @@ class QuickBooks_QBXML_Schema_Object_ItemGroupQueryRq extends QuickBooks_QBXML_S
   'NameFilter Name' => 999.99,
   'NameRangeFilter FromName' => 999.99,
   'NameRangeFilter ToName' => 999.99,
-  'IncludeRetElement' => 4,
-  'OwnerID' => 2,
+  'IncludeRetElement' => 4.0,
+  'OwnerID' => 2.0,
 );
 		
 		return $paths;
@@ -144,23 +144,23 @@ class QuickBooks_QBXML_Schema_Object_ItemGroupQueryRq extends QuickBooks_QBXML_S
 	
 	protected function &_reorderPathsPaths()
 	{
-		static $paths = array (
-  0 => 'ListID',
-  1 => 'FullName',
-  2 => 'MaxReturned',
-  3 => 'ActiveStatus',
-  4 => 'FromModifiedDate',
-  5 => 'ToModifiedDate',
-  6 => 'NameFilter MatchCriterion',
-  7 => 'NameFilter Name',
-  8 => 'NameRangeFilter FromName',
-  9 => 'NameRangeFilter ToName',
-  10 => 'IncludeRetElement',
-  11 => 'OwnerID',
-);
+		static $paths = [
+  'ListID',
+  'FullName',
+  'MaxReturned',
+  'ActiveStatus',
+  'FromModifiedDate',
+  'ToModifiedDate',
+  'NameFilter',
+  'NameFilter MatchCriterion',
+  'NameFilter Name',
+  'NameRangeFilter',
+  'NameRangeFilter FromName',
+  'NameRangeFilter ToName',
+  'IncludeRetElement',
+  'OwnerID'
+];
 			
 		return $paths;
 	}
 }
-
-?>
