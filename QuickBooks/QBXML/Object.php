@@ -568,7 +568,6 @@ abstract class QuickBooks_QBXML_Object
 	 * 
 	 * @todo Support for qbXML versions
 	 * 
-	 * @param boolean $compress_empty_elements
 	 * @param string $indent
 	 * @param string $root
 	 * @return string

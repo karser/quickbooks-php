@@ -133,7 +133,7 @@ class QuickBooks_QBXML_Object_ReceivePayment_AppliedToTxn extends QuickBooks_QBX
 	 * @param string $root
 	 * @return string
 	 */
-	public function asQBXML($request, $todo_for_empty_elements = QUICKBOOKS_OBJECT_XML_DROP, $indent = "\t", $root = null)
+	public function asQBXML($request, $todo_for_empty_elements = QuickBooks_QBXML_Object::XML_DROP, $indent = "\t", $root = null)
 	{
 		$this->_cleanup();
 		
