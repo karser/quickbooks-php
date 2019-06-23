@@ -21,7 +21,7 @@ QuickBooks_Loader::load('/QuickBooks/QBXML/Object.php');
 class QuickBooks_QBXML_Object_Employee extends QuickBooks_QBXML_Object
 {
 	/**
-	 * Create a new QuickBooks_Object_Customer object
+	 * Create a new QuickBooks_QBXML_Object_Customer object
 	 * 
 	 * @param array $arr
 	 */

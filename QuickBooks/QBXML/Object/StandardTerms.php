@@ -21,7 +21,7 @@ QuickBooks_Loader::load('/QuickBooks/QBXML/Object.php');
 class QuickBooks_QBXML_Object_StandardTerms extends QuickBooks_QBXML_Object
 {
 	/**
-	 * Create a new QuickBooks_Object_StandardTerms object
+	 * Create a new QuickBooks_QBXML_Object_StandardTerms object
 	 * 
 	 * @param array $arr
 	 */
@@ -104,7 +104,7 @@ class QuickBooks_QBXML_Object_StandardTerms extends QuickBooks_QBXML_Object
 	}
 	
 	/**
-	 * Alias of QuickBooks_Object_StandardTerms::getStdDueDays()
+	 * Alias of QuickBooks_QBXML_Object_StandardTerms::getStdDueDays()
 	 */
 	public function getStandardDueDays()
 	{
@@ -123,7 +123,7 @@ class QuickBooks_QBXML_Object_StandardTerms extends QuickBooks_QBXML_Object
 	}
 	
 	/**
-	 * Alias of QuickBooks_Object_StandardTerms::setStdDueDays()
+	 * Alias of QuickBooks_QBXML_Object_StandardTerms::setStdDueDays()
 	 */
 	public function setStandardDueDays($days)
 	{

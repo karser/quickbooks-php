@@ -6,7 +6,7 @@
  * NOTE: By default, ServiceItems are created as SalesOrPurchase items, and are 
  * thus *NOT* created as SalesAndPurchase items. If you want to create an item 
  * that is sold *and* purchased, you'll need to set the type with the method:
- * 	-> {@link QuickBooks_Object_ServiceItem::isSalesAndPurchase()}
+ * 	-> {@link QuickBooks_QBXML_Object_ServiceItem::isSalesAndPurchase()}
  * 
  * @author Keith Palmer <keith@consolibyte.com>
  * @license LICENSE.txt 
@@ -31,7 +31,7 @@ class QuickBooks_QBXML_Object_ServiceItem extends QuickBooks_QBXML_Object
 	protected $_is_sales_and_purchase;
 	
 	/**
-	 * Create a new QuickBooks_Object_ServiceItem object (ServiceItem)
+	 * Create a new QuickBooks_QBXML_Object_ServiceItem object (ServiceItem)
 	 */
 	public function __construct($arr = array(), $is_sales_and_purchase = false)
 	{

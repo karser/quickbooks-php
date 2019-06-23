@@ -41,7 +41,7 @@ QuickBooks_Loader::load('/QuickBooks/QBXML/Object/Check/ApplyCheckToTxn.php');
 class QuickBooks_QBXML_Object_Check extends QuickBooks_QBXML_Object
 {
 	/**
-	 * Create a new QuickBooks_Object_Check object
+	 * Create a new QuickBooks_QBXML_Object_Check object
 	 * 
 	 * @param array $arr
 	 */
@@ -222,7 +222,7 @@ class QuickBooks_QBXML_Object_Check extends QuickBooks_QBXML_Object
 	}
 
 	/**
-	 * @see QuickBooks_Object_Check::setTxnDate()
+	 * @see QuickBooks_QBXML_Object_Check::setTxnDate()
 	 */
 	public function setTransactionDate($date)
 	{
@@ -230,7 +230,7 @@ class QuickBooks_QBXML_Object_Check extends QuickBooks_QBXML_Object
 	}
 
 	/**
-	 * @see QuickBooks_Object_Check::getTxnDate()
+	 * @see QuickBooks_QBXML_Object_Check::getTxnDate()
 	 */
 	public function getTransactionDate($format = null)
 	{

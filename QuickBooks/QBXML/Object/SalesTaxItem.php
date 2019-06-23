@@ -6,7 +6,7 @@
  * NOTE: By default, ServiceItems are created as SalesOrPurchase items, and are 
  * thus *NOT* created as SalesAndPurchase items. If you want to create an item 
  * that is sold *and* purchased, you'll need to set the type with the method:
- * 	-> {@link QuickBooks_Object_ServiceItem::isSalesAndPurchase()}
+ * 	-> {@link QuickBooks_QBXML_Object_ServiceItem::isSalesAndPurchase()}
  * 
  * @author Keith Palmer <keith@consolibyte.com>
  * @license LICENSE.txt 

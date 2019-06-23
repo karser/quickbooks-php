@@ -777,11 +777,11 @@ abstract class QuickBooks_QBXML_Object
 	}
 	
 	/**
-	 * Convert a QuickBooks_XML_Node object to a QuickBooks_Object_* object instance 
+	 * Convert a QuickBooks_XML_Node object to a QuickBooks_QBXML_Object_* object instance 
 	 * 
 	 * @param QuickBooks_XML_Node $XML
 	 * @param string $action_or_object
-	 * @return QuickBooks_Object
+	 * @return QuickBooks_QBXML_Object
 	 */
 	static public function fromXML($XML, $action_or_object = null)
 	{		
@@ -924,11 +924,11 @@ abstract class QuickBooks_QBXML_Object
 	}
 	
 	/**
-	 * Convert a qbXML string to a QuickBooks_Object_* object instance
+	 * Convert a qbXML string to a QuickBooks_QBXML_Object_* object instance
 	 * 
 	 * @param string $qbxml
 	 * @param string $action_or_object
-	 * @return QuickBooks_Object
+	 * @return QuickBooks_QBXML_Object
 	 */
 	static public function fromQBXML($qbxml, $action_or_object = null)
 	{

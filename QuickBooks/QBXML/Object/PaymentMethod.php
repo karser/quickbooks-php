@@ -21,7 +21,7 @@ QuickBooks_Loader::load('/QuickBooks/QBXML/Object.php');
 class QuickBooks_QBXML_Object_PaymentMethod extends QuickBooks_QBXML_Object
 {
 	/**
-	 * Create a new QuickBooks_Object_PaymentMethod object
+	 * Create a new QuickBooks_QBXML_Object_PaymentMethod object
 	 * 
 	 * @param array $arr
 	 */

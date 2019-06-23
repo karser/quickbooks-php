@@ -21,7 +21,7 @@ QuickBooks_Loader::load('/QuickBooks/QBXML/Object.php');
 class QuickBooks_QBXML_Object_Bill_ItemLine extends QuickBooks_QBXML_Object
 {
 	/**
-	 * Create a new QuickBooks_Object_Check_ItemLine object
+	 * Create a new QuickBooks_QBXML_Object_Check_ItemLine object
 	 * 
 	 * @param array $arr
 	 */
@@ -111,7 +111,7 @@ class QuickBooks_QBXML_Object_Bill_ItemLine extends QuickBooks_QBXML_Object
 	}
 
 	/**
-	 * @see QuickBooks_Object_Check_ItemLineAdd::setDesc()
+	 * @see QuickBooks_QBXML_Object_Check_ItemLineAdd::setDesc()
 	 */
 	public function setDescription($value)
 	{
@@ -119,7 +119,7 @@ class QuickBooks_QBXML_Object_Bill_ItemLine extends QuickBooks_QBXML_Object
 	}
 
 	/**
-	 * @see QuickBooks_Object_Check_ItemLineAdd::getDesc()
+	 * @see QuickBooks_QBXML_Object_Check_ItemLineAdd::getDesc()
 	 */
 	public function getDescription()
 	{

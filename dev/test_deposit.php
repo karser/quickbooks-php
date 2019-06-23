@@ -3,13 +3,13 @@
 require_once '../QuickBooks.php';
 
 
-$Deposit = new QuickBooks_Object_Deposit();
+$Deposit = new QuickBooks_QBXML_Object_Deposit();
 
 $Deposit->setTxnDate(time());
 $Deposit->setDepositToAccountFullName('Liberty Bank');
 $Deposit->setMemo('Test deposit');
 
-$DepositLine = new QuickBooks_Object_Deposit_DepositLine();
+$DepositLine = new QuickBooks_QBXML_Object_Deposit_DepositLine();
 $DepositLine->setPaymentTxnID('1234-ABCD');
 $DepositLine->setPaymentTxnLineID('5668-EFGH');
 $DepositLine->setOverrideMemo('Test override memo');

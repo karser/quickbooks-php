@@ -6,7 +6,7 @@
  * NOTE: By default, NonInventoryItems are created as SalesOrPurchase items, and are 
  * thus *NOT* created as SalesAndPurchase items. If you want to create an item 
  * that is sold *and* purchased, you'll need to set the type with the method:
- * 	-> {@link QuickBooks_Object_NonInventoryItem::isSalesAndPurchase()}
+ * 	-> {@link QuickBooks_QBXML_Object_NonInventoryItem::isSalesAndPurchase()}
  * 
  * @todo Verify the get/set methods on this one... it was copied from ServiceItem
  * @todo Add isActive(), getIsActive(), etc. methods

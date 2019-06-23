@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Examples of converting qbXML to QuickBooks_Object_* classes, and vice-versa
+ * Examples of converting qbXML to QuickBooks_QBXML_Object_* classes, and vice-versa
  * 
  * @package QuickBooks
  * @subpackage Documentation
@@ -108,7 +108,7 @@ $qbxml = '
 	</SalesReceiptRet>';
 
 // Convert the qbXML string to an object
-$Object = QuickBooks_Object::fromQBXML($qbxml);
+$Object = QuickBooks_QBXML_Object::fromQBXML($qbxml);
 
 // Print the object
 print_r($Object);
@@ -124,7 +124,7 @@ if ($Doc = $Parser->parse($errnum, $errmsg))
 {
 	$Root = $Doc->getRoot();
 	
-	$Object = QuickBooks_Object::fromXML($Root);
+	$Object = QuickBooks_QBXML_Object::fromXML($Root);
 	
 	// Print it out
 	print_r($Object);
@@ -176,7 +176,7 @@ $qbxml = '
 	</CustomerRet>';
 
 // Create the customer
-$Object = QuickBooks_Object::fromQBXML($qbxml);
+$Object = QuickBooks_QBXML_Object::fromQBXML($qbxml);
 
 // Print it out
 print_r($Object);
@@ -205,7 +205,7 @@ $qbxml = '
 	</CustomerAdd>';
 
 // Create it...
-$Object = QuickBooks_Object::fromQBXML($qbxml);
+$Object = QuickBooks_QBXML_Object::fromQBXML($qbxml);
 
 // Print it...
 print_r($Object);
@@ -236,7 +236,7 @@ $qbxml = '<VendorRet>
 	</VendorRet>';
 
 // Create the object from the qbXML
-$Object = QuickBooks_Object::fromQBXML($qbxml);
+$Object = QuickBooks_QBXML_Object::fromQBXML($qbxml);
 
 // Print it
 print_r($Object);
@@ -265,7 +265,7 @@ $qbxml = '<ItemSalesTaxGroupRet>
 	</ItemSalesTaxGroupRet>';
 
 // Create it...
-$Object = QuickBooks_Object::fromQBXML($qbxml);
+$Object = QuickBooks_QBXML_Object::fromQBXML($qbxml);
 
 // Print it...
 print_r($Object);

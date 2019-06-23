@@ -20,7 +20,7 @@ QuickBooks_Loader::load('/QuickBooks/QBXML/Object.php');
 class QuickBooks_QBXML_Object_JournalEntry_JournalDebitLine extends QuickBooks_QBXML_Object
 {
 	/**
-	 * Create a new QuickBooks_Object_JournalEntry_JournalDebitLine object
+	 * Create a new QuickBooks_QBXML_Object_JournalEntry_JournalDebitLine object
 	 * 
 	 * @param array $arr
 	 */

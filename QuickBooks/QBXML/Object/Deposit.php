@@ -115,7 +115,7 @@ class QuickBooks_QBXML_Object_Deposit extends QuickBooks_QBXML_Object
 	}
 
 	/**
-	 * @see QuickBooks_Object_Check::setTxnDate()
+	 * @see QuickBooks_QBXML_Object_Check::setTxnDate()
 	 */
 	public function setTransactionDate($date)
 	{
@@ -123,7 +123,7 @@ class QuickBooks_QBXML_Object_Deposit extends QuickBooks_QBXML_Object
 	}
 
 	/**
-	 * @see QuickBooks_Object_Check::getTxnDate()
+	 * @see QuickBooks_QBXML_Object_Check::getTxnDate()
 	 */
 	public function getTransactionDate($format = null)
 	{

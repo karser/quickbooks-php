@@ -26,7 +26,7 @@ class QuickBooks_QBXML_Object_OtherChargeItem extends QuickBooks_QBXML_Object
 	protected $_is_sales_and_purchase;
 	
 	/**
-	 * Create a new QuickBooks_Object_ServiceItem object (ServiceItem)
+	 * Create a new QuickBooks_QBXML_Object_ServiceItem object (ServiceItem)
 	 */
 	public function __construct($arr = array(), $is_sales_and_purchase = false)
 	{

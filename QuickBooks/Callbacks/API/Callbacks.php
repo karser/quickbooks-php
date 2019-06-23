@@ -642,7 +642,7 @@ class QuickBooks_Callbacks_API_Callbacks
 	 */	
 	protected static function _objectFromXML($action, $XML)
 	{
-		return QuickBooks_Object::fromXML($XML, $action);
+		return QuickBooks_QBXML_Object::fromXML($XML, $action);
 	}
 	
 	/*
@@ -651,7 +651,7 @@ class QuickBooks_Callbacks_API_Callbacks
 		if (strtolower(substr($action, -3)) == 'add')
 		{
 			$type = substr($action, 0, -3);
-			$class = 'QuickBooks_Object_' . ucfirst(strtolower($type));
+			$class = 'QuickBooks_QBXML_Object_' . ucfirst(strtolower($type));
 			
 			if (class_exists($class))
 			{
@@ -661,7 +661,7 @@ class QuickBooks_Callbacks_API_Callbacks
 		else if (strtolower(substr($action, -3)) == 'mod')
 		{
 			$type = substr($action, 0, -3);
-			$class = 'QuickBooks_Object_' . ucfirst(strtolower($type));
+			$class = 'QuickBooks_QBXML_Object_' . ucfirst(strtolower($type));
 			
 			if (class_exists($class))
 			{
@@ -674,10 +674,10 @@ class QuickBooks_Callbacks_API_Callbacks
 		//{
 		//	case QUICKBOOKS_ADD_CUSTOMER:
 		//	case QUICKBOOKS_MOD_CUSTOMER:
-		//		return new QuickBooks_Object_Customer($arr);
+		//		return new QuickBooks_QBXML_Object_Customer($arr);
 		//	case QUICKBOOKS_ADD_INVOICE:
 		//	case QUICKBOOKS_MOD_INVOICE:
-		//		return new QuickBooks_Object_Invoice($arr);
+		//		return new QuickBooks_QBXML_Object_Invoice($arr);
 		//	case QUICKBOOKS_
 		//}
 		
@@ -698,7 +698,7 @@ class QuickBooks_Callbacks_API_Callbacks
 			$type = substr($type, 4) . 'Item';
 		}
 		
-		$class = 'QuickBooks_Object_' . ucfirst(strtolower($type));
+		$class = 'QuickBooks_QBXML_Object_' . ucfirst(strtolower($type));
 		
 		if (class_exists($class))
 		{

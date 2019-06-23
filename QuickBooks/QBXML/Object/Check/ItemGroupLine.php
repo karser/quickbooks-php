@@ -21,7 +21,7 @@ QuickBooks_Loader::load('/QuickBooks/QBXML/Object.php');
 class QuickBooks_QBXML_Object_Check_ItemGroupLine extends QuickBooks_QBXML_Object
 {
 	/**
-	 * Create a new QuickBooks_Object_Check_ItemGroupLine object
+	 * Create a new QuickBooks_QBXML_Object_Check_ItemGroupLine object
 	 * 
 	 * @param array $arr
 	 */
@@ -111,7 +111,7 @@ class QuickBooks_QBXML_Object_Check_ItemGroupLine extends QuickBooks_QBXML_Objec
 	}
 
 	/**
-	 * @see QuickBooks_Object_Check_ItemGroupLineAdd::setDesc()
+	 * @see QuickBooks_QBXML_Object_Check_ItemGroupLineAdd::setDesc()
 	 */
 	public function setDescription($value)
 	{
@@ -119,7 +119,7 @@ class QuickBooks_QBXML_Object_Check_ItemGroupLine extends QuickBooks_QBXML_Objec
 	}
 
 	/**
-	 * @see QuickBooks_Object_Check_ItemGroupLineAdd::getDesc()
+	 * @see QuickBooks_QBXML_Object_Check_ItemGroupLineAdd::getDesc()
 	 */
 	public function getDescription()
 	{

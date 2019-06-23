@@ -31,7 +31,7 @@ QuickBooks_Loader::load('/QuickBooks/QBXML/Object/CreditMemo/CreditMemoLine.php'
 class Quickbooks_QBXML_Object_CreditMemo extends QuickBooks_QBXML_Object
 {
  	/**
-	 * Create a new QuickBooks_Object_Customer object
+	 * Create a new QuickBooks_QBXML_Object_Customer object
 	 * 
 	 * @param array $arr
 	 */
@@ -110,7 +110,7 @@ class Quickbooks_QBXML_Object_CreditMemo extends QuickBooks_QBXML_Object
 	}
 	
 	/**
-	 * Alias of {@link QuickBooks_Object_Invoice::setRefNumber()}
+	 * Alias of {@link QuickBooks_QBXML_Object_Invoice::setRefNumber()}
 	 */
 	public function setReferenceNumber($str)
 	{
@@ -128,7 +128,7 @@ class Quickbooks_QBXML_Object_CreditMemo extends QuickBooks_QBXML_Object
 	}
 
 	/**
-	 * Alias of {@link QuickBooks_Object_Invoice::getRefNumber()}
+	 * Alias of {@link QuickBooks_QBXML_Object_Invoice::getRefNumber()}
 	 */
 	public function getReferenceNumber()
 	{

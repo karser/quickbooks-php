@@ -26,7 +26,7 @@ QuickBooks_Loader::load('/QuickBooks/QBXML/Object/BillPaymentCheck/AppliedToTxn.
 class QuickBooks_QBXML_Object_BillPaymentCheck extends QuickBooks_QBXML_Object
 {
 	/**
-	 * Create a new QuickBooks_Object_ReceivePayment object
+	 * Create a new QuickBooks_QBXML_Object_ReceivePayment object
 	 * 
 	 * @param array $arr
 	 */
@@ -47,7 +47,7 @@ class QuickBooks_QBXML_Object_BillPaymentCheck extends QuickBooks_QBXML_Object
 	}
 	
 	/**
-	 * Alias of {@link QuickBooks_Object_ReceivePayment::setTxnID()}
+	 * Alias of {@link QuickBooks_QBXML_Object_ReceivePayment::setTxnID()}
 	 */
 	public function setTransactionID($TxnID)
 	{
@@ -65,7 +65,7 @@ class QuickBooks_QBXML_Object_BillPaymentCheck extends QuickBooks_QBXML_Object
 	}
 	
 	/**
-	 * Alias of {@link QuickBooks_Object_ReceivePayment::getTxnID()}
+	 * Alias of {@link QuickBooks_QBXML_Object_ReceivePayment::getTxnID()}
 	 */
 	public function getTransactionID()
 	{
@@ -143,7 +143,7 @@ class QuickBooks_QBXML_Object_BillPaymentCheck extends QuickBooks_QBXML_Object
 	}
 	
 	/**
-	 * Alias of {@link QuickBooks_Object_Invoice::setTxnDate()}
+	 * Alias of {@link QuickBooks_QBXML_Object_Invoice::setTxnDate()}
 	 */
 	public function setTransactionDate($date)
 	{
@@ -192,7 +192,7 @@ class QuickBooks_QBXML_Object_BillPaymentCheck extends QuickBooks_QBXML_Object
 	}
 	
 	/**
-	 * Alias of {@link QuickBooks_Object_ReceivePayment::addAppliedToTxn()}
+	 * Alias of {@link QuickBooks_QBXML_Object_ReceivePayment::addAppliedToTxn()}
 	 */
 	public function addAppliedToTransaction($obj)
 	{
@@ -222,7 +222,7 @@ class QuickBooks_QBXML_Object_BillPaymentCheck extends QuickBooks_QBXML_Object
 	}
 	
 	/**
-	 * Alias of {@link QuickBooks_Object_Invoice::getTxnDate()}
+	 * Alias of {@link QuickBooks_QBXML_Object_Invoice::getTxnDate()}
 	 */
 	public function getTransactionDate($format = 'Y-m-d')
 	{

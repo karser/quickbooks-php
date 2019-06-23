@@ -14,7 +14,7 @@ $qbxml = '
 		<Desc>Non-taxable</Desc>
 	</SalesTaxCodeRet>';
 
-$SalesTaxCode = QuickBooks_Object::fromQBXML($qbxml);
+$SalesTaxCode = QuickBooks_QBXML_Object::fromQBXML($qbxml);
 
 print_r($SalesTaxCode);
 
@@ -55,7 +55,7 @@ $qbxml = '
 		</DefaultUnit>
 	</UnitOfMeasureSetRet>';
 
-$UnitOfMeasureSet = QuickBooks_Object::fromQBXML($qbxml);
+$UnitOfMeasureSet = QuickBooks_QBXML_Object::fromQBXML($qbxml);
 
 print_r($UnitOfMeasureSet);
 

@@ -20,7 +20,7 @@ QuickBooks_Loader::load('/QuickBooks/QBXML/Object.php');
 class QuickBooks_QBXML_Object_SalesRep extends QuickBooks_QBXML_Object
 {
 	/**
-	 * Create a new QuickBooks_Object_SalesRep object
+	 * Create a new QuickBooks_QBXML_Object_SalesRep object
 	 * 
 	 * @param array $arr
 	 */

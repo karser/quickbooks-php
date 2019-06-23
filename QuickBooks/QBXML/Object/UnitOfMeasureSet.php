@@ -33,7 +33,7 @@ QuickBooks_Loader::load('/QuickBooks/QBXML/Object/UnitOfMeasureSet/RelatedUnit.p
 class QuickBooks_QBXML_Object_UnitOfMeasureSet extends QuickBooks_QBXML_Object
 {
 	/**
-	 * Create a new QuickBooks_Object_Class object
+	 * Create a new QuickBooks_QBXML_Object_Class object
 	 * 
 	 * @param array $arr
 	 */

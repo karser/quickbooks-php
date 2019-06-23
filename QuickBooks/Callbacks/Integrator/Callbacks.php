@@ -705,7 +705,7 @@ class QuickBooks_Callbacks_Integrator_Callbacks
 	/**
 	 * 
 	 * 
-	 * @param QuickBooks_Object_ReceivePayment $Payment
+	 * @param QuickBooks_QBXML_Object_ReceivePayment $Payment
 	 * @param mixed $OrderID
 	 * @return boolean
 	 */
@@ -720,7 +720,7 @@ class QuickBooks_Callbacks_Integrator_Callbacks
 	/**
 	 * 
 	 * 
-	 * @param QuickBooks_Object $Product
+	 * @param QuickBooks_QBXML_Object $Product
 	 * @param mixed $ProductID
 	 * @return boolean
 	 */
@@ -1242,7 +1242,7 @@ class QuickBooks_Callbacks_Integrator_Callbacks
 			else
 			{
 				// Uh oh... create it!
-				$Customer = new QuickBooks_Object_Customer();
+				$Customer = new QuickBooks_QBXML_Object_Customer();
 				$Customer->setListID($Estimate->getCustomerListID());
 				$Customer->setName($Estimate->getCustomerName());
 				

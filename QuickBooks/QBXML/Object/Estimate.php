@@ -42,7 +42,7 @@ class QuickBooks_QBXML_Object_Estimate extends QuickBooks_QBXML_Object
 	}
 	
 	/**
-	 * Alias of {@link QuickBooks_Object_Estimate::setTxnID()}
+	 * Alias of {@link QuickBooks_QBXML_Object_Estimate::setTxnID()}
 	 */
 	public function setTransactionID($TxnID)
 	{
@@ -61,7 +61,7 @@ class QuickBooks_QBXML_Object_Estimate extends QuickBooks_QBXML_Object
 	}
 
 	/**
-	 * Alias of {@link QuickBooks_Object_Invoice::getTxnID()}
+	 * Alias of {@link QuickBooks_QBXML_Object_Invoice::getTxnID()}
 	 */
 	public function getTransactionID()
 	{
@@ -213,7 +213,7 @@ class QuickBooks_QBXML_Object_Estimate extends QuickBooks_QBXML_Object
 	}
 	
 	/**
-	 * Alias of {@link QuickBooks_Object_Estimate::setTxnDate()}
+	 * Alias of {@link QuickBooks_QBXML_Object_Estimate::setTxnDate()}
 	 */
 	public function setTransactionDate($date)
 	{
@@ -232,7 +232,7 @@ class QuickBooks_QBXML_Object_Estimate extends QuickBooks_QBXML_Object
 	}
 	
 	/**
-	 * Alias of {@link QuickBooks_Object_Estimate::getTxnDate()}
+	 * Alias of {@link QuickBooks_QBXML_Object_Estimate::getTxnDate()}
 	 */
 	public function getTransactionDate($format = 'Y-m-d')
 	{

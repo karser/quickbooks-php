@@ -2,7 +2,7 @@
 
 require_once '../QuickBooks.php';
 
-$Customer = new QuickBooks_Object_Customer();
+$Customer = new QuickBooks_QBXML_Object_Customer();
 
 $Customer->setFullName('web:Keith Palmer');
 

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Example of building qbXML for specific versions of QuickBooks using the QuickBooks_Object_* classes
+ * Example of building qbXML for specific versions of QuickBooks using the QuickBooks_QBXML_Object_* classes
  * 
  * Certain versions of QuickBooks may or may not support certain different 
  * features of the qbXML specification. For instance, Online Edition may not 
@@ -36,12 +36,12 @@ $SalesReceipt->setCustomerFullName('ConsoliBYTE:Keith Palmer');
 $SalesReceipt->setItemSalesTaxFullName('CT Sales Tax');
 
 // This is for Online Edition
-$SalesTaxLine = new QuickBooks_Object_SalesReceipt_SalesTaxLine();
+$SalesTaxLine = new QuickBooks_QBXML_Object_SalesReceipt_SalesTaxLine();
 $SalesTaxLine->setAmount(7.50);
 $SalesReceipt->addSalesTaxLine($SalesTaxLine);
 
 // Add a line items
-$Line1 = new QuickBooks_Object_SalesReceipt_SalesReceiptLine();
+$Line1 = new QuickBooks_QBXML_Object_SalesReceipt_SalesReceiptLine();
 $Line1->setItemFullName('QuickBooks Integration:PHP Integration');
 $Line1->setQuantity(1);
 $Line1->setRate(125.0);

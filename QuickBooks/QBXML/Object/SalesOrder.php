@@ -42,7 +42,7 @@ class QuickBooks_QBXML_Object_SalesOrder extends QuickBooks_QBXML_Object
 	}
 	
 	/**
-	 * Alias of {@link QuickBooks_Object_SalesOrder::setTxnID()}
+	 * Alias of {@link QuickBooks_QBXML_Object_SalesOrder::setTxnID()}
 	 */
 	public function setTransactionID($TxnID)
 	{
@@ -230,7 +230,7 @@ class QuickBooks_QBXML_Object_SalesOrder extends QuickBooks_QBXML_Object
 	}
 	
 	/**
-	 * Alias of {@link QuickBooks_Object_Invoice::setTxnDate()}
+	 * Alias of {@link QuickBooks_QBXML_Object_Invoice::setTxnDate()}
 	 */
 	public function setTransactionDate($date)
 	{
@@ -248,7 +248,7 @@ class QuickBooks_QBXML_Object_SalesOrder extends QuickBooks_QBXML_Object
 	}
 	
 	/**
-	 * Alias of {@link QuickBooks_Object_Invoice::getTxnDate()}
+	 * Alias of {@link QuickBooks_QBXML_Object_Invoice::getTxnDate()}
 	 */
 	public function getTransactionDate()
 	{
@@ -658,7 +658,7 @@ class QuickBooks_QBXML_Object_SalesOrder extends QuickBooks_QBXML_Object
 		*/
 		
 		/*
-		$tmp = new QuickBooks_Object_Generic();
+		$tmp = new QuickBooks_QBXML_Object_Generic();
 		$tmp->set('Quantity', mt_rand(4, 8));
 		$tmp->set('Amount', mt_rand(255, 300));
 		$tmp->set('ItemRef ListID', 'test');

@@ -56,7 +56,7 @@ class QuickBooks_QBXML_Object_Invoice extends QuickBooks_QBXML_Object
 	}
 	
 	/**
-	 * Alias of {@link QuickBooks_Object_Invoice::setTxnID()}
+	 * Alias of {@link QuickBooks_QBXML_Object_Invoice::setTxnID()}
 	 */
 	public function setTransactionID($TxnID)
 	{
@@ -75,7 +75,7 @@ class QuickBooks_QBXML_Object_Invoice extends QuickBooks_QBXML_Object
 	}
 	
 	/**
-	 * Alias of {@link QuickBooks_Object_Invoice::getTxnID()}
+	 * Alias of {@link QuickBooks_QBXML_Object_Invoice::getTxnID()}
 	 */
 	public function getTransactionID()
 	{
@@ -296,7 +296,7 @@ class QuickBooks_QBXML_Object_Invoice extends QuickBooks_QBXML_Object
 	}
 	
 	/**
-	 * Alias of {@link QuickBooks_Object_Invoice::setTxnDate()}
+	 * Alias of {@link QuickBooks_QBXML_Object_Invoice::setTxnDate()}
 	 */
 	public function setTransactionDate($date)
 	{
@@ -316,7 +316,7 @@ class QuickBooks_QBXML_Object_Invoice extends QuickBooks_QBXML_Object
 	}
 	
 	/**
-	 * Alias of {@link QuickBooks_Object_Invoice::getTxnDate()}
+	 * Alias of {@link QuickBooks_QBXML_Object_Invoice::getTxnDate()}
 	 */
 	public function getTransactionDate()
 	{
@@ -335,7 +335,7 @@ class QuickBooks_QBXML_Object_Invoice extends QuickBooks_QBXML_Object
 	}
 	
 	/**
-	 * Alias of {@link QuickBooks_Object_Invoice::setRefNumber()}
+	 * Alias of {@link QuickBooks_QBXML_Object_Invoice::setRefNumber()}
 	 */
 	public function setReferenceNumber($str)
 	{
@@ -353,7 +353,7 @@ class QuickBooks_QBXML_Object_Invoice extends QuickBooks_QBXML_Object
 	}
 
 	/**
-	 * Alias of {@link QuickBooks_Object_Invoice::getRefNumber()}
+	 * Alias of {@link QuickBooks_QBXML_Object_Invoice::getRefNumber()}
 	 */
 	public function getReferenceNumber()
 	{
@@ -852,7 +852,7 @@ class QuickBooks_QBXML_Object_Invoice extends QuickBooks_QBXML_Object
 	/**
 	 * Add a discount line (only supported by Online Edition as of 8.0)
 	 * 
-	 * @param QuickBooks_Object_Invoice_DiscountLine
+	 * @param QuickBooks_QBXML_Object_Invoice_DiscountLine
 	 * @return boolean
 	 */
 	public function addDiscountLine($obj)
@@ -863,7 +863,7 @@ class QuickBooks_QBXML_Object_Invoice extends QuickBooks_QBXML_Object
 	/**
 	 * Add a sales tax line (only supported by Online Edition as of 8.0)
 	 * 
-	 * @param QuickBooks_Object_Invoice_SalesTaxLine
+	 * @param QuickBooks_QBXML_Object_Invoice_SalesTaxLine
 	 * @return boolean
 	 */
 	public function addSalesTaxLine($obj)
@@ -874,7 +874,7 @@ class QuickBooks_QBXML_Object_Invoice extends QuickBooks_QBXML_Object
 	/**
 	 * Add a shipping line (only supported by Online Edition as of 8.0)
 	 * 
-	 * @param QuickBooks_Object_Invoice_ShippingLine
+	 * @param QuickBooks_QBXML_Object_Invoice_ShippingLine
 	 * @return boolean
 	 */
 	public function addShippingLine($obj)

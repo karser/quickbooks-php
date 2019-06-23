@@ -32,7 +32,7 @@ QuickBooks_Loader::load('/QuickBooks/QBXML/Object/Bill/ExpenseLine.php');
 class QuickBooks_QBXML_Object_Bill extends QuickBooks_QBXML_Object
 {
 	/**
-	 * Create a new QuickBooks_Object_JournalEntry object
+	 * Create a new QuickBooks_QBXML_Object_JournalEntry object
 	 * 
 	 * @param array $arr
 	 */
@@ -119,7 +119,7 @@ class QuickBooks_QBXML_Object_Bill extends QuickBooks_QBXML_Object
 	}
 
 	/**
-	 * @see QuickBooks_Object_JournalEntry::setTxnDate()
+	 * @see QuickBooks_QBXML_Object_JournalEntry::setTxnDate()
 	 */
 	public function setTransactionDate($date)
 	{
@@ -127,7 +127,7 @@ class QuickBooks_QBXML_Object_Bill extends QuickBooks_QBXML_Object
 	}
 
 	/**
-	 * @see QuickBooks_Object_JournalEntry::getTxnDate()
+	 * @see QuickBooks_QBXML_Object_JournalEntry::getTxnDate()
 	 */
 	public function getTransactionDate($format = null)
 	{
